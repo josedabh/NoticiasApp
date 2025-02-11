@@ -1,6 +1,7 @@
 import { Component, inject } from '@angular/core';
-import { InfoNoticiasService } from '../../shared/services/info-noticias.service';
-import { Noticias } from '../../data';
+
+import { Noticias } from '../../../data';
+import { InfoNoticiasService } from '../../../shared/services/info-noticias.service';
 
 @Component({
   selector: 'app-cards',
