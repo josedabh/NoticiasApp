@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+import { AsyncPipe, CommonModule, JsonPipe } from '@angular/common';
 import { NgModule } from '@angular/core';
 
 import { CardsComponent } from './cards/cards.component';
@@ -13,7 +13,9 @@ import { NoticiasComponent } from './noticias.component';
   ],
   imports: [
     CommonModule,
-    NoticiasRoutingModule
+    NoticiasRoutingModule,
+    JsonPipe,
+    AsyncPipe
   ]
 })
 export class NoticiasModule { }

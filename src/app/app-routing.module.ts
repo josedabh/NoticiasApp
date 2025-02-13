@@ -4,7 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { Error404Component } from './components/error404/error404.component';
 
 const routes: Routes = [
-  {path:'',redirectTo:'home',pathMatch:'full'},
+  {path:'',redirectTo:'noticias/list',pathMatch:'full'},
   {path: '',
     loadChildren: () => import('./components/components-routing.module').then(m => m.ComponentsRoutingModule)
   },

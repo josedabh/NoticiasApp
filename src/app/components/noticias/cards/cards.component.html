@@ -1,9 +1,12 @@
+@for (info of noticias; track $index) {
 <div class="card" style="width: 18rem;">
-    <img src="..." class="card-img-top" alt="...">
-    <div class="card-body" *ngFor="let info of noticias">
-      <p class="card-text">
-        Hello
-      </p>
-      <h1>Has picado</h1>
-    </div>
+  <img src="/assets/img/oso404.svg" class="card-img-top" alt="prueba">
+  <div class="card-body">
+    <p class="card-text">
+      {{info.autor}}
+    </p>
+    <h1>Has picado</h1>
   </div>
+</div>
+}
+<!-- {{prueba | async | json}} -->
