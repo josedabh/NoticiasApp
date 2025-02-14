@@ -5,13 +5,15 @@ import { NoticiasCardsComponent } from './noticias-cards/noticias-cards.componen
 import { NoticiasRoutingModule } from './noticias-routing.module';
 import { NoticiasComponent } from './noticias.component';
 import { NoticiasCarruselComponent } from './noticias-carrusel/noticias-carrusel.component';
+import { NoticiasListComponent } from './noticias-list/noticias-list.component';
 
 
 @NgModule({
   declarations: [
     NoticiasComponent,
     NoticiasCardsComponent,
-    NoticiasCarruselComponent
+    NoticiasCarruselComponent,
+    NoticiasListComponent
   ],
   imports: [
     CommonModule,

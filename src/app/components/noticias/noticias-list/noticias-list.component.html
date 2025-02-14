@@ -1,0 +1,14 @@
+<!-- Carrusel de Noticias Destacadas -->
+<app-noticias-carrusel></app-noticias-carrusel>
+
+<!-- Lista de Noticias -->
+<div class="row mt-4">
+    <div class="col-md-4" *ngFor="let news of noticias">
+        <app-noticias-cards [news]="news"></app-noticias-cards>
+    </div>
+</div>
+
+<!-- Botón de Cargar Más -->
+<!-- <div class="text-center mt-3">
+    <button class="btn btn-primary" (click)="loadMore()">Cargar más</button>
+</div> -->

@@ -1,8 +1,6 @@
-import { Component, inject } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
-import { Noticias } from '../../../data';
-import { InfoNoticiasService } from '../../../shared/services/info-noticias.service';
-import { NoticiasApiService } from '../../../shared/services/noticiasApi/noticias-api.service';
+import { Noticia } from '../../../data';
 
 @Component({
   selector: 'app-noticias-cards',
@@ -11,13 +9,6 @@ import { NoticiasApiService } from '../../../shared/services/noticiasApi/noticia
 })
 export class NoticiasCardsComponent {
 
-  noticias!:Noticias[];
-  news = inject(InfoNoticiasService);
-  // readonly #api = inject(NoticiasApiService);
-  // prueba = this.#api.getNoticias();
-  constructor(){
-    this.news.noticias$.subscribe((noticias) => {
-      this.noticias = noticias;
-    });
-  }
+  @Input() news!: Noticia;
+
 }

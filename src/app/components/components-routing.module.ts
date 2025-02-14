@@ -1,11 +1,15 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './home/home.component';
-import { NoticiasComponent } from './noticias/noticias.component';
 
+import { HomeComponent } from '../pages/home/home.component';
+
+export const ROUTES = {
+  HOME: 'home',
+  NOTICIAS: 'noticias'
+}
 const routes: Routes = [
-  {path:'home', component:HomeComponent},
-  {path: 'noticias',
+  {path: ROUTES.HOME, component:HomeComponent},
+  {path: ROUTES.NOTICIAS ,
     loadChildren: () => import("./noticias/noticias-routing.module").then(m => m.NoticiasRoutingModule)
   }
 ];

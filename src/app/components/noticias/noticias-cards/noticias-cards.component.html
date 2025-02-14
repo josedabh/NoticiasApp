@@ -1,12 +1,9 @@
-@for (info of noticias; track $index) {
-<div class="card" style="width: 18rem;">
-  <img src="/assets/img/oso404.svg" class="card-img-top" alt="prueba">
+<div class="card">
+  <img [src]="news.image_url" class="card-img-top" alt="{{ news.title }}">
   <div class="card-body">
-    <p class="card-text">
-      {{info.autor}}
-    </p>
-    <h1>Has picado</h1>
+      <h5 class="card-title">{{ news.title }}</h5>
+      <p class="card-text">{{ news.description }}</p>
+      <p>{{news.categories}}</p>
+      <a [routerLink]="['/news', news.uuid]" class="btn btn-primary">Leer más</a>
   </div>
 </div>
-}
-<!-- {{prueba | async | json}} -->
