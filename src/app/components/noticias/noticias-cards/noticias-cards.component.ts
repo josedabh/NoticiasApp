@@ -5,11 +5,11 @@ import { InfoNoticiasService } from '../../../shared/services/info-noticias.serv
 import { NoticiasApiService } from '../../../shared/services/noticiasApi/noticias-api.service';
 
 @Component({
-  selector: 'app-cards',
-  templateUrl: './cards.component.html',
-  styleUrl: './cards.component.scss'
+  selector: 'app-noticias-cards',
+  templateUrl: './noticias-cards.component.html',
+  styleUrl: './noticias-cards.component.scss'
 })
-export class CardsComponent {
+export class NoticiasCardsComponent {
 
   noticias!:Noticias[];
   news = inject(InfoNoticiasService);
