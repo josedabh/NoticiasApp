@@ -1,1 +1,34 @@
-<p>login works!</p>
+<div class="contenedor">
+    <form>
+        <!--Email-->
+        <mat-form-field>
+            <mat-label>Enter your email</mat-label>
+            <input
+              matInput
+              placeholder="pat@example.com"
+              [formControl]="email"
+              (blur)="updateErrorMessage()"
+              required
+            />
+            @if (email.invalid) {
+              <mat-error>{{errorMessage()}}</mat-error>
+            }
+        </mat-form-field>
+        <!--Contraseña-->
+        <mat-form-field>
+            <mat-label>Enter your email</mat-label>
+            <input
+              matInput
+              placeholder="pat@example.com"
+              [formControl]="email"
+              (blur)="updateErrorMessage()"
+              required
+            />
+            @if (email.invalid) {
+              <mat-error>{{errorMessage()}}</mat-error>
+            }
+        </mat-form-field>
+        <!--Boton entrar-->
+        <button type="submit">Entrar</button>
+    </form>
+</div>

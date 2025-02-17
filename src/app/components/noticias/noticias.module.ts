@@ -6,6 +6,7 @@ import { NoticiasRoutingModule } from './noticias-routing.module';
 import { NoticiasComponent } from './noticias.component';
 import { NoticiasCarruselComponent } from './noticias-carrusel/noticias-carrusel.component';
 import { NoticiasListComponent } from './noticias-list/noticias-list.component';
+import { NoticiasDetallesComponent } from './noticias-detalles/noticias-detalles.component';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { NoticiasListComponent } from './noticias-list/noticias-list.component';
     NoticiasComponent,
     NoticiasCardsComponent,
     NoticiasCarruselComponent,
-    NoticiasListComponent
+    NoticiasListComponent,
+    NoticiasDetallesComponent
   ],
   imports: [
     CommonModule,
