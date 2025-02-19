@@ -4,9 +4,10 @@ import { NoticiasApiService } from '../../../shared/services/noticias-api.servic
 import { Noticia } from '../../../data';
 
 @Component({
-  selector: 'app-noticias-detalles',
-  templateUrl: './noticias-detalles.component.html',
-  styleUrl: './noticias-detalles.component.scss'
+    selector: 'app-noticias-detalles',
+    templateUrl: './noticias-detalles.component.html',
+    styleUrl: './noticias-detalles.component.scss',
+    standalone: false
 })
 export class NoticiasDetallesComponent {}
 

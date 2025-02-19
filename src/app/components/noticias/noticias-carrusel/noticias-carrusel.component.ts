@@ -4,9 +4,10 @@ import { Noticia } from '../../../data';
 import { NoticiasApiService } from '../../../shared/services/noticias-api.service';
 
 @Component({
-  selector: 'app-noticias-carrusel',
-  templateUrl: './noticias-carrusel.component.html',
-  styleUrl: './noticias-carrusel.component.scss'
+    selector: 'app-noticias-carrusel',
+    templateUrl: './noticias-carrusel.component.html',
+    styleUrl: './noticias-carrusel.component.scss',
+    standalone: false
 })
 export class NoticiasCarruselComponent {
 
