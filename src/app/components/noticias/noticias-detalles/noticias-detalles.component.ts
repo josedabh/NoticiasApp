@@ -1,13 +1,10 @@
-import { Component, inject } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
-import { NoticiasApiService } from '../../../shared/services/noticias-api.service';
-import { Noticia } from '../../../data';
+import { Component } from '@angular/core';
 
 @Component({
     selector: 'app-noticias-detalles',
     templateUrl: './noticias-detalles.component.html',
     styleUrl: './noticias-detalles.component.scss',
-    standalone: false
+    imports: [],
 })
 export class NoticiasDetallesComponent {}
 

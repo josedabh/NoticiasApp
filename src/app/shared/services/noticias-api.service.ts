@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
-import { ApiNews } from '../../data';
+import { ApiNews } from '../utils/data';
 
 @Injectable({
   providedIn: 'root'

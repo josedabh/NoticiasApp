@@ -8,7 +8,6 @@ import { merge } from 'rxjs';
     templateUrl: './login.component.html',
     styleUrl: './login.component.scss',
     changeDetection: ChangeDetectionStrategy.OnPush,
-    standalone: false
 })
 export class LoginComponent {
 

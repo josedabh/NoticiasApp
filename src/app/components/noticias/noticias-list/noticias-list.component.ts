@@ -1,12 +1,14 @@
 import { Component, inject } from '@angular/core';
-import { Noticia } from '../../../data';
+import { Noticia } from '../../../shared/utils/data';
 import { NoticiasApiService } from '../../../shared/services/noticias-api.service';
+import { NoticiasCarruselComponent } from '../noticias-carrusel/noticias-carrusel.component';
+import { NoticiasCardsComponent } from '../noticias-cards/noticias-cards.component';
 
 @Component({
     selector: 'app-noticias-list',
     templateUrl: './noticias-list.component.html',
     styleUrl: './noticias-list.component.scss',
-    standalone: false
+    imports: [NoticiasCarruselComponent, NoticiasCardsComponent]
 })
 export class NoticiasListComponent {
 

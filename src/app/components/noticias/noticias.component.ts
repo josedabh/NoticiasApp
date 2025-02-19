@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
     selector: 'app-noticias',
-    templateUrl: './noticias.component.html',
+    template: '<router-outlet></router-outlet>',
     styleUrl: './noticias.component.scss',
-    standalone: false
+    imports: [RouterOutlet]
 })
 export class NoticiasComponent {
 

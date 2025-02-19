@@ -2,11 +2,13 @@
 <app-noticias-carrusel></app-noticias-carrusel>
 
 <!-- Lista de Noticias -->
+@for (news of noticias; track $index) {
 <div class="row mt-4">
-    <div class="col-md-4" *ngFor="let news of noticias">
+    <div class="col-md-4">
         <app-noticias-cards [news]="news"></app-noticias-cards>
     </div>
 </div>
+}
 
 <!-- Botón de Cargar Más -->
 <!-- <div class="text-center mt-3">
