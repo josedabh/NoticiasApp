@@ -1,34 +1,37 @@
 <div class="contenedor">
-    <form>
-        <!--Email-->
-        <mat-form-field>
-            <mat-label>Enter your email</mat-label>
-            <input
-              matInput
-              placeholder="pat@example.com"
-              [formControl]="email"
-              (blur)="updateErrorMessage()"
-              required
-            />
-            @if (email.invalid) {
-              <mat-error>{{errorMessage()}}</mat-error>
-            }
-        </mat-form-field>
-        <!--Contraseña-->
-        <mat-form-field>
-            <mat-label>Enter your email</mat-label>
-            <input
-              matInput
-              placeholder="pat@example.com"
-              [formControl]="email"
-              (blur)="updateErrorMessage()"
-              required
-            />
-            @if (email.invalid) {
-              <mat-error>{{errorMessage()}}</mat-error>
-            }
-        </mat-form-field>
-        <!--Boton entrar-->
-        <button type="submit">Entrar</button>
-    </form>
+  <h1>Login</h1>
+  <br>
+  <!--Email-->
+  <mat-form-field>
+      <mat-label>Email</mat-label>
+      <input
+        matInput
+        placeholder="Email"
+        [formControl]="email"
+        (blur)="updateErrorMessage()"
+        required
+      />
+      @if (email.invalid) {
+        <mat-error>{{errorMessage()}}</mat-error>
+      }
+  </mat-form-field>
+  <br>
+  <!--Contraseña-->
+  <mat-form-field>
+    <mat-label>Contraseña</mat-label>
+    <input matInput [type]="hide() ? 'password' : 'text'" />
+    <button
+      mat-icon-button
+      matSuffix
+      (click)="clickEvent($event)"
+      [attr.aria-label]="'Hide password'"
+      [attr.aria-pressed]="hide()"
+    >
+      <mat-icon>{{hide() ? 'visibility_off' : 'visibility'}}</mat-icon>
+    </button>
+  </mat-form-field>
+  <br>
+  <!--Boton entrar-->
+  <button class="btn btn-secondary"
+  type="submit">Entrar</button>
 </div>

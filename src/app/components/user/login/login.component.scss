@@ -1,0 +1,6 @@
+@use "mixins/user" as *;
+
+.contenedor {
+    margin-top: 100px;
+    @include contenedor($color: #a7a7a7, $maxWitdh:400px);
+}

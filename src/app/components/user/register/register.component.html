@@ -1,1 +1,106 @@
-<p>register works!</p>
+<div class="contenedor">
+    <h1>Registro</h1>
+    <br>
+    <form>
+        <div class="formulario">
+            <!--Nombre-->
+            <mat-form-field>
+                <mat-label>Nombre</mat-label>
+                <input matInput placeholder="Nombre" 
+                [formControl]="nombre" required />
+                @if (nombre.invalid && nombre.touched) {
+                <mat-error>El nombre es requerido</mat-error>
+                }
+            </mat-form-field>
+
+            <!--Apellidos-->
+            <mat-form-field>
+                <mat-label>Apellidos</mat-label>
+                <input matInput placeholder="Apellidos" 
+                [formControl]="apellidos" required />
+                @if (apellidos.invalid && apellidos.touched) {
+                <mat-error>Los apellidos son requeridos</mat-error>
+                }
+            </mat-form-field>
+
+            <!--Email-->
+            <mat-form-field>
+                <mat-label>Email</mat-label>
+                <input matInput placeholder="Email" [formControl]="email" 
+                (blur)="updateErrorMessage()" required />
+                @if (email.invalid) {
+                <mat-error>{{errorMessage()}}</mat-error>
+                }
+            </mat-form-field>
+
+            <!--Contraseña-->
+            <mat-form-field>
+                <mat-label>Contraseña</mat-label>
+                <input matInput 
+                [type]="hidePassword() ? 'password' : 'text'" 
+                [formControl]="password" required />
+                <button mat-icon-button matSuffix 
+                (click)="togglePassword($event)" [attr.aria-label]="'Hide password'"
+                    [attr.aria-pressed]="hidePassword()">
+                    <mat-icon>
+                        {{hidePassword() ? 'visibility_off' : 'visibility'}}
+                    </mat-icon>
+                </button>
+                @if (password.invalid && password.touched) {
+                <mat-error>La contraseña debe tener al menos 8 caracteres</mat-error>
+                }
+            </mat-form-field>
+
+            <!--Confirmar Contraseña-->
+            <mat-form-field>
+                <mat-label>Confirmar Contraseña</mat-label>
+                <input matInput 
+                [type]="hideConfirmPassword() ? 'password' : 'text'" 
+                [formControl]="confirmPassword"
+                    required />
+                <button mat-icon-button matSuffix 
+                (click)="toggleConfirmPassword($event)"
+                    [attr.aria-label]="'Hide confirm password'" 
+                    [attr.aria-pressed]="hideConfirmPassword()">
+                    <mat-icon>{{hideConfirmPassword() ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </button>
+                @if (confirmPassword.invalid && confirmPassword.touched) {
+                <mat-error>Las contraseñas no coinciden</mat-error>
+                }
+            </mat-form-field>
+
+            <!--Categorías de Noticias-->
+            <mat-form-field>
+                <mat-label>Categorías de interés</mat-label>
+                <mat-select [formControl]="categorias" multiple>
+                    <mat-option value="deportes">Deportes</mat-option>
+                    <mat-option value="tecnologia">Tecnología</mat-option>
+                    <mat-option value="economia">Economía</mat-option>
+                    <mat-option value="politica">Política</mat-option>
+                    <mat-option value="entretenimiento">Entretenimiento</mat-option>
+                    <mat-option value="ciencia">Ciencia</mat-option>
+                    <mat-option value="salud">Salud</mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+        
+        <!--Newsletter-->
+        <mat-checkbox [formControl]="newsletter">
+            Deseo recibir el boletín de noticias
+        </mat-checkbox>
+    
+        <!--Botón registrar-->
+        <button class="btn btn-primary" type="submit" 
+        [disabled]="!isFormValid()" (click)="onSubmit()">
+            Registrarse
+        </button>
+
+        <!--Link a Login-->
+        <p class="mt-3">
+            ¿Ya tienes cuenta?
+            <a [routerLink]="['/user/login']">
+                Inicia sesión aquí
+            </a>
+        </p>
+    </form>
+</div>

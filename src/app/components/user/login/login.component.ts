@@ -1,7 +1,9 @@
 import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { FormControl, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
-import { MatInput, MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
 import { merge } from 'rxjs';
 
 @Component({
@@ -10,7 +12,7 @@ import { merge } from 'rxjs';
     styleUrl: './login.component.scss',
     changeDetection: ChangeDetectionStrategy.OnPush,
     imports: [FormsModule, ReactiveFormsModule,
-      MatInputModule
+      MatInputModule, MatButtonModule, MatIconModule
     ],
 })
 export class LoginComponent {
@@ -33,5 +35,10 @@ export class LoginComponent {
     } else {
       this.errorMessage.set('');
     }
+  }
+  hide = signal(true);
+  clickEvent(event: MouseEvent) {
+    this.hide.set(!this.hide());
+    event.stopPropagation();
   }
 }

@@ -14,7 +14,7 @@ export const Approutes: Routes = [
     path: ROUTES.NOTICIAS, component: HomeComponent,
     loadChildren: () => import('./components/noticias/noticias.routes').then(m => m.noticiasRoutes),
   },
-  {path: 'user',
+  {path: ROUTES.USER, component: HomeComponent,
     loadChildren: () => import('./components/user/user.routes').then(m => m.userRoutes)},
   { path: '**', component: Error404Component }
 ];
