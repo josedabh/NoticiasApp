@@ -1,0 +1,17 @@
+.router {
+    display: grid;
+    place-items: center;
+    height: 100%;
+}
+
+.app-container {
+    height: 100vh; // Para ocupar toda la pantalla
+}
+
+mat-sidenav {
+    width: 250px; // Ancho del sidebar
+}
+
+mat-sidenav-content {
+    // Ajustes para el contenido principal
+}

@@ -1,4 +1,13 @@
-.icon{
-    height: 2%;
-    width: 2%;
+.navbar {
+    // Ajusta estilos del mat-toolbar
+    display: flex;
+    justify-content: flex-start;
+
+    .mat-icon {
+        vertical-align: middle;
+    }
+
+    .form-control {
+        min-width: 200px;
+    }
 }

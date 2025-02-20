@@ -1,14 +1,14 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
+import { MatIconModule } from '@angular/material/icon';
 
 @Component({
     selector: 'app-sidebar',
     templateUrl: './sidebar.component.html',
     styleUrl: './sidebar.component.scss',
+    imports: [MatIconModule]
 })
 export class SidebarComponent {
-  @Input() isOpen = false;
-
-  toggleSidebar() {
-    this.isOpen = !this.isOpen;
-  }
+  
+  @Output() closeSidebar = new EventEmitter<void>();
+  
 }

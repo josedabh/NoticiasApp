@@ -1,37 +1,27 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid">
-        <!-- Botón para abrir el Sidebar -->
-        <button class="btn btn-primary me-3" (click)="toggleSidebar()">
-            <img src="assets/icons/menu-hamburguesa.svg" alt="Sidebar" style="height: 10px;width: 10px;">
-        </button>
+<mat-toolbar color="primary" class="navbar d-flex align-items-center">
+    <!-- Botón de menú para pantallas pequeñas -->
+    <button mat-icon-button class="d-md-none me-3" (click)="onToggleSidebar()">
+        <mat-icon>menu</mat-icon>
+    </button>
 
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+    <!-- Título o Logo -->
+    <span class="fw-bold me-auto">ARQUICKINFO</span>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">
-                        Arkqinfo
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" [routerLink]="['/user/login']" routerLinkActive="router-link-active" >
-                        <img src="assets/icons/usuario.svg" alt="Home" class="icon"> Login
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" [routerLink]="['/user/register']" routerLinkActive="router-link-active" >
-                        <img src="assets/icons/usuario.svg" alt="Home" class="icon"> Register
-                    </a>
-                </li>
-            </ul>
-            <form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
-        </div>
+    <!-- Buscador -->
+    <div class="d-flex align-items-center bg-white rounded px-2">
+        <input matInput placeholder="Buscar noticias..." 
+        [(ngModel)]="searchValue" class="form-control border-0" />
+        <button mat-button color="accent" (click)="onSearch()">
+            <mat-icon>search</mat-icon>
+        </button>
     </div>
-</nav>
+
+    <!-- Botón de usuario con menú desplegable -->
+    <button mat-icon-button [matMenuTriggerFor]="userMenu" class="ms-3">
+        <mat-icon>account_circle</mat-icon>
+    </button>
+    <mat-menu #userMenu="matMenu">
+        <button mat-menu-item (click)="onLogin()">Iniciar Sesión</button>
+        <button mat-menu-item (click)="onRegister()">Registrarse</button>
+    </mat-menu>
+</mat-toolbar>

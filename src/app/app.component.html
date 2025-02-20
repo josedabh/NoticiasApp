@@ -1,0 +1,18 @@
+<mat-sidenav-container class="app-container">
+
+    <!-- SIDEBAR -->
+    <mat-sidenav #drawer mode="side" [opened]="isDesktop">
+      <app-sidebar (closeSidebar)="drawer.toggle()"></app-sidebar>
+    </mat-sidenav>
+  
+    <!-- CONTENIDO PRINCIPAL -->
+    <mat-sidenav-content>
+      <app-navbar (toggleSidebar)="drawer.toggle()"></app-navbar>
+      
+      <!-- Aquí va tu contenido o <router-outlet> -->
+      <div class="container-fluid p-3">
+        <router-outlet></router-outlet>
+      </div>
+    </mat-sidenav-content>
+  
+  </mat-sidenav-container>

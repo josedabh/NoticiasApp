@@ -1,42 +1,13 @@
-.sidebar {
-    position: fixed;
-    top: 0;
-    left: -250px;
-    width: 250px;
-    height: 100%;
-    background: #343a40;
-    color: white;
-    padding: 15px;
-    transition: left 0.3s;
-}
-
-.sidebar-open {
-    left: 0;
-}
-
-.btn-close {
-    background: none;
-    border: none;
-    font-size: 24px;
-    color: white;
-    cursor: pointer;
+.sidebar-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .list-group-item {
-    background: transparent;
     border: none;
-}
 
-.list-group-item a {
-    color: white;
-    text-decoration: none;
-}
-
-.list-group-item a:hover {
-    text-decoration: underline;
-}
-
-.icon{
-    height: 8%;
-    width: 8%;
+    &:hover {
+        background-color: #e2e6ea;
+    }
 }

@@ -1,16 +1,38 @@
 import { Component, EventEmitter, Output } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { FormsModule } from '@angular/forms';
+import { MatIconModule } from '@angular/material/icon';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 @Component({
     selector: 'app-navbar',
     templateUrl: './navbar.component.html',
     styleUrl: './navbar.component.scss',
-    imports: [RouterLink],
+    imports: [MatIconModule, FormsModule, MatToolbarModule,
+      MatMenuModule
+    ],
 })
 export class NavbarComponent {
-  @Output() sidebarToggle = new EventEmitter<void>();
+  @Output() toggleSidebar = new EventEmitter<void>();
 
-  toggleSidebar() {
-      this.sidebarToggle.emit();
+  searchValue: string = '';
+
+  onToggleSidebar() {
+    this.toggleSidebar.emit();
+  }
+
+  onSearch() {
+    console.log('Buscando:', this.searchValue);
+    // Lógica de búsqueda
+  }
+
+  onLogin() {
+    console.log('Iniciar Sesión');
+    // Lógica de login
+  }
+
+  onRegister() {
+    console.log('Registrarse');
+    // Lógica de registro
   }
 }
