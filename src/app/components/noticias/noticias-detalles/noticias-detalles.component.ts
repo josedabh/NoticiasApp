@@ -1,4 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { NoticiasApiService } from 'src/app/shared/services/noticias-api.service';
+import { Noticia } from 'src/app/shared/utils/data';
 
 @Component({
     selector: 'app-noticias-detalles',
@@ -6,21 +9,42 @@ import { Component } from '@angular/core';
     styleUrl: './noticias-detalles.component.scss',
     imports: [],
 })
-export class NoticiasDetallesComponent {}
+export class NoticiasDetallesComponent {
 
-//   readonly #router = inject(Router);
-//   readonly #route = inject(ActivatedRoute);
-//   readonly #apiNoticias = inject(NoticiasApiService);
+    readonly #route = inject(ActivatedRoute);
+    readonly #apiNoticias = inject(NoticiasApiService);
 
-//   uuid:string | null = this.#route.snapshot.fragment['uuid'];
-  
-//   noticia!:Noticia
+    noticia!: Noticia;
 
-//   constructor(){
-//     this.noticia 
-//   }
+    constructor() {
+        const uuid = this.#route.snapshot.paramMap.get('uuid');
+        if (uuid) {
+            this.#apiNoticias.getNewsByUuid(uuid).subscribe((noticia) => {
+                if (noticia) {
+                    this.noticia = noticia;
+                } else {
+                    this.setNoticiaNoEncontrada();
+                }
+            });
+        } else {
+            this.setNoticiaNoEncontrada();
+        }
+    }
 
-//   function loadElement() {
-    
-//   }
-// }
+    private setNoticiaNoEncontrada() {
+        this.noticia = {
+            uuid: '',
+            title: 'Noticia no encontrada',
+            description: 'No se ha encontrado la noticia solicitada',
+            image_url: 'https://via.placeholder.com/800x400.png?text=Noticia+no+encontrada',
+            published_at: new Date().toDateString(),
+            source: "Desconocido",
+            categories: ['Desconocido'],
+            keywords: 'Desconocido',
+            relevance_score: 0,
+            snippet: 'No se ha encontrado la noticia solicitada',
+            url: 'https://www.google.com',
+            language: 'es'
+        };
+    }
+}

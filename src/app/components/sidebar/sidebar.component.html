@@ -1,9 +1,22 @@
+<!-- Sidebar -->
 <div [class.sidebar-open]="isOpen" class="sidebar">
     <button class="btn-close" (click)="toggleSidebar()">×</button>
     <ul class="list-group">
-        <li class="list-group-item"><a href="#">Inicio</a></li>
-        <li class="list-group-item"><a href="#">Perfil</a></li>
-        <li class="list-group-item"><a href="#">Configuración</a></li>
-        <li class="list-group-item"><a href="#">Cerrar sesión</a></li>
+        <li class="list-group-item">
+            <img src="assets/icons/usuario.svg" alt="Home" class="icon"> 
+            <a href="#">Inicio</a>
+        </li>
+        <li class="list-group-item">
+            <img src="assets/icons/usuario.svg" alt="Perfil" class="icon"> 
+            <a href="#">Perfil</a>
+        </li>
+        <li class="list-group-item">
+            <img src="assets/icons/ajustes.svg" alt="Config" class="icon"> 
+            <a href="#">Configuración</a>
+        </li>
+        <li class="list-group-item">
+            <img src="assets/icons/ajustes.svg" alt="Logout" class="icon"> 
+            <a href="#">Cerrar sesión</a>
+        </li>
     </ul>
 </div>

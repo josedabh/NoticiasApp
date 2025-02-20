@@ -1,3 +1,9 @@
 <div class="detalles">
-
+    <section>
+        <h1>{{noticia.title}}</h1>
+        <h3>{{noticia.snippet}}</h3>
+        <img [src]="noticia.image_url" 
+        alt="{{noticia.title}}" class="image">
+        <p>{{noticia.description}}</p>
+    </section>
 </div>

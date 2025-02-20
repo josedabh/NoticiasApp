@@ -1,0 +1,56 @@
+{
+    "meta": {
+        "found": 7481726,
+        "returned": 3,
+        "limit": 3,
+        "page": 1
+    },
+    "data": [
+        {
+            "uuid": "f94bb8cf-2182-47df-9ff9-f990dcf1ef4a",
+            "title": "Adiós para siempre a esta histórica marca de moda española: se declara en quiebra y cae toda la plantilla",
+            "description": "El comercio electrónico lo ha puesto más difícil para las tiendas físicas. Cada vez son más las personas que optan por comprar desde la comodidad de su cas...",
+            "keywords": "",
+            "snippet": "El comercio electrónico lo ha puesto más difícil para las tiendas físicas. Cada vez son más las personas que optan por comprar desde la comodidad de su cas...",
+            "url": "https:\/\/www.mundodeportivo.com\/actualidad\/20250220\/1002411298\/adios-siempre-historica-marca-moda-espanola-declara-quiebra-cae-toda-plantilla-dct.html",
+            "image_url": "https:\/\/www.mundodeportivo.com\/files\/og_thumbnail\/files\/fp\/uploads\/2025\/02\/12\/67ac9a951e1e7.r_d.578-298-0.jpeg",
+            "language": "es",
+            "published_at": "2025-02-20T07:33:26.000000Z",
+            "source": "mundodeportivo.com",
+            "categories": [],
+            "relevance_score": null
+        },
+        {
+            "uuid": "c4a83567-0daf-4736-8768-ea47401dd934",
+            "title": "Monegros no pierdas tu tren y CEOS van a pedir al Ministerio de Transportes que amplíe el servicio de tren entre Zaragoza y Lérida hasta Barcelona",
+            "description": "La plataforma Monegros no pierdas tu tren y la Confederación de Empresarios de la provincia de Huesca van a pedir al Ministerio de Transportes que amplíe el servicio de tren entre Zaragoza y Lérida y que llegue hasta Barcelona.Tras varias reuniones mantenidas en los últimos meses con distintas administraciones para presentar sus reivindicaciones, y sin conseguir sus objetivos, en las últimas han pedido a RENFE que amplíe el servicio. El portavoz de Monegros no pierdas tu tren, Raúl Rivarés, ha explicado que en la reunión han conocido los inconvenientes de la empresa concesionaria RENFE para ampliar el servicio tal y como se pide por dos cuestiones. Por un lado, los maquinistas de la compañía sólo pueden conducir un tipo de tren y líneas concretas y además tienen problemas técnicos con los propios trenes para realizar este servicio.",
+            "keywords": "",
+            "snippet": "Tras varias reuniones mantenidas en los últimos meses con distintas administraciones para presentar sus reivindicaciones, y sin conseguir sus objetivos, en las últimas han pedido a RENFE que amplíe el servicio",
+            "url": "https:\/\/www.cope.es\/emisoras\/aragon\/huesca-provincia\/huesca\/cope-huesca\/noticias\/monegros-pierdas-tren-ceos-pedir-ministerio-transportes-amplie-servicio-tren-zaragoza-lerida-barcelona-20250220_3099260.html",
+            "image_url": "https:\/\/imagenes.cope.es\/files\/og_thumbnail\/uploads\/2025\/02\/20\/67b6d810ca507.jpeg",
+            "language": "es",
+            "published_at": "2025-02-20T07:31:20.000000Z",
+            "source": "cope.es",
+            "categories": [
+                "general"
+            ],
+            "relevance_score": null
+        },
+        {
+            "uuid": "5b43e7e7-4a83-4fb3-84ed-78417a08aeb6",
+            "title": "Joseph Cáceres",
+            "description": "",
+            "keywords": "",
+            "snippet": "",
+            "url": "https:\/\/merengala.blogspot.com\/feeds\/6345577926082552579\/comments\/default",
+            "image_url": "",
+            "language": "es",
+            "published_at": "2025-02-20T07:31:10.000000Z",
+            "source": "merengala.blogspot.com",
+            "categories": [
+                "general"
+            ],
+            "relevance_score": null
+        }
+    ]
+}

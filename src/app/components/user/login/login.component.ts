@@ -1,6 +1,7 @@
 import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
-import { FormControl, Validators } from '@angular/forms';
+import { FormControl, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
+import { MatInput, MatInputModule } from '@angular/material/input';
 import { merge } from 'rxjs';
 
 @Component({
@@ -8,6 +9,9 @@ import { merge } from 'rxjs';
     templateUrl: './login.component.html',
     styleUrl: './login.component.scss',
     changeDetection: ChangeDetectionStrategy.OnPush,
+    imports: [FormsModule, ReactiveFormsModule,
+      MatInputModule
+    ],
 })
 export class LoginComponent {
 

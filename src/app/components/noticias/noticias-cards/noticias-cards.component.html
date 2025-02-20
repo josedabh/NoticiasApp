@@ -4,6 +4,6 @@
       <h5 class="card-title">{{ news.title }}</h5>
       <p class="card-text">{{ news.description }}</p>
       <p>{{news.categories}}</p>
-      <a [routerLink]="['/detalles', news.uuid]" class="btn btn-primary">Leer más</a>
+      <a class="btn btn-primary" (click)="goNews(news.uuid)">Leer más</a>
   </div>
 </div>

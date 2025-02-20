@@ -16,15 +16,8 @@ export class NoticiasCarruselComponent {
   readonly #apiNoticia = inject(NoticiasApiService);
 
   constructor() {
-    this.#apiNoticia.getNews(3).subscribe({
-      next: (response) => {
-        console.log("Respuesta de la API:", response);
-        this.noticias = response.data || []; // Extrae solo el array de noticias
-      },
-      error: (err) => {
-        console.error("Error obteniendo noticias:", err);
-        this.noticias = []; // Evita que la plantilla falle
-      },
+    this.#apiNoticia.getNews(3).subscribe( (noticias) => {
+      this.noticias = noticias;
     });
   }
 }
