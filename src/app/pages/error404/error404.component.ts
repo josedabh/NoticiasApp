@@ -1,7 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { Router } from '@angular/router';
-import { ROUTES } from '../../app.routes';
+import { APP_ROUTES } from '../../app.routes';
 
 @Component({
     selector: 'app-error404',
@@ -17,6 +17,6 @@ export class Error404Component {
      * LLeva a la pagina principal
      */
     goBack(){
-        this.#router.navigate([ROUTES.NOTICIAS]);
+        this.#router.navigate([APP_ROUTES.NOTICIAS]);
     }
 }
