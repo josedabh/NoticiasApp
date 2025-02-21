@@ -1,8 +1,8 @@
 <mat-toolbar color="primary" class="navbar d-flex align-items-center">
-    <!-- Botón de menú para pantallas pequeñas -->
-    <button mat-icon-button class="d-md-none me-3" (click)="onToggleSidebar()">
-        <mat-icon>menu</mat-icon>
-    </button>
+    <!-- Botón hamburguesa para abrir el offcanvas (visible en todas las resoluciones) -->
+  <button mat-icon-button class="me-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSidebar" aria-controls="offcanvasSidebar">
+    <mat-icon>menu</mat-icon>
+  </button>
 
     <!-- Título o Logo -->
     <span class="fw-bold me-auto">ARQUICKINFO</span>
