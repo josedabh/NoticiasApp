@@ -3,9 +3,11 @@ import { FormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { ActivatedRoute, Router, ROUTES } from '@angular/router';
-import { USER_ROUTES } from '../user/user.routes';
+import { ActivatedRoute, Router } from '@angular/router';
 import { APP_ROUTES } from 'src/app/app.routes';
+
+import { USER_ROUTES } from '../user/user.routes';
+
 
 @Component({
     selector: 'app-navbar',
@@ -32,14 +34,13 @@ export class NavbarComponent {
 
   onSearch() {
     console.log('Buscando:', this.searchValue);
-    // Lógica de búsqueda
   }
 
   onLogin() {
-    this.#router.navigate([APP_ROUTES.USER,USER_ROUTES.LOGIN], { relativeTo: this.#route });
+    this.#router.navigate([APP_ROUTES.USER,USER_ROUTES.LOGIN]);
   }
 
   onRegister() {
-    this.#router.navigate([APP_ROUTES.USER, USER_ROUTES.REGISTER], { relativeTo: this.#route });
+    this.#router.navigate([APP_ROUTES.USER, USER_ROUTES.REGISTER]);
   }
 }
