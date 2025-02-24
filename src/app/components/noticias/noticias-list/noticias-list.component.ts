@@ -11,13 +11,27 @@ import { NoticiasCardsComponent } from '../noticias-cards/noticias-cards.compone
     imports: [NoticiasCarruselComponent, NoticiasCardsComponent]
 })
 export class NoticiasListComponent {
-
+  // Array para almacenar las noticias
   noticias: Noticia[] = [];
 
+  // Servicios
   readonly #apiNoticia = inject(NoticiasApiService);
 
-  constructor() {
-    this.#apiNoticia.getNews(3).subscribe((noticias) => {
+  ngOnInit() {
+    // Cargar noticias iniciales
+    this.loadNews();
+  }
+
+  // Método para cargar noticias iniciales
+  private loadNews() {
+    this.#apiNoticia.getNews(3).subscribe(noticias => {
+      this.noticias = noticias;
+    });
+  }
+
+  // Método para cargar noticias por categoría
+  loadNewsByCategory(category: string) {
+    this.#apiNoticia.getNewsByCategory(category).subscribe(noticias => {
       this.noticias = noticias;
     });
   }

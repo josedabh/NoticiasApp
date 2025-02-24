@@ -20,9 +20,6 @@ import { USER_ROUTES } from '../user/user.routes';
 export class NavbarComponent {
   @Output() toggleSidebar = new EventEmitter<void>();
 
-  /**
-   * Servicios
-   */
   readonly #router = inject(Router);
   readonly #route = inject(ActivatedRoute);
 

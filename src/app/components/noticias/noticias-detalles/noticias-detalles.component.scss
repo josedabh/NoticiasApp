@@ -3,3 +3,11 @@
 .image {
     @include image
 }
+
+.detalles{
+    margin: 30px;
+    border: 1px solid #111111;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #000000;
+    transition: all 0.3s;
+}

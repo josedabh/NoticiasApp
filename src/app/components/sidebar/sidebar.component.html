@@ -1,17 +1,14 @@
-<!-- Eliminamos la clase offcanvas-lg para que siempre sea offcanvas -->
-<div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="offcanvasSidebar" aria-labelledby="offcanvasSidebarLabel">
-  <div class="offcanvas-header">
-    <h5 class="offcanvas-title" id="offcanvasSidebarLabel">Categorías</h5>
-    <!-- Botón de cierre, se muestra siempre -->
-    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+<div class="sidebar-content">
+  <div class="title">
+    <h5>Categorías</h5>
   </div>
-  <div class="offcanvas-body">
-    <ul class="list-group">
-      @for (category of categories; track $index) {
-      <li class="list-group-item bg-dark">
-        <a class="text-white text-decoration-none">{{ category.nombre }}</a>
-      </li>
-      }
-    </ul>
-  </div>
+  <ul class="list-group">
+    @for (category of categories; track $index) {
+    <li class="list-group-item">
+      <a class="text-decoration-none" (click)="selectCategory(category.value)">
+        {{ category.nombre }}
+      </a>
+    </li>
+    }
+  </ul>
 </div>

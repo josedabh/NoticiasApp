@@ -1,9 +1,10 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { MatSidenavModule } from '@angular/material/sidenav';
 import { RouterOutlet } from '@angular/router';
 
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
-import { MatSidenavModule } from '@angular/material/sidenav';
+import { NoticiasApiService } from './shared/services/noticias-api.service';
 
 @Component({
     selector: 'app-root',
@@ -14,15 +15,22 @@ import { MatSidenavModule } from '@angular/material/sidenav';
     ]
 })
 export class AppComponent {
-    isDesktop = true;
+    isSidebarOpen = false;
 
-    ngOnInit(): void {
-        this.onResize();
+    //Servicios
+    readonly #apiNoticia = inject(NoticiasApiService);
+
+    /**
+     * Método para manejar el evento de redimensión de la ventana
+     */
+    toggleSidebar() {
+        this.isSidebarOpen = !this.isSidebarOpen;
     }
 
-    // Detectar cambios de tamaño para mostrar el sidebar abierto o cerrado
-    @HostListener('window:resize', [])
-    onResize() {
-        this.isDesktop = window.innerWidth >= 992; // breakpoint "lg" de Bootstrap
+    /**
+     * Método para manejar el evento de selección de categoría
+     */
+    onCategorySelected(category: string) {
+        this.#apiNoticia.getNewsByCategory(category).subscribe();
     }
 }

@@ -1,4 +1,18 @@
-<app-navbar></app-navbar>
-<app-sidebar></app-sidebar>
+<mat-sidenav-container class="sidenav-container">
+    <!-- Sidebar -->
+    <mat-sidenav mode="side" [opened]="isSidebarOpen">
+        <app-sidebar [isOpen]="isSidebarOpen" 
+        (closeSidebar)="toggleSidebar()"
+        (categorySelected)="onCategorySelected($event)"></app-sidebar>
+    </mat-sidenav>
 
-<router-outlet></router-outlet>
+    <!-- Contenido principal -->
+    <mat-sidenav-content [class.shrinked]="isSidebarOpen">
+        <app-navbar (toggleSidebar)="toggleSidebar()"></app-navbar>
+
+        <!-- Contenido dinámico -->
+        <div class="content">
+            <router-outlet></router-outlet>
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>

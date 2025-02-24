@@ -29,11 +29,23 @@ export class NoticiasApiService {
   //     map(response => response.data)
   //   );
   // }
+  /**
+   * Llamada a la API para obtener una noticia por su uuid
+   * @param uuid 
+   * @returns 
+   */
   getNewsByUuid(uuid: string) {
     const url = "assets/api/noticia.json";
     return this.#http.get<ApiNews>(url).pipe(
       map(response => response.data),
       map((noticias) => noticias.find((noticia) => noticia.uuid === uuid))
+    );
+  }
+
+  getNewsByCategory(category: string) {
+    const url = `${this.#apiUrl}/headlines?api_token=${this.#tokenApi}&language=es&categories=${category}`;
+    return this.#http.get<ApiNews>(url).pipe(
+      map((response) => response.data)
     );
   }
 }

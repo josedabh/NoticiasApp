@@ -11,11 +11,17 @@ import { Noticia } from '../../../shared/utils/data';
 })
 export class NoticiasCardsComponent {
 
+  // Input que recibe una noticia individual para mostrar
   @Input() news!: Noticia;
 
+  // Servicios
   readonly #route = inject(ActivatedRoute);
   readonly #router = inject(Router);
 
+  /**
+   * Método para navegar a los detalles de una noticia
+   * @param uuid - Identificador único de la noticia
+   */
   goNews(uuid: string) {
     this.#router.navigate([`detalles/${uuid}`], {relativeTo: this.#route});
   }

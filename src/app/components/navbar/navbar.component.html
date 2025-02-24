@@ -1,16 +1,15 @@
 <mat-toolbar color="primary" class="navbar d-flex align-items-center">
-    <!-- Botón hamburguesa para abrir el offcanvas (visible en todas las resoluciones) -->
-  <button mat-icon-button class="me-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSidebar" aria-controls="offcanvasSidebar">
-    <mat-icon>menu</mat-icon>
-  </button>
+    <!-- Botón hamburguesa -->
+    <button mat-icon-button (click)="onToggleSidebar()">
+        <mat-icon>menu</mat-icon>
+    </button>
 
     <!-- Título o Logo -->
     <span class="fw-bold me-auto">ARQUICKINFO</span>
 
     <!-- Buscador -->
     <div class="d-flex align-items-center bg-white rounded px-2">
-        <input matInput placeholder="Buscar noticias..." 
-        [(ngModel)]="searchValue" class="form-control border-0" />
+        <input matInput placeholder="Buscar noticias..." [(ngModel)]="searchValue" class="form-control border-0" />
         <button mat-button color="accent" (click)="onSearch()">
             <mat-icon>search</mat-icon>
         </button>

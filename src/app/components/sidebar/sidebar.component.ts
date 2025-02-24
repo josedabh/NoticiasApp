@@ -1,6 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
-import { MatSidenavModule } from '@angular/material/sidenav';
 
 interface Categories {
   value: string;
@@ -11,12 +10,17 @@ interface Categories {
     selector: 'app-sidebar',
     templateUrl: './sidebar.component.html',
     styleUrl: './sidebar.component.scss',
-    imports: [MatIconModule, MatSidenavModule]
+    imports: [MatIconModule]
 })
 export class SidebarComponent {
+  // Input para controlar si el sidebar está abierto
   @Input() isOpen = false;
+  // Output para cerrar el sidebar
   @Output() closeSidebar = new EventEmitter<void>();
+  // Output para seleccionar categoria
+  @Output() categorySelected = new EventEmitter<string>();
 
+  // Array con las categorías disponibles
   categories: Categories[]= [
     { value: 'general', nombre: 'General' },
     { value: 'tech', nombre: 'Tecnología' },
@@ -29,4 +33,12 @@ export class SidebarComponent {
     { value: 'food', nombre: 'Comida' },
     { value: 'travel', nombre: 'Viajes' },
   ];
+
+  /**
+   * Método para seleccionar categoría y emitir evento
+   */
+  selectCategory(category: string) {
+    this.categorySelected.emit(category);
+  }
+  
 }

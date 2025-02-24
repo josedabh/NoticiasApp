@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterLink } from '@angular/router';
 import { NoticiasApiService } from 'src/app/shared/services/noticias-api.service';
 import { Noticia } from 'src/app/shared/utils/data';
 
@@ -11,13 +11,17 @@ import { Noticia } from 'src/app/shared/utils/data';
 })
 export class NoticiasDetallesComponent {
 
+    //Servicios
     readonly #route = inject(ActivatedRoute);
     readonly #apiNoticias = inject(NoticiasApiService);
 
+    //Constantes
     noticia!: Noticia;
 
     constructor() {
+        // Obtener el UUID de los parámetros de la URL
         const uuid = this.#route.snapshot.paramMap.get('uuid');
+        //Si existe el UUID te muestra la noticia sino te pone no encontrada
         if (uuid) {
             this.#apiNoticias.getNewsByUuid(uuid).subscribe((noticia) => {
                 if (noticia) {
@@ -31,6 +35,10 @@ export class NoticiasDetallesComponent {
         }
     }
 
+    /**
+     * Método privado para establecer una noticia por defecto
+     * cuando no se encuentra la noticia solicitada
+     */
     private setNoticiaNoEncontrada() {
         this.noticia = {
             uuid: '',
@@ -46,5 +54,10 @@ export class NoticiasDetallesComponent {
             url: 'https://www.google.com',
             language: 'es'
         };
+    }
+
+    //Va hacias atras
+    goBack() {
+        window.history.back();
     }
 }
