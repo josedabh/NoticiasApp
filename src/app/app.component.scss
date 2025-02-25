@@ -11,5 +11,7 @@ mat-sidenav-content {
 }
 
 .content {
-    padding: 1rem;
+    display: grid;
+    place-items: center;
+    width: 100%;
 }

@@ -24,3 +24,12 @@ export interface Noticia {
     categories: string[]
     relevance_score: any
 }
+
+export interface User {
+    id: number;
+    username: string;
+    email: string;
+    password: string;
+    role: 'admin' | 'user';
+    avatar?: string;
+}

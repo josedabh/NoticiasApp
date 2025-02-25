@@ -5,22 +5,50 @@
     </button>
 
     <!-- Título o Logo -->
-    <span class="fw-bold me-auto">ARQUICKINFO</span>
+    <a class="fw-bold me-auto" (click)="goPagPrincipal()">ARQUICKINFO</a>
 
     <!-- Buscador -->
     <div class="d-flex align-items-center bg-white rounded px-2">
-        <input matInput placeholder="Buscar noticias..." [(ngModel)]="searchValue" class="form-control border-0" />
-        <button mat-button color="accent" (click)="onSearch()">
-            <mat-icon>search</mat-icon>
-        </button>
+        <input type="text" class="form-control border-0" [(ngModel)]="searchValue" placeholder="Buscar noticias..."
+            (keyup.enter)="onSearch()">
+        <mat-icon class="text-primary" role="button" (click)="onSearch()">search</mat-icon>
     </div>
 
     <!-- Botón de usuario con menú desplegable -->
-    <button mat-icon-button [matMenuTriggerFor]="userMenu" class="ms-3">
-        <mat-icon>account_circle</mat-icon>
-    </button>
-    <mat-menu #userMenu="matMenu">
-        <button mat-menu-item (click)="onLogin()">Iniciar Sesión</button>
-        <button mat-menu-item (click)="onRegister()">Registrarse</button>
-    </mat-menu>
+    <div class="ms-3">
+        @if (currentUser$ | async; as user) {
+        <!-- Usuario autenticado -->
+        <button mat-icon-button [matMenuTriggerFor]="userMenu">
+            <mat-icon>account_circle</mat-icon>
+        </button>
+        <mat-menu #userMenu="matMenu">
+            <div class="px-3 py-2 text-center">
+                <img [src]="user.avatar" [alt]="user.username" class="rounded-circle" width="40" height="40">
+                <p class="mb-0 mt-1">{{user.username}}</p>
+                <small class="text-muted">{{user.role}}</small>
+            </div>
+            <mat-divider></mat-divider>
+            <button mat-menu-item (click)="onInfoUser()">
+                <mat-icon>person</mat-icon>
+                <span>Mi Perfil</span>
+            </button>
+            <button mat-menu-item (click)="onLogout()">
+                <mat-icon>exit_to_app</mat-icon>
+                <span>Cerrar Sesión</span>
+            </button>
+        </mat-menu>
+        } @else {
+        <!-- Usuario no autenticado -->
+        <div class="d-flex gap-2">
+            <button mat-raised-button (click)="onLogin()">
+                <mat-icon>login</mat-icon>
+                Iniciar Sesión
+            </button>
+            <button mat-stroked-button color="accent" (click)="onRegister()">
+                <mat-icon>person_add</mat-icon>
+                Registrarse
+            </button>
+        </div>
+        }
+    </div>
 </mat-toolbar>

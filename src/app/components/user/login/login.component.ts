@@ -1,10 +1,12 @@
-import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { FormControl, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
+import { Router } from '@angular/router';
 import { merge } from 'rxjs';
+import { APP_ROUTES } from 'src/app/app.routes';
 
 @Component({
     selector: 'app-login',
@@ -16,6 +18,8 @@ import { merge } from 'rxjs';
     ],
 })
 export class LoginComponent {
+
+  readonly #router = inject(Router);
 
   readonly email = new FormControl('', [Validators.required, Validators.email]);
 
@@ -40,5 +44,9 @@ export class LoginComponent {
   clickEvent(event: MouseEvent) {
     this.hide.set(!this.hide());
     event.stopPropagation();
+  }
+
+  goPag(){
+    this.#router.navigate([APP_ROUTES.NOTICIAS]);
   }
 }

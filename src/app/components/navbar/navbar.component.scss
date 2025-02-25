@@ -10,4 +10,14 @@
     .form-control {
         min-width: 200px;
     }
+
+    .user-menu-header {
+        min-width: 200px;
+    }
+
+    .mat-menu-item {
+        .mat-icon {
+            margin-right: 8px;
+        }
+    }
 }
