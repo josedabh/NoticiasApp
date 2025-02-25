@@ -10,7 +10,6 @@ export class AuthService {
   private mockUsers: User[] = [
     {
       id: 1,
-      username: 'admin',
       firstName: 'Admin',
       lastName: 'Usuario',
       email: 'admin@example.com',
@@ -21,7 +20,6 @@ export class AuthService {
     },
     {
       id: 2,
-      username: 'user',
       firstName: 'Usuario',
       lastName: 'Normal',
       email: 'user@example.com',

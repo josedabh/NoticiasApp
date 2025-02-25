@@ -9,6 +9,7 @@ import { merge } from 'rxjs';
 import { APP_ROUTES } from 'src/app/app.routes';
 import { USER_ROUTES } from '../user.routes';
 import { AuthService } from 'src/app/shared/services/auth.service';
+import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 
 @Component({
     selector: 'app-login',
@@ -21,12 +22,15 @@ import { AuthService } from 'src/app/shared/services/auth.service';
       ReactiveFormsModule,
       MatInputModule, 
       MatButtonModule, 
-      MatIconModule
+      MatIconModule,
+      MatSnackBarModule
     ],
 })
 export class LoginComponent {
-  private readonly authService = inject(AuthService);
-  private readonly router = inject(Router);
+  //Servicios
+  readonly authService = inject(AuthService);
+  readonly #router = inject(Router);
+  readonly #snackBar = inject(MatSnackBar);
 
   loginForm = new FormGroup({
     email: new FormControl('', [Validators.required, Validators.email]),
@@ -47,10 +51,15 @@ export class LoginComponent {
     if (this.loginForm.valid) {
       const { email, password } = this.loginForm.value;
       if (this.authService.login(email!, password!)) {
-        // Navegamos a la página de información del usuario después del login exitoso
-        this.router.navigate([APP_ROUTES.USER, USER_ROUTES.INFOUSUARIO]);
+        this.#router.navigate([APP_ROUTES.USER, USER_ROUTES.INFOUSUARIO]);
       } else {
         this.errorMessage.set('Email o contraseña incorrectos');
+        this.#snackBar.open('Email o contraseña incorrectos', 'Cerrar', {
+          duration: 3000,
+          horizontalPosition: 'center',
+          verticalPosition: 'top',
+          panelClass: ['error-snackbar']
+        });
       }
     }
   }

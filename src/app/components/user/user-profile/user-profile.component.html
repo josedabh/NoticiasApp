@@ -1,7 +1,7 @@
 @if (user$ | async; as user) {
     <mat-card class="profile-card">
       <mat-card-header>
-        <img [src]="user.avatar" [alt]="user.username" class="profile-avatar">
+        <img [src]="user.avatar" [alt]="user.firstName" class="profile-avatar">
         <mat-card-title>{{ user.firstName }} {{ user.lastName }}</mat-card-title>
       </mat-card-header>
       <mat-card-content>

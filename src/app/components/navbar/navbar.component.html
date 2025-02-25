@@ -23,9 +23,8 @@
         </button>
         <mat-menu #userMenu="matMenu">
             <div class="px-3 py-2 text-center">
-                <img [src]="user.avatar" [alt]="user.username" class="rounded-circle" width="40" height="40">
-                <p class="mb-0 mt-1">{{user.username}}</p>
-                <small class="text-muted">{{user.role}}</small>
+                <img [src]="user.avatar" [alt]="user.firstName" class="rounded-circle" width="40" height="40">
+                <p class="mb-0 mt-1">{{user.firstName}}</p>
             </div>
             <mat-divider></mat-divider>
             <button mat-menu-item (click)="onInfoUser()">

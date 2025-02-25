@@ -49,7 +49,6 @@ export class RegisterComponent {
     if (this.isFormValid()) {
       const newUser: User = {
         id: Math.floor(Math.random() * 1000),
-        username: `${this.nombre.value} ${this.apellidos.value}`,
         firstName: this.nombre.value!,
         lastName: this.apellidos.value!,
         email: this.email.value!,

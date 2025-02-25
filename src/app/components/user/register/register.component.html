@@ -1,7 +1,7 @@
 <div class="contenedor">
     <h1>Registro</h1>
     <br>
-    <form>
+    <form (ngSubmit)="onSubmit()" (keydown.enter)="onSubmit()">
         <div class="formulario">
             <!--Nombre-->
             <mat-form-field>
@@ -90,9 +90,10 @@
         </mat-checkbox>
     
         <!--Botón registrar-->
-        <button class="btn btn-primary" type="submit" 
-        [disabled]="!isFormValid()" (click)="onSubmit()">
-            Registrarse
+        <button class="btn btn-primary" 
+        type="submit" 
+        [disabled]="!isFormValid()">
+        Registrarse
         </button>
 
         <!--Link a Login-->
