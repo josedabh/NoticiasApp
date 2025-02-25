@@ -37,19 +37,59 @@
             "relevance_score": null
         },
         {
-            "uuid": "5b43e7e7-4a83-4fb3-84ed-78417a08aeb6",
-            "title": "Joseph Cáceres",
-            "description": "",
-            "keywords": "",
-            "snippet": "",
-            "url": "https:\/\/merengala.blogspot.com\/feeds\/6345577926082552579\/comments\/default",
-            "image_url": "",
+            "uuid": "8d43e7e7-5b83-4fb3-84ed-78417a08aeb7",
+            "title": "La IA revoluciona el diagnóstico médico en hospitales españoles",
+            "description": "Un nuevo sistema de inteligencia artificial implementado en varios hospitales españoles ha demostrado una precisión del 95% en la detección temprana de enfermedades. Los médicos destacan su capacidad para analizar miles de imágenes médicas en minutos, reduciendo significativamente los tiempos de diagnóstico.",
+            "keywords": "IA, medicina, diagnóstico, hospitales, España",
+            "snippet": "El nuevo sistema de IA ha demostrado una precisión sin precedentes en el diagnóstico temprano de enfermedades, revolucionando la atención médica en España",
+            "url": "https://salud-digital.es/ia-revoluciona-diagnostico-medico",
+            "image_url": "https://picsum.photos/800/400?random=7",
             "language": "es",
-            "published_at": "2025-02-20T07:31:10.000000Z",
-            "source": "merengala.blogspot.com",
-            "categories": [
-                "general"
-            ],
+            "published_at": "2025-02-20T08:15:00.000000Z",
+            "source": "salud-digital.es",
+            "categories": ["tecnología", "salud"],
+            "relevance_score": null
+        },
+        {
+            "uuid": "9c54f8e8-6b94-5gc4-95fe-89528b19bfc8",
+            "title": "España lidera la transición a energías renovables en Europa",
+            "description": "España ha alcanzado un nuevo récord en producción de energía renovable, cubriendo el 75% de la demanda eléctrica nacional durante el último trimestre. Este logro posiciona al país como líder europeo en la transición energética, superando los objetivos establecidos para 2025.",
+            "keywords": "energía renovable, España, sostenibilidad, medio ambiente",
+            "snippet": "España alcanza un hito histórico en producción de energía renovable, estableciendo un nuevo estándar para Europa",
+            "url": "https://energia-sostenible.es/espana-lider-renovables",
+            "image_url": "https://picsum.photos/800/400?random=8",
+            "language": "es",
+            "published_at": "2025-02-20T09:00:00.000000Z",
+            "source": "energia-sostenible.es",
+            "categories": ["economía", "medio ambiente"],
+            "relevance_score": null
+        },
+        {
+            "uuid": "7e65g9f9-7c05-6hd5-06gf-90639c20cgd9",
+            "title": "Real Madrid presenta su nueva ciudad deportiva inteligente",
+            "description": "El Real Madrid ha inaugurado su nueva ciudad deportiva equipada con tecnología de última generación. Las instalaciones incluyen sistemas de análisis deportivo basados en IA, campos inteligentes que monitorizan el rendimiento de los jugadores en tiempo real y un centro médico robotizado.",
+            "keywords": "Real Madrid, deportes, tecnología, instalaciones deportivas",
+            "snippet": "La nueva ciudad deportiva del Real Madrid establece un nuevo estándar en instalaciones deportivas inteligentes",
+            "url": "https://deportes-futuro.es/real-madrid-ciudad-deportiva",
+            "image_url": "https://picsum.photos/800/400?random=9",
+            "language": "es",
+            "published_at": "2025-02-20T10:30:00.000000Z",
+            "source": "deportes-futuro.es",
+            "categories": ["deportes", "tecnología"],
+            "relevance_score": null
+        },
+        {
+            "uuid": "6f76h0g0-8d16-7ie6-17hg-01740d31dhe0",
+            "title": "Descubren una nueva especie marina en las costas españolas",
+            "description": "Científicos del CSIC han descubierto una nueva especie de coral fluorescente en las costas del Mediterráneo español. El hallazgo, considerado de gran importancia para la biodiversidad marina, podría tener aplicaciones en la medicina regenerativa debido a sus propiedades únicas.",
+            "keywords": "ciencia, biología marina, investigación, España",
+            "snippet": "El descubrimiento de esta nueva especie de coral fluorescente abre nuevas posibilidades en la investigación médica",
+            "url": "https://ciencia-marina.es/nuevo-coral-mediterraneo",
+            "image_url": "https://picsum.photos/800/400?random=10",
+            "language": "es",
+            "published_at": "2025-02-20T11:45:00.000000Z",
+            "source": "ciencia-marina.es",
+            "categories": ["ciencia", "medio ambiente"],
             "relevance_score": null
         }
     ]

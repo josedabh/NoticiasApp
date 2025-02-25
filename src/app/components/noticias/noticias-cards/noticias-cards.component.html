@@ -3,7 +3,7 @@
   <div class="card-body">
       <h5 class="card-title">{{ news.title }}</h5>
       <p class="card-text">{{ news.description }}</p>
-      <p>{{news.categories}}</p>
+      <p class="categories">{{news.categories.join(', ')}}</p>
       <a class="btn btn-primary" (click)="goNews(news.uuid)">Leer más</a>
   </div>
 </div>

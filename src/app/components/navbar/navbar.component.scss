@@ -39,30 +39,49 @@
     .auth-container {
         margin-left: auto;
 
-        ::ng-deep .mat-mdc-menu-panel {
-            min-width: 200px !important;
-        }
-
-        .user-menu-header {
-            display: grid;
-            place-items: center;
-            
-            img {
-                display: block;
-                margin: 1rem auto;
-                width: 60px;
-                height: 60px;
-                border-radius: 50%;
-                object-fit: cover;
-                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        ::ng-deep {
+            .mat-mdc-menu-panel {
+                min-width: 200px !important;
             }
 
-            p {
-                margin: 0;
-                font-weight: 500;
-                color: rgba(0, 0, 0, 0.87);
-                width: 100%;
-                text-align: center;
+            .mat-mdc-menu-content {
+                padding: 0 !important;
+
+                .user-menu-header {
+                    position: relative;
+                    display: grid;
+                    place-items: center;
+                    width: 100%;
+                    padding: 16px;
+                    text-align: center;
+                    background: none;
+                    margin: 0;
+
+                    &:hover {
+                        background: none;
+                    }
+
+                    .user-avatar {
+                        width: 32px;
+                        height: 32px;
+                        border-radius: 50%;
+                        object-fit: cover;
+                        display: block;
+                        margin: 0 auto 8px;
+                        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                    }
+
+                    p {
+                        width: 100%;
+                        text-align: center;
+                        margin: 0;
+                        padding: 0;
+                        font-size: 14px;
+                        font-weight: 500;
+                        color: rgba(0, 0, 0, 0.87);
+                        line-height: 1.2;
+                    }
+                }
             }
         }
 
