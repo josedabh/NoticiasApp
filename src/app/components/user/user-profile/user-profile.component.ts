@@ -1,12 +1,16 @@
-import { CommonModule } from '@angular/common';
+import { AsyncPipe, CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
 
 import { AuthService } from '../../../shared/services/auth.service';
+import { MatCardModule } from '@angular/material/card';
+import { MatIconModule } from '@angular/material/icon';
+import { MatChipsModule } from '@angular/material/chips';
 
 @Component({
   selector: 'app-user-profile',
   standalone: true,
-  imports: [CommonModule],
+  imports: [MatCardModule,MatIconModule, 
+    MatChipsModule, AsyncPipe],
   templateUrl: './user-profile.component.html',
   styleUrl: './user-profile.component.scss'
 })

@@ -1,45 +1,25 @@
-<div class="container mt-4" *ngIf="user$ | async as user">
-    <div class="card">
-        <div class="card-header bg-primary text-white">
-            <h3>Perfil de Usuario</h3>
+@if (user$ | async; as user) {
+    <mat-card class="profile-card">
+      <mat-card-header>
+        <img [src]="user.avatar" [alt]="user.username" class="profile-avatar">
+        <mat-card-title>{{ user.firstName }} {{ user.lastName }}</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <div class="profile-info">
+          <p><mat-icon>email</mat-icon> {{ user.email }}</p>
+          <div class="categories-section">
+            <h3>Categorías de interés</h3>
+            <mat-chip-set>
+              @for (category of user.categories; track category) {
+                <mat-chip>{{ category }}</mat-chip>
+              }
+            </mat-chip-set>
+          </div>
+          <p class="newsletter">
+            <mat-icon>{{ user.newsletter ? 'mark_email_read' : 'mark_email_unread' }}</mat-icon>
+            Newsletter: {{ user.newsletter ? 'Suscrito' : 'No suscrito' }}
+          </p>
         </div>
-        <div class="card-body">
-            <div class="row">
-                <div class="col-md-4 text-center">
-                    <img [src]="user.avatar" alt="Avatar" class="rounded-circle img-fluid mb-3"
-                        style="width: 150px; height: 150px;">
-                </div>
-                <div class="col-md-8">
-                    <h4>Información Personal</h4>
-                    <hr>
-                    <div class="row">
-                        <div class="col-sm-3">
-                            <p class="mb-0">Usuario:</p>
-                        </div>
-                        <div class="col-sm-9">
-                            <p class="text-muted mb-0">{{user.username}}</p>
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="row">
-                        <div class="col-sm-3">
-                            <p class="mb-0">Email:</p>
-                        </div>
-                        <div class="col-sm-9">
-                            <p class="text-muted mb-0">{{user.email}}</p>
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="row">
-                        <div class="col-sm-3">
-                            <p class="mb-0">Rol:</p>
-                        </div>
-                        <div class="col-sm-9">
-                            <p class="text-muted mb-0">{{user.role}}</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+      </mat-card-content>
+    </mat-card>
+  }

@@ -1,6 +1,6 @@
 @use "mixins/user" as *;
 
-.contenedor {
+.login-container {
     margin-top: 100px;
     @include contenedor($color: #a7a7a7, $maxWidth:400px);
 }

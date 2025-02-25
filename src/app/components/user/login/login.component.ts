@@ -1,52 +1,73 @@
 import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
-import { FormControl, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
+import { FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { Router } from '@angular/router';
 import { merge } from 'rxjs';
 import { APP_ROUTES } from 'src/app/app.routes';
+import { USER_ROUTES } from '../user.routes';
+import { AuthService } from 'src/app/shared/services/auth.service';
 
 @Component({
     selector: 'app-login',
     templateUrl: './login.component.html',
     styleUrl: './login.component.scss',
     changeDetection: ChangeDetectionStrategy.OnPush,
-    imports: [FormsModule, ReactiveFormsModule,
-      MatInputModule, MatButtonModule, MatIconModule
+    standalone: true,
+    imports: [
+      FormsModule, 
+      ReactiveFormsModule,
+      MatInputModule, 
+      MatButtonModule, 
+      MatIconModule
     ],
 })
 export class LoginComponent {
+  private readonly authService = inject(AuthService);
+  private readonly router = inject(Router);
 
-  readonly #router = inject(Router);
-
-  readonly email = new FormControl('', [Validators.required, Validators.email]);
+  loginForm = new FormGroup({
+    email: new FormControl('', [Validators.required, Validators.email]),
+    password: new FormControl('', [Validators.required])
+  });
 
   errorMessage = signal('');
+  hide = signal(true);
 
   constructor() {
-    merge(this.email.statusChanges, this.email.valueChanges)
+    merge(this.loginForm.get('email')!.statusChanges, 
+          this.loginForm.get('email')!.valueChanges)
       .pipe(takeUntilDestroyed())
       .subscribe(() => this.updateErrorMessage());
   }
 
+  onSubmit() {
+    if (this.loginForm.valid) {
+      const { email, password } = this.loginForm.value;
+      if (this.authService.login(email!, password!)) {
+        // Navegamos a la página de información del usuario después del login exitoso
+        this.router.navigate([APP_ROUTES.USER, USER_ROUTES.INFOUSUARIO]);
+      } else {
+        this.errorMessage.set('Email o contraseña incorrectos');
+      }
+    }
+  }
+
   updateErrorMessage() {
-    if (this.email.hasError('required')) {
-      this.errorMessage.set('You must enter a value');
-    } else if (this.email.hasError('email')) {
-      this.errorMessage.set('Not a valid email');
+    const emailControl = this.loginForm.get('email')!;
+    if (emailControl.hasError('required')) {
+      this.errorMessage.set('El email es requerido');
+    } else if (emailControl.hasError('email')) {
+      this.errorMessage.set('El email no es válido');
     } else {
       this.errorMessage.set('');
     }
   }
-  hide = signal(true);
-  clickEvent(event: MouseEvent) {
-    this.hide.set(!this.hide());
-    event.stopPropagation();
-  }
 
-  goPag(){
-    this.#router.navigate([APP_ROUTES.NOTICIAS]);
+  togglePassword(event: MouseEvent) {
+    this.hide.update(value => !value);
+    event.preventDefault();
   }
 }

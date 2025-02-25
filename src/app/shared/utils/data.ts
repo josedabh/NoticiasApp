@@ -30,6 +30,9 @@ export interface User {
     username: string;
     email: string;
     password: string;
-    role: 'admin' | 'user';
-    avatar?: string;
+    firstName: string;
+    lastName: string;
+    avatar: string;
+    categories: string[];
+    newsletter: boolean;
 }

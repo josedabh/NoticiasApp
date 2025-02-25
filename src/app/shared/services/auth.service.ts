@@ -11,18 +11,24 @@ export class AuthService {
     {
       id: 1,
       username: 'admin',
+      firstName: 'Admin',
+      lastName: 'Usuario',
       email: 'admin@example.com',
       password: 'admin',
-      role: 'admin',
-      avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=admin'
+      avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=admin',
+      categories: ['Tecnología', 'Negocios', 'Ciencia'],
+      newsletter: true
     },
     {
       id: 2,
       username: 'user',
+      firstName: 'Usuario',
+      lastName: 'Normal',
       email: 'user@example.com',
       password: 'user',
-      role: 'user',
-      avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=user'
+      avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=user',
+      categories: ['Deportes', 'Entretenimiento'],
+      newsletter: false
     }
   ];
 
@@ -51,5 +57,18 @@ export class AuthService {
     this.currentUserSubject.next(null);
     // Opcional: limpiar cualquier dato almacenado en localStorage si lo usas
     localStorage.removeItem('currentUser');
+  }
+
+  register(newUser: User): boolean {
+    // Verificar si el email ya existe
+    if (this.mockUsers.some(user => user.email === newUser.email)) {
+      return false;
+    }
+    
+    // Agregar el nuevo usuario
+    this.mockUsers.push(newUser);
+    // Autenticar al usuario automáticamente
+    this.currentUserSubject.next(newUser);
+    return true;
   }
 }
