@@ -27,11 +27,26 @@ export interface Noticia {
 
 export interface User {
     id: number;
-    email: string;
-    password: string;
     firstName: string;
     lastName: string;
+    email: string;
+    password: string;
     avatar: string;
     categories: string[];
     newsletter: boolean;
 }
+
+export interface Category {
+    value: string;
+    name: string;
+}
+
+export const CATEGORIES: Category[] = [
+    { value: 'sports', name: 'Deportes' },
+    { value: 'tech', name: 'Tecnología' },
+    { value: 'business', name: 'Economía' },
+    { value: 'politics', name: 'Política' },
+    { value: 'entertainment', name: 'Entretenimiento' },
+    { value: 'science', name: 'Ciencia' },
+    { value: 'health', name: 'Salud' }
+];

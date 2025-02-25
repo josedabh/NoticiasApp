@@ -73,13 +73,11 @@
             <mat-form-field>
                 <mat-label>Categorías de interés</mat-label>
                 <mat-select [formControl]="categorias" multiple>
-                    <mat-option value="deportes">Deportes</mat-option>
-                    <mat-option value="tecnologia">Tecnología</mat-option>
-                    <mat-option value="economia">Economía</mat-option>
-                    <mat-option value="politica">Política</mat-option>
-                    <mat-option value="entretenimiento">Entretenimiento</mat-option>
-                    <mat-option value="ciencia">Ciencia</mat-option>
-                    <mat-option value="salud">Salud</mat-option>
+                    @for (category of categories; track category.value) {
+                        <mat-option [value]="category.value">
+                            {{category.name}}
+                        </mat-option>
+                    }
                 </mat-select>
             </mat-form-field>
         </div>

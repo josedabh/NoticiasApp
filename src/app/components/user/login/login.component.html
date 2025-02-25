@@ -1,6 +1,7 @@
 <div class="login-container">
   <h1>Iniciar Sesión</h1>
-  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()"
+  (keydown.enter)="onSubmit()">
     <mat-form-field>
       <mat-label>Email</mat-label>
       <input matInput formControlName="email" required>

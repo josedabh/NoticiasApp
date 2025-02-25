@@ -1,23 +1,80 @@
 .navbar {
-    // Ajusta estilos del mat-toolbar
     display: flex;
-    justify-content: flex-start;
+    align-items: center;
+    padding: 0 1rem;
+    height: 64px;
 
-    .mat-icon {
-        vertical-align: middle;
+    .brand {
+        text-decoration: none;
+        color: rgb(217, 89, 89);
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-right: 2rem;
+        cursor: pointer;
+
+        &:hover {
+            opacity: 0.9;
+        }
     }
 
-    .form-control {
-        min-width: 200px;
-    }
+    .search-container {
+        flex: 1;
+        max-width: 600px;
+        margin: 0 2rem;
 
-    .user-menu-header {
-        min-width: 200px;
-    }
+        .form-control {
+            min-width: 200px;
+            height: 40px;
+        }
 
-    .mat-menu-item {
         .mat-icon {
-            margin-right: 8px;
+            cursor: pointer;
+
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+    }
+
+    .auth-container {
+        margin-left: auto;
+
+        ::ng-deep .mat-mdc-menu-panel {
+            min-width: 200px !important;
+        }
+
+        .user-menu-header {
+            display: grid;
+            place-items: center;
+            
+            img {
+                display: block;
+                margin: 1rem auto;
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+                object-fit: cover;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            }
+
+            p {
+                margin: 0;
+                font-weight: 500;
+                color: rgba(0, 0, 0, 0.87);
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+        .mat-menu-item {
+            .mat-icon {
+                margin-right: 8px;
+            }
+        }
+
+        .auth-buttons {
+            display: flex;
+            gap: 1rem;
         }
     }
 }
