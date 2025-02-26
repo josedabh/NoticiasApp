@@ -1,27 +1,45 @@
-# NoticiasApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.11.
+# NoticiasApp 📰⛅
 
-## Development server
+Aplicación Angular para visualizar noticias y datos meteorológicos, integrando una API externa y un mock local.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Documentación
 
-## Code scaffolding
+La documentación se encuentra en Documentación del Proyecto Angular (1). 
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+---
 
-## Build
+## 📌 Tabla de Contenidos
+- [Información del Proyecto](#-información-del-proyecto)
+- [Instalación y Configuración](#⚙️-instalación-y-configuración)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+---
 
-## Running unit tests
+## 🚀 Información del Proyecto
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- **Versión**: 1.0.0  
+- **Autor**: José Daniel Bravo Heredia  
+- **Repositorio**: [GitHub](https://github.com/josedabh/NoticiasApp)  
+- **Tecnologías**:  
+  ![Angular](https://img.shields.io/badge/Angular-DD0031?style=flat&logo=angular&logoColor=white)
+  ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=typescript&logoColor=white)
+  ![RxJS](https://img.shields.io/badge/RxJS-B7178C?style=flat&logo=reactivex&logoColor=white)
+  ![Angular Material](https://img.shields.io/badge/Angular_Material-3F51B5?style=flat&logo=angular&logoColor=white)
 
-## Running end-to-end tests
+---
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## ⚙️ Instalación y Configuración
 
-## Further help
+### Requisitos Previos
+- Node.js >= 20.x.x
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+### Pasos para Ejecutar
+```bash
+git clone https://github.com/josedabh/NoticiasApp
+cd NoticiasApp
+npm install
+ng serve
+```
+**Acceso**: [http://localhost:4200](http://localhost:4200)
+
+---
