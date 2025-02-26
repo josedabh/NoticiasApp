@@ -1,6 +1,7 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output, inject } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 import { CATEGORIES, Category } from 'src/app/shared/utils/data';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-sidebar',
@@ -14,13 +15,14 @@ export class SidebarComponent {
   // Output para cerrar el sidebar
   @Output() closeSidebar = new EventEmitter<void>();
 
+  readonly #router = inject(Router);
   categories:Category[] = CATEGORIES;
 
   /**
    * Método para seleccionar categoría y emitir evento
    */
   selectCategory(category: string) {
-    this.#router.navigate(['/categoria', category]);
+    this.#router.navigate(['/noticias/categoria', category]);
     this.closeSidebar.emit();
   }
   

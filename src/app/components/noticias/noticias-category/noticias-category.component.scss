@@ -1,3 +1,9 @@
+@use "mixins/user" as *;
+
+.category-container{
+    @include contenedor($color:#acbfff, $maxWidth:auto)
+}
+
 .card {
     height: 100%;
     transition: transform 0.2s;

@@ -26,11 +26,4 @@ export class AppComponent {
     toggleSidebar() {
         this.isSidebarOpen = !this.isSidebarOpen;
     }
-
-    /**
-     * Método para manejar el evento de selección de categoría
-     */
-    onCategorySelected(category: string) {
-        this.#apiNoticia.getNewsByCategory(category).subscribe();
-    }
 }

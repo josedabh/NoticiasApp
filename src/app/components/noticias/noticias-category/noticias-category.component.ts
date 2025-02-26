@@ -13,6 +13,7 @@ import { NoticiasCardsComponent } from '../noticias-cards/noticias-cards.compone
   styleUrl: './noticias-category.component.scss',
   imports: [NoticiasCardsComponent]
 })
+
 export class NoticiasCategoryComponent {
 
   readonly #router = inject(Router);
@@ -42,7 +43,7 @@ export class NoticiasCategoryComponent {
       }
     });
 
-
+  }
   /**
    * Método para navegar a la lista de noticias
    */

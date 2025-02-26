@@ -6,15 +6,6 @@
 
     <!-- Título o Logo -->
     <a class="brand" (click)="goPagPrincipal()">ARQUICKINFO</a>
-
-    <!-- Buscador -->
-    <div class="search-container">
-        <div class="d-flex align-items-center bg-white rounded px-3">
-            <input type="text" class="form-control border-0" [(ngModel)]="searchValue" placeholder="Buscar noticias..."
-                (keyup.enter)="onSearch()">
-            <mat-icon class="text-primary" role="button" (click)="onSearch()">search</mat-icon>
-        </div>
-    </div>
     
     <!-- Contenedor de autenticación -->
     <div class="auth-container">
