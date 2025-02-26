@@ -151,6 +151,7 @@
                 <td class="col-md-9">
                                 <code><a href="../components/NoticiasCarruselComponent.html" target="_self" >NoticiasCarruselComponent</a></code>
                                 <code><a href="../components/NoticiasCardsComponent.html" target="_self" >NoticiasCardsComponent</a></code>
+                                <code><a href="../components/WeatherComponent.html" target="_self" >WeatherComponent</a></code>
                 </td>
             </tr>
 
@@ -271,8 +272,8 @@
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="31"
-                                    class="link-to-prism">src/app/components/noticias/noticias-list/noticias-list.component.ts:31</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="32"
+                                    class="link-to-prism">src/app/components/noticias/noticias-list/noticias-list.component.ts:32</a></div>
                         </td>
                     </tr>
 
@@ -308,8 +309,8 @@
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="25"
-                                    class="link-to-prism">src/app/components/noticias/noticias-list/noticias-list.component.ts:25</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="26"
+                                    class="link-to-prism">src/app/components/noticias/noticias-list/noticias-list.component.ts:26</a></div>
                         </td>
                     </tr>
 
@@ -345,8 +346,8 @@
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="38"
-                                    class="link-to-prism">src/app/components/noticias/noticias-list/noticias-list.component.ts:38</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="39"
+                                    class="link-to-prism">src/app/components/noticias/noticias-list/noticias-list.component.ts:39</a></div>
                         </td>
                     </tr>
 
@@ -418,7 +419,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">src/app/components/noticias/noticias-list/noticias-list.component.ts:22</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/app/components/noticias/noticias-list/noticias-list.component.ts:23</a></div>
                         </td>
                     </tr>
 
@@ -445,7 +446,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/app/components/noticias/noticias-list/noticias-list.component.ts:23</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">src/app/components/noticias/noticias-list/noticias-list.component.ts:24</a></div>
                         </td>
                     </tr>
 
@@ -476,7 +477,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/components/noticias/noticias-list/noticias-list.component.ts:18</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/app/components/noticias/noticias-list/noticias-list.component.ts:19</a></div>
                         </td>
                     </tr>
 
@@ -507,7 +508,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/app/components/noticias/noticias-list/noticias-list.component.ts:19</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/app/components/noticias/noticias-list/noticias-list.component.ts:20</a></div>
                         </td>
                     </tr>
 
@@ -522,18 +523,19 @@
     <div class="tab-pane fade  tab-source-code" id="source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, inject } from &#x27;@angular/core&#x27;;
 import { Router } from &#x27;@angular/router&#x27;;
+import { APP_ROUTES } from &#x27;src/app/app.routes&#x27;;
 
+import { WeatherComponent } from &#x27;../../../pages/weather/weather.component&#x27;;
 import { NoticiasApiService } from &#x27;../../../shared/services/noticias-api.service&#x27;;
 import { Noticia } from &#x27;../../../shared/utils/data&#x27;;
 import { NoticiasCardsComponent } from &#x27;../noticias-cards/noticias-cards.component&#x27;;
 import { NoticiasCarruselComponent } from &#x27;../noticias-carrusel/noticias-carrusel.component&#x27;;
-import { APP_ROUTES } from &#x27;src/app/app.routes&#x27;;
 
 @Component({
     selector: &#x27;app-noticias-list&#x27;,
     templateUrl: &#x27;./noticias-list.component.html&#x27;,
     styleUrl: &#x27;./noticias-list.component.scss&#x27;,
-    imports: [NoticiasCarruselComponent, NoticiasCardsComponent]
+    imports: [NoticiasCarruselComponent, NoticiasCardsComponent, WeatherComponent]
 })
 export class NoticiasListComponent {
   // Array para almacenar las noticias
@@ -551,7 +553,7 @@ export class NoticiasListComponent {
 
   // Método para cargar noticias iniciales
   private loadNews() {
-    this.#apiNoticia.getNews(3).subscribe(noticias &#x3D;&gt; {
+    this.#apiNoticia.getNews().subscribe(noticias &#x3D;&gt; {
       this.noticias &#x3D; noticias;
     });
   }
@@ -568,26 +570,23 @@ export class NoticiasListComponent {
     </div>
 
     <div class="tab-pane fade " id="templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;!-- Carrusel solo se muestra cuando no hay categoría seleccionada --&gt;
-@if (!selectedCategory) {
+        <pre class="line-numbers"><code class="language-html">&lt;!--Grid de tiempo--&gt;
+&lt;div class&#x3D;&quot;container&quot;&gt;
+    &lt;app-weather&gt;&lt;/app-weather&gt;
+&lt;/div&gt;
+
+&lt;!-- Carrusel solo se muestra cuando no hay categoría seleccionada --&gt;
+&lt;div class&#x3D;&quot;container&quot;&gt;
     &lt;app-noticias-carrusel&gt;&lt;/app-noticias-carrusel&gt;
-}
+&lt;/div&gt;
 
 &lt;!-- Grid de Noticias --&gt;
 &lt;div class&#x3D;&quot;container mt-4&quot;&gt;
-    @if (selectedCategory) {
-        &lt;h2 class&#x3D;&quot;mb-4&quot;&gt;Noticias de: {{selectedCategory}}&lt;/h2&gt;
-    }
-    
     &lt;div class&#x3D;&quot;row row-cols-1 row-cols-md-3 g-4&quot;&gt;
         @for (news of noticias; track $index) {
-            &lt;div class&#x3D;&quot;col&quot;&gt;
-                &lt;app-noticias-cards [news]&#x3D;&quot;news&quot;&gt;&lt;/app-noticias-cards&gt;
-            &lt;/div&gt;
-        } @empty {
-            &lt;div class&#x3D;&quot;col-12 text-center&quot;&gt;
-                &lt;h3&gt;No hay noticias en esta categoría&lt;/h3&gt;
-            &lt;/div&gt;
+        &lt;div class&#x3D;&quot;col&quot;&gt;
+            &lt;app-noticias-cards [news]&#x3D;&quot;news&quot;&gt;&lt;/app-noticias-cards&gt;
+        &lt;/div&gt;
         }
     &lt;/div&gt;
 &lt;/div&gt;</code></pre>
@@ -619,8 +618,8 @@ export class NoticiasListComponent {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><!-- Carrusel solo se muestra cuando no hay categoría seleccionada -->@if (!selectedCategory) {    <app-noticias-carrusel></app-noticias-carrusel>}<!-- Grid de Noticias --><div class="container mt-4">    @if (selectedCategory) {        <h2 class="mb-4">Noticias de: {{selectedCategory}}</h2>    }        <div class="row row-cols-1 row-cols-md-3 g-4">        @for (news of noticias; track $index) {            <div class="col">                <app-noticias-cards [news]="news"></app-noticias-cards>            </div>        } @empty {            <div class="col-12 text-center">                <h3>No hay noticias en esta categoría</h3>            </div>        }    </div></div></div>'
-    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'Error404Component', 'selector': 'app-error404'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'NoticiasCardsComponent', 'selector': 'app-noticias-cards'},{'name': 'NoticiasCarruselComponent', 'selector': 'app-noticias-carrusel'},{'name': 'NoticiasCategoryComponent', 'selector': 'app-noticias-category'},{'name': 'NoticiasComponent', 'selector': 'app-noticias'},{'name': 'NoticiasDetallesComponent', 'selector': 'app-noticias-detalles'},{'name': 'NoticiasListComponent', 'selector': 'app-noticias-list'},{'name': 'RegisterComponent', 'selector': 'app-register'},{'name': 'SidebarComponent', 'selector': 'app-sidebar'},{'name': 'UserProfileComponent', 'selector': 'app-user-profile'}];
+        var COMPONENT_TEMPLATE = '<div><!--Grid de tiempo--><div class="container">    <app-weather></app-weather></div><!-- Carrusel solo se muestra cuando no hay categoría seleccionada --><div class="container">    <app-noticias-carrusel></app-noticias-carrusel></div><!-- Grid de Noticias --><div class="container mt-4">    <div class="row row-cols-1 row-cols-md-3 g-4">        @for (news of noticias; track $index) {        <div class="col">            <app-noticias-cards [news]="news"></app-noticias-cards>        </div>        }    </div></div></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'Error404Component', 'selector': 'app-error404'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'NoticiasCardsComponent', 'selector': 'app-noticias-cards'},{'name': 'NoticiasCarruselComponent', 'selector': 'app-noticias-carrusel'},{'name': 'NoticiasCategoryComponent', 'selector': 'app-noticias-category'},{'name': 'NoticiasComponent', 'selector': 'app-noticias'},{'name': 'NoticiasDetallesComponent', 'selector': 'app-noticias-detalles'},{'name': 'NoticiasListComponent', 'selector': 'app-noticias-list'},{'name': 'RegisterComponent', 'selector': 'app-register'},{'name': 'SidebarComponent', 'selector': 'app-sidebar'},{'name': 'UserProfileComponent', 'selector': 'app-user-profile'},{'name': 'WeatherComponent', 'selector': 'app-weather'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'NoticiasListComponent'};
 </script>

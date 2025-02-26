@@ -146,6 +146,12 @@
             </tr>
 
 
+            <tr>
+                <td class="col-md-3">imports</td>
+                <td class="col-md-9">
+                            <code>DatePipe</code>
+                </td>
+            </tr>
 
 
 
@@ -237,7 +243,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/app/components/noticias/noticias-detalles/noticias-detalles.component.ts:19</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/app/components/noticias/noticias-detalles/noticias-detalles.component.ts:20</a></div>
                             </td>
                         </tr>
 
@@ -274,8 +280,8 @@
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="60"
-                                    class="link-to-prism">src/app/components/noticias/noticias-detalles/noticias-detalles.component.ts:60</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="61"
+                                    class="link-to-prism">src/app/components/noticias/noticias-detalles/noticias-detalles.component.ts:61</a></div>
                         </td>
                     </tr>
 
@@ -313,8 +319,8 @@
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="42"
-                                    class="link-to-prism">src/app/components/noticias/noticias-detalles/noticias-detalles.component.ts:42</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="43"
+                                    class="link-to-prism">src/app/components/noticias/noticias-detalles/noticias-detalles.component.ts:43</a></div>
                         </td>
                     </tr>
 
@@ -359,7 +365,7 @@ cuando no se encuentra la noticia solicitada</p>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/components/noticias/noticias-detalles/noticias-detalles.component.ts:16</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/app/components/noticias/noticias-detalles/noticias-detalles.component.ts:17</a></div>
                         </td>
                     </tr>
 
@@ -386,7 +392,7 @@ cuando no se encuentra la noticia solicitada</p>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/components/noticias/noticias-detalles/noticias-detalles.component.ts:15</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/components/noticias/noticias-detalles/noticias-detalles.component.ts:16</a></div>
                         </td>
                     </tr>
 
@@ -412,7 +418,7 @@ cuando no se encuentra la noticia solicitada</p>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/app/components/noticias/noticias-detalles/noticias-detalles.component.ts:19</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/app/components/noticias/noticias-detalles/noticias-detalles.component.ts:20</a></div>
                         </td>
                     </tr>
 
@@ -425,8 +431,9 @@ cuando no se encuentra la noticia solicitada</p>
 
 
     <div class="tab-pane fade  tab-source-code" id="source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, inject } from &#x27;@angular/core&#x27;;
-import { ActivatedRoute, RouterLink } from &#x27;@angular/router&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { DatePipe } from &#x27;@angular/common&#x27;;
+import { Component, inject } from &#x27;@angular/core&#x27;;
+import { ActivatedRoute } from &#x27;@angular/router&#x27;;
 import { NoticiasApiService } from &#x27;src/app/shared/services/noticias-api.service&#x27;;
 import { Noticia } from &#x27;src/app/shared/utils/data&#x27;;
 
@@ -434,7 +441,7 @@ import { Noticia } from &#x27;src/app/shared/utils/data&#x27;;
     selector: &#x27;app-noticias-detalles&#x27;,
     templateUrl: &#x27;./noticias-detalles.component.html&#x27;,
     styleUrl: &#x27;./noticias-detalles.component.scss&#x27;,
-    imports: [],
+    imports: [DatePipe],
 })
 export class NoticiasDetallesComponent {
 
@@ -498,9 +505,15 @@ export class NoticiasDetallesComponent {
         &lt;img [src]&#x3D;&quot;noticia.image_url&quot; 
         alt&#x3D;&quot;{{noticia.title}}&quot; class&#x3D;&quot;image&quot;&gt;
         &lt;p&gt;{{noticia.description}}&lt;/p&gt;
+        &lt;div class&#x3D;&quot;info&quot;&gt;
+            &lt;a [href]&#x3D;&quot;noticia.url&quot;&gt;Más información&lt;/a&gt;
+            &lt;p&gt; Publicado el {{noticia.published_at | date: &#x27;fullDate&#x27;}}&lt;/p&gt;
+        &lt;/div&gt;
     &lt;/section&gt;
 &lt;/div&gt;
-&lt;button class&#x3D;&quot;btn btn-primary&quot; (click)&#x3D;&quot;goBack()&quot;&gt;Volver atras&lt;/button&gt;</code></pre>
+&lt;div class&#x3D;&quot;boton&quot;&gt;
+    &lt;button class&#x3D;&quot;btn btn-primary&quot; (click)&#x3D;&quot;goBack()&quot;&gt;Volver atras&lt;/button&gt;
+&lt;/div&gt;</code></pre>
     </div>
 
 
@@ -529,8 +542,8 @@ export class NoticiasDetallesComponent {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class="detalles">    <section>        <h1>{{noticia.title}}</h1>        <h3>{{noticia.snippet}}</h3>        <img [src]="noticia.image_url"         alt="{{noticia.title}}" class="image">        <p>{{noticia.description}}</p>    </section></div><button class="btn btn-primary" (click)="goBack()">Volver atras</button></div>'
-    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'Error404Component', 'selector': 'app-error404'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'NoticiasCardsComponent', 'selector': 'app-noticias-cards'},{'name': 'NoticiasCarruselComponent', 'selector': 'app-noticias-carrusel'},{'name': 'NoticiasCategoryComponent', 'selector': 'app-noticias-category'},{'name': 'NoticiasComponent', 'selector': 'app-noticias'},{'name': 'NoticiasDetallesComponent', 'selector': 'app-noticias-detalles'},{'name': 'NoticiasListComponent', 'selector': 'app-noticias-list'},{'name': 'RegisterComponent', 'selector': 'app-register'},{'name': 'SidebarComponent', 'selector': 'app-sidebar'},{'name': 'UserProfileComponent', 'selector': 'app-user-profile'}];
+        var COMPONENT_TEMPLATE = '<div><div class="detalles">    <section>        <h1>{{noticia.title}}</h1>        <h3>{{noticia.snippet}}</h3>        <img [src]="noticia.image_url"         alt="{{noticia.title}}" class="image">        <p>{{noticia.description}}</p>        <div class="info">            <a [href]="noticia.url">Más información</a>            <p> Publicado el {{noticia.published_at | date: \'fullDate\'}}</p>        </div>    </section></div><div class="boton">    <button class="btn btn-primary" (click)="goBack()">Volver atras</button></div></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'Error404Component', 'selector': 'app-error404'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'NoticiasCardsComponent', 'selector': 'app-noticias-cards'},{'name': 'NoticiasCarruselComponent', 'selector': 'app-noticias-carrusel'},{'name': 'NoticiasCategoryComponent', 'selector': 'app-noticias-category'},{'name': 'NoticiasComponent', 'selector': 'app-noticias'},{'name': 'NoticiasDetallesComponent', 'selector': 'app-noticias-detalles'},{'name': 'NoticiasListComponent', 'selector': 'app-noticias-list'},{'name': 'RegisterComponent', 'selector': 'app-register'},{'name': 'SidebarComponent', 'selector': 'app-sidebar'},{'name': 'UserProfileComponent', 'selector': 'app-user-profile'},{'name': 'WeatherComponent', 'selector': 'app-weather'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'NoticiasDetallesComponent'};
 </script>

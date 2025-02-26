@@ -92,6 +92,9 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                             <li class="link">
                                 <a href="components/UserProfileComponent.html" data-type="entity-link" >UserProfileComponent</a>
                             </li>
+                            <li class="link">
+                                <a href="components/WeatherComponent.html" data-type="entity-link" >WeatherComponent</a>
+                            </li>
                         </ul>
                     </li>
                         <li class="chapter">
@@ -107,6 +110,9 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 </li>
                                 <li class="link">
                                     <a href="injectables/NoticiasApiService.html" data-type="entity-link" >NoticiasApiService</a>
+                                </li>
+                                <li class="link">
+                                    <a href="injectables/WeatherService.html" data-type="entity-link" >WeatherService</a>
                                 </li>
                             </ul>
                         </li>
@@ -125,13 +131,34 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="interfaces/Category.html" data-type="entity-link" >Category</a>
                             </li>
                             <li class="link">
+                                <a href="interfaces/Coord.html" data-type="entity-link" >Coord</a>
+                            </li>
+                            <li class="link">
                                 <a href="interfaces/Meta.html" data-type="entity-link" >Meta</a>
                             </li>
                             <li class="link">
                                 <a href="interfaces/Noticia.html" data-type="entity-link" >Noticia</a>
                             </li>
                             <li class="link">
+                                <a href="interfaces/Nubes.html" data-type="entity-link" >Nubes</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/Principal.html" data-type="entity-link" >Principal</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/Sys.html" data-type="entity-link" >Sys</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/Tiempo.html" data-type="entity-link" >Tiempo</a>
+                            </li>
+                            <li class="link">
                                 <a href="interfaces/User.html" data-type="entity-link" >User</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/Viento.html" data-type="entity-link" >Viento</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/Weather.html" data-type="entity-link" >Weather</a>
                             </li>
                         </ul>
                     </li>

@@ -79,104 +79,50 @@
                    <compodoc-menu mode="normal"></compodoc-menu>
                </div>
                <!-- START CONTENT -->
-               <div class="content component">
+               <div class="content injectable">
                    <div class="content-data">
 
 
 
 
+
+
+
+
 <ol class="breadcrumb">
-  <li class="breadcrumb-item">Components</li>
-  <li class="breadcrumb-item"
-  >
-  Error404Component</li>
+  <li class="breadcrumb-item">Injectables</li>
+  <li class="breadcrumb-item" >WeatherService</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
         <li class="nav-item">
-            <a href="#info" class="nav-link active"
+            <a href="#info" 
+                class="nav-link"
+                class="nav-link active"
                 role="tab" id="info-tab" data-bs-toggle="tab" data-link="info">Info</a>
         </li>
         <li class="nav-item">
-            <a href="#source" class="nav-link"
+            <a href="#source" 
+                class="nav-link"
+                
                 role="tab" id="source-tab" data-bs-toggle="tab" data-link="source">Source</a>
-        </li>
-        <li class="nav-item">
-            <a href="#templateData" class="nav-link"
-                role="tab" id="templateData-tab" data-bs-toggle="tab" data-link="template">Template</a>
-        </li>
-        <li class="nav-item">
-            <a href="#tree" class="nav-link"
-                role="tab" id="tree-tab" data-bs-toggle="tab" data-link="dom-tree">DOM Tree</a>
         </li>
 </ul>
 
 <div class="tab-content">
-    <div class="tab-pane fade active in" id="info"><p class="comment">
-    <h3>File</h3>
-</p>
-<p class="comment">
-    <code>src/app/pages/error404/error404.component.ts</code>
-</p>
+    <div class="tab-pane fade active in" id="info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/app/shared/services/weather.service.ts</code>
+        </p>
 
 
 
 
 
-
-<section data-compodoc="block-metadata">
-    <h3>Metadata</h3>
-    <table class="table table-sm table-hover metadata">
-        <tbody>
-
-
-
-
-
-
-
-
-
-
-
-
-            <tr>
-                <td class="col-md-3">selector</td>
-                <td class="col-md-9"><code>app-error404</code></td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-3">imports</td>
-                <td class="col-md-9">
-                            <code>MatButtonModule</code>
-                </td>
-            </tr>
-
-
-
-
-            <tr>
-                <td class="col-md-3">templateUrl</td>
-                <td class="col-md-9"><code>./error404.component.html</code></td>
-            </tr>
-
-
-
-            <tr>
-                <td class="col-md-3">styleUrl</td>
-                <td class="col-md-9"><code>./error404.component.scss</code></td>
-            </tr>
-
-
-
-
-
-        </tbody>
-    </table>
-</section>
-
-    <section data-compodoc="block-index">
+            <section data-compodoc="block-index">
     <h3 id="index">Index</h3>
     <table class="table table-sm table-bordered index-table">
         <tbody>
@@ -191,7 +137,13 @@
                             <li>
                                     <span class="modifier">Readonly</span>
                                     <span class="modifier">Private</span>
-                                <a href="##router" >#router</a>
+                                <a href="##http" >#http</a>
+                            </li>
+                            <li>
+                                <a href="#apiUrl" >apiUrl</a>
+                            </li>
+                            <li>
+                                <a href="#token" >token</a>
                             </li>
                         </ul>
                     </td>
@@ -206,7 +158,10 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                <a href="#goBack" >goBack</a>
+                                <a href="#getCity" >getCity</a>
+                            </li>
+                            <li>
+                                <a href="#getWeather" >getWeather</a>
                             </li>
                         </ul>
                     </td>
@@ -221,11 +176,7 @@
 </section>
 
 
-
-
-
-
-    <section data-compodoc="block-methods">
+            <section data-compodoc="block-methods">
     
     <h3 id="methods">
         Methods
@@ -234,43 +185,84 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="goBack"></a>
+                    <a name="getCity"></a>
                     <span class="name">
-                        <span ><b>goBack</b></span>
-                        <a href="#goBack"><span class="icon ion-ios-link"></span></a>
+                        <span ><b>getCity</b></span>
+                        <a href="#getCity"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>goBack()</code>
+<code>getCity()</code>
                 </td>
             </tr>
 
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="20"
-                                    class="link-to-prism">src/app/pages/error404/error404.component.ts:20</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="18"
+                                    class="link-to-prism">src/app/shared/services/weather.service.ts:18</a></div>
                         </td>
                     </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                        <div class="io-description"><p>LLeva a la pagina principal</p>
-</div>
 
                         <div class="io-description">
-                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+                            <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
 
                         </div>
                 </td>
             </tr>
         </tbody>
     </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getWeather"></a>
+                    <span class="name">
+                        <span ><b>getWeather</b></span>
+                        <a href="#getWeather"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getWeather()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="35"
+                                    class="link-to-prism">src/app/shared/services/weather.service.ts:35</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Método para obtener el clima de una ciudad aleatoria</p>
+</div>
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                <p>Un observable con la respuesta del clima</p>
+
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
 </section>
-    <section data-compodoc="block-properties">
+            <section data-compodoc="block-properties">
     
     <h3 id="inputs">
         Properties
@@ -279,23 +271,85 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="#router"></a>
+                    <a name="#http"></a>
                     <span class="name">
                             <span class="modifier">Readonly</span>
                             <span class="modifier">Private</span>
-                        <span ><b>#router</b></span>
-                        <a href="##router"><span class="icon ion-ios-link"></span></a>
+                        <span ><b>#http</b></span>
+                        <a href="##http"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
                 <tr>
                     <td class="col-md-4">
-                        <i>Default value : </i><code>inject(Router)</code>
+                        <i>Default value : </i><code>inject(HttpClient)</code>
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/pages/error404/error404.component.ts:15</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="11" class="link-to-prism">src/app/shared/services/weather.service.ts:11</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="apiUrl"></a>
+                    <span class="name">
+                        <span ><b>apiUrl</b></span>
+                        <a href="#apiUrl"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&#x27;https://api.openweathermap.org/data/2.5/weather&#x27;</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/shared/services/weather.service.ts:14</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="token"></a>
+                    <span class="name">
+                        <span ><b>token</b></span>
+                        <a href="#token"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&#x27;df855f99ef805f0c21d61f527670fc1f&#x27;</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/shared/services/weather.service.ts:15</a></div>
                         </td>
                     </tr>
 
@@ -304,81 +358,54 @@
     </table>
 </section>
 
-</div>
+    </div>
 
 
     <div class="tab-pane fade  tab-source-code" id="source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, inject } from &#x27;@angular/core&#x27;;
-import { MatButtonModule } from &#x27;@angular/material/button&#x27;;
-import { Router } from &#x27;@angular/router&#x27;;
-import { APP_ROUTES } from &#x27;../../app.routes&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { HttpClient } from &#x27;@angular/common/http&#x27;;
+import { inject, Injectable } from &#x27;@angular/core&#x27;;
+import { Tiempo } from &#x27;../utils/tiempo&#x27;;
 
-@Component({
-    selector: &#x27;app-error404&#x27;,
-    templateUrl: &#x27;./error404.component.html&#x27;,
-    styleUrl: &#x27;./error404.component.scss&#x27;,
-    imports: [MatButtonModule]
+@Injectable({
+  providedIn: &#x27;root&#x27;
 })
-export class Error404Component {
+export class WeatherService {
 
-    //Servicio
-    readonly #router &#x3D; inject(Router);
-    
-    /**
-     * LLeva a la pagina principal
-     */
-    goBack(){
-        this.#router.navigate([APP_ROUTES.NOTICIAS]);
-    }
+  //Servicio
+  readonly #http &#x3D; inject(HttpClient);
+
+  //Constante
+  apiUrl &#x3D; &#x27;https://api.openweathermap.org/data/2.5/weather&#x27;;
+  token &#x3D; &#x27;df855f99ef805f0c21d61f527670fc1f&#x27;; 
+
+  // Método para obtener una ciudad aleatoria
+  getCity(): string {
+    const cities &#x3D; [
+      { id: 1, name: &quot;Sevilla&quot; },
+      { id: 2, name: &quot;Tokyo&quot; },
+      { id: 3, name: &quot;New York&quot; },
+      { id: 4, name: &quot;London&quot; }
+    ];
+
+    // Elegir una ciudad aleatoria
+    const randomIndex &#x3D; Math.floor(Math.random() * cities.length); 
+    return cities[randomIndex].name;
+  }
+
+  /**
+   * Método para obtener el clima de una ciudad aleatoria
+   * @returns Un observable con la respuesta del clima
+   */
+  getWeather() {
+    const city &#x3D; this.getCity(); 
+    const url &#x3D; &#x60;${this.apiUrl}?q&#x3D;${city}&amp;appid&#x3D;${this.token}&amp;units&#x3D;metric&amp;lang&#x3D;es&#x60;;  
+    return this.#http.get&lt;Tiempo&gt;(url);  
+  }
 }
 </code></pre>
     </div>
 
-    <div class="tab-pane fade " id="templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;container&quot;&gt;
-    &lt;img src&#x3D;&quot;assets\img\oso404.png&quot; alt&#x3D;&quot;Error 404&quot;&gt;
-    &lt;h1 class&#x3D;&quot;title&quot;&gt;La página no ha sido encontrada&lt;/h1&gt;
-    &lt;p&gt;Está pagina ha desaparecido de nuestra base de datos.&lt;/p&gt;
-    &lt;button mat-raised-button (click)&#x3D;&quot;goBack()&quot;&gt;Volver atrás&lt;/button&gt;
-&lt;/div&gt;</code></pre>
-    </div>
-
-
-    <div class="tab-pane fade " id="tree">
-        <div id="tree-container"></div>
-        <div class="tree-legend">
-            <div class="title">
-                <b>Legend</b>
-            </div>
-            <div>
-                <div class="color htmlelement"></div><span>Html element</span>
-            </div>
-            <div>
-                <div class="color component"></div><span>Component</span>
-            </div>
-            <div>
-                <div class="color directive"></div><span>Html element with directive</span>
-            </div>
-        </div>
-    </div>
-
-    
 </div>
-
-<script src="../js/libs/vis.min.js"></script>
-<script src="../js/libs/htmlparser.js"></script>
-<script src="../js/libs/deep-iterator.js"></script>
-<script>
-        var COMPONENT_TEMPLATE = '<div><div class="container">    <img src="assets\img\oso404.png" alt="Error 404">    <h1 class="title">La página no ha sido encontrada</h1>    <p>Está pagina ha desaparecido de nuestra base de datos.</p>    <button mat-raised-button (click)="goBack()">Volver atrás</button></div></div>'
-    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'Error404Component', 'selector': 'app-error404'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'NoticiasCardsComponent', 'selector': 'app-noticias-cards'},{'name': 'NoticiasCarruselComponent', 'selector': 'app-noticias-carrusel'},{'name': 'NoticiasCategoryComponent', 'selector': 'app-noticias-category'},{'name': 'NoticiasComponent', 'selector': 'app-noticias'},{'name': 'NoticiasDetallesComponent', 'selector': 'app-noticias-detalles'},{'name': 'NoticiasListComponent', 'selector': 'app-noticias-list'},{'name': 'RegisterComponent', 'selector': 'app-register'},{'name': 'SidebarComponent', 'selector': 'app-sidebar'},{'name': 'UserProfileComponent', 'selector': 'app-user-profile'},{'name': 'WeatherComponent', 'selector': 'app-weather'}];
-    var DIRECTIVES = [];
-    var ACTUAL_COMPONENT = {'name': 'Error404Component'};
-</script>
-<script src="../js/tree.js"></script>
-
-
-
-
 
 
 
@@ -417,8 +444,8 @@ export class Error404Component {
 
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
-            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
-            var COMPODOC_CURRENT_PAGE_URL = 'Error404Component.html';
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
+            var COMPODOC_CURRENT_PAGE_URL = 'WeatherService.html';
             var MAX_SEARCH_RESULTS = 15;
        </script>
 

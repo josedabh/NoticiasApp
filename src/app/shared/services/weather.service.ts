@@ -7,8 +7,10 @@ import { Tiempo } from '../utils/tiempo';
 })
 export class WeatherService {
 
+  //Servicio
   readonly #http = inject(HttpClient);
 
+  //Constante
   apiUrl = 'https://api.openweathermap.org/data/2.5/weather';
   token = 'df855f99ef805f0c21d61f527670fc1f'; 
 
