@@ -148,4 +148,8 @@ export class RegisterComponent {
       this.#errorMessage.set('');
     }
   }
+
+  goBack(){
+    this.#router.navigate([APP_ROUTES.NOTICIAS]);
+  }
 }

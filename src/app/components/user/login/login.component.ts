@@ -79,4 +79,8 @@ export class LoginComponent {
     this.hide.update(value => !value);
     event.preventDefault();
   }
+
+  goBack(){
+    this.#router.navigate([APP_ROUTES.NOTICIAS]);
+  }
 }

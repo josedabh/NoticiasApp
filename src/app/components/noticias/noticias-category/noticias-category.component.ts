@@ -27,12 +27,21 @@ export class NoticiasCategoryComponent {
     this.#route.paramMap.subscribe(params => {
       const category = params.get('category');
       if (category) {
-        this.categoriaActual = category;
+        this.onNameCategory(category);
         this.loadNewsByCategory(category);
       }
     });
   }
 
+  private onNameCategory(category:string){
+    let categoria = null;
+    if(category !=null){
+      categoria = CATEGORIES.find(
+        cat => cat.value === category
+      )!;
+    }
+    this.categoriaActual = categoria!.name;
+  }
   private loadNewsByCategory(category: string) {
     this.#apiNoticia.getNewsByCategory(category).subscribe({
       next: (noticias) => {
