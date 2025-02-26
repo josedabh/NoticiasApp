@@ -1,17 +1,18 @@
 import { Component, inject } from '@angular/core';
 import { Router } from '@angular/router';
+import { APP_ROUTES } from 'src/app/app.routes';
 
+import { WeatherComponent } from '../../../pages/weather/weather.component';
 import { NoticiasApiService } from '../../../shared/services/noticias-api.service';
 import { Noticia } from '../../../shared/utils/data';
 import { NoticiasCardsComponent } from '../noticias-cards/noticias-cards.component';
 import { NoticiasCarruselComponent } from '../noticias-carrusel/noticias-carrusel.component';
-import { APP_ROUTES } from 'src/app/app.routes';
 
 @Component({
     selector: 'app-noticias-list',
     templateUrl: './noticias-list.component.html',
     styleUrl: './noticias-list.component.scss',
-    imports: [NoticiasCarruselComponent, NoticiasCardsComponent]
+    imports: [NoticiasCarruselComponent, NoticiasCardsComponent, WeatherComponent]
 })
 export class NoticiasListComponent {
   // Array para almacenar las noticias

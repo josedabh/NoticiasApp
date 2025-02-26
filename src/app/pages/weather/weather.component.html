@@ -1,0 +1,12 @@
+<div class="weather-container">
+    <div class="weather-info">
+        <h1>Clima en {{ tiempo.name }}, {{ tiempo.sys.country }}</h1>
+        <p>Temperatura: {{ tiempo.main.temp }}°C</p>
+        <p>Condición: {{ tiempo.weather[0].description }}</p>
+        <p>Temperatura mínima: {{ tiempo.main.temp_min }}°C</p>
+        <p>Temperatura máxima: {{ tiempo.main.temp_max }}°C</p>
+        <p>Humedad: {{ tiempo.main.humidity }}%</p>
+        <p>Viento: {{ tiempo.wind.speed }} m/s</p>
+        <p>Visibilidad: {{ tiempo.visibility }} metros</p>
+    </div>
+</div>
