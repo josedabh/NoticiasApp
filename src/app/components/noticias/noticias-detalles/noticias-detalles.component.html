@@ -5,6 +5,12 @@
         <img [src]="noticia.image_url" 
         alt="{{noticia.title}}" class="image">
         <p>{{noticia.description}}</p>
+        <div class="info">
+            <a [href]="noticia.url">Más información</a>
+            <p> Publicado el {{noticia.published_at | date: 'fullDate'}}</p>
+        </div>
     </section>
 </div>
-<button class="btn btn-primary" (click)="goBack()">Volver atras</button>
+<div class="boton">
+    <button class="btn btn-primary" (click)="goBack()">Volver atras</button>
+</div>

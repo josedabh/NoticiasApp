@@ -49,5 +49,6 @@ export const CATEGORIES: Category[] = [
     { value: 'business', name: 'Económicas' },
     { value: 'science', name: 'Científicas' },
     { value: 'entertainment', name: 'Entretenimiento' },
-    { value: 'health', name: 'Salud' }
+    { value: 'health', name: 'Salud' },
+    { value: 'environment', name: 'Medio Ambiente'}
 ];

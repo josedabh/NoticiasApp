@@ -10,4 +10,19 @@
     border-radius: 10px;
     box-shadow: 0 0 10px #000000;
     transition: all 0.3s;
+
+    section{
+        margin: 2%
+    }
+}
+
+.info{
+    display: flex;
+    justify-content: space-between
+}
+
+.boton{
+    margin-left: 40px;
+    margin-top: 20px;
+    margin-bottom: 10px;
 }

@@ -7,20 +7,6 @@
     },
     "data": [
         {
-            "uuid": "f94bb8cf-2182-47df-9ff9-f990dcf1ef4a",
-            "title": "Adiós para siempre a esta histórica marca de moda española: se declara en quiebra y cae toda la plantilla",
-            "description": "El comercio electrónico lo ha puesto más difícil para las tiendas físicas. Cada vez son más las personas que optan por comprar desde la comodidad de su cas...",
-            "keywords": "",
-            "snippet": "El comercio electrónico lo ha puesto más difícil para las tiendas físicas. Cada vez son más las personas que optan por comprar desde la comodidad de su cas...",
-            "url": "https:\/\/www.mundodeportivo.com\/actualidad\/20250220\/1002411298\/adios-siempre-historica-marca-moda-espanola-declara-quiebra-cae-toda-plantilla-dct.html",
-            "image_url": "https:\/\/www.mundodeportivo.com\/files\/og_thumbnail\/files\/fp\/uploads\/2025\/02\/12\/67ac9a951e1e7.r_d.578-298-0.jpeg",
-            "language": "es",
-            "published_at": "2025-02-20T07:33:26.000000Z",
-            "source": "mundodeportivo.com",
-            "categories": [],
-            "relevance_score": null
-        },
-        {
             "uuid": "c4a83567-0daf-4736-8768-ea47401dd934",
             "title": "Monegros no pierdas tu tren y CEOS van a pedir al Ministerio de Transportes que amplíe el servicio de tren entre Zaragoza y Lérida hasta Barcelona",
             "description": "La plataforma Monegros no pierdas tu tren y la Confederación de Empresarios de la provincia de Huesca van a pedir al Ministerio de Transportes que amplíe el servicio de tren entre Zaragoza y Lérida y que llegue hasta Barcelona.Tras varias reuniones mantenidas en los últimos meses con distintas administraciones para presentar sus reivindicaciones, y sin conseguir sus objetivos, en las últimas han pedido a RENFE que amplíe el servicio. El portavoz de Monegros no pierdas tu tren, Raúl Rivarés, ha explicado que en la reunión han conocido los inconvenientes de la empresa concesionaria RENFE para ampliar el servicio tal y como se pide por dos cuestiones. Por un lado, los maquinistas de la compañía sólo pueden conducir un tipo de tren y líneas concretas y además tienen problemas técnicos con los propios trenes para realizar este servicio.",
@@ -47,7 +33,7 @@
             "language": "es",
             "published_at": "2025-02-20T08:15:00.000000Z",
             "source": "salud-digital.es",
-            "categories": ["tecnología", "salud"],
+            "categories": ["tech", "health"],
             "relevance_score": null
         },
         {
@@ -61,7 +47,7 @@
             "language": "es",
             "published_at": "2025-02-20T09:00:00.000000Z",
             "source": "energia-sostenible.es",
-            "categories": ["economía", "medio ambiente"],
+            "categories": ["business", "environment"],
             "relevance_score": null
         },
         {
@@ -75,7 +61,7 @@
             "language": "es",
             "published_at": "2025-02-20T10:30:00.000000Z",
             "source": "deportes-futuro.es",
-            "categories": ["deportes", "tecnología"],
+            "categories": ["sports", "tech"],
             "relevance_score": null
         },
         {
@@ -89,8 +75,148 @@
             "language": "es",
             "published_at": "2025-02-20T11:45:00.000000Z",
             "source": "ciencia-marina.es",
-            "categories": ["ciencia", "medio ambiente"],
+            "categories": ["science", "environment"],
             "relevance_score": null
+        },
+        {
+            "uuid": "6f76h0g0-8d16-7ie6-17hg-01740d31dhe0",
+            "title": "Descubren una nueva especie marina en las costas españolas",
+            "description": "Científicos del CSIC han descubierto una nueva especie de coral fluorescente en las costas del Mediterráneo español. El hallazgo, considerado de gran importancia para la biodiversidad marina, podría tener aplicaciones en la medicina regenerativa debido a sus propiedades únicas.",
+            "keywords": "ciencia, biología marina, investigación, España",
+            "snippet": "El descubrimiento de esta nueva especie de coral fluorescente abre nuevas posibilidades en la investigación médica",
+            "url": "https://ciencia-marina.es/nuevo-coral-mediterraneo",
+            "image_url": "https://picsum.photos/800/400?random=10",
+            "language": "es",
+            "published_at": "2025-02-20T11:45:00.000000Z",
+            "source": "ciencia-marina.es",
+            "categories": ["science", "environment"],
+            "relevance_score": null
+        },
+        {
+            "uuid": "9a34b5c1-3e27-4f8c-a90d-8e3f6d7e9c22",
+            "title": "La inteligencia artificial revoluciona la medicina",
+            "description": "Investigadores han desarrollado un algoritmo de inteligencia artificial capaz de detectar enfermedades con una precisión superior a la de los médicos humanos.",
+            "keywords": "tecnología, IA, medicina, salud",
+            "snippet": "Un nuevo algoritmo de inteligencia artificial supera a los médicos en la detección temprana de enfermedades.",
+            "url": "https://technews.com/ai-medicine",
+            "image_url": "https://picsum.photos/800/400?random=11",
+            "language": "es",
+            "published_at": "2025-02-19T14:30:00.000000Z",
+            "source": "technews.com",
+            "categories": ["tech", "health"],
+            "relevance_score": 9.8
+        },
+        {
+            "uuid": "5b12f3a7-6e29-48c4-bd21-9e2c5d4f0b77",
+            "title": "El mercado de criptomonedas alcanza un nuevo récord",
+            "description": "Bitcoin y Ethereum han alcanzado precios históricos tras la creciente adopción de criptomonedas por grandes empresas.",
+            "keywords": "finanzas, criptomonedas, Bitcoin, Ethereum",
+            "snippet": "Las criptomonedas continúan en auge, con Bitcoin alcanzando un máximo histórico.",
+            "url": "https://economiahoy.com/crypto-record",
+            "image_url": "https://picsum.photos/800/400?random=12",
+            "language": "es",
+            "published_at": "2025-02-18T09:00:00.000000Z",
+            "source": "economiahoy.com",
+            "categories": ["business", "tech"],
+            "relevance_score": 9.5
+        },
+        {
+            "uuid": "2d84e3c8-5a71-4b39-91a7-6b8d5c9e0f55",
+            "title": "España avanza a cuartos de final en el Mundial de Fútbol",
+            "description": "La selección española logra una victoria histórica y avanza a los cuartos de final tras vencer a Francia en un partido emocionante.",
+            "keywords": "deportes, fútbol, Mundial, España",
+            "snippet": "España derrota a Francia y avanza a los cuartos de final del Mundial.",
+            "url": "https://deporteshoy.com/espana-francia-mundial",
+            "image_url": "https://picsum.photos/800/400?random=13",
+            "language": "es",
+            "published_at": "2025-02-21T20:00:00.000000Z",
+            "source": "deporteshoy.com",
+            "categories": ["sports"],
+            "relevance_score": 9.3
+        },
+        {
+            "uuid": "7e98f4d1-2a34-4c65-bd11-9f8e2a0f1e88",
+            "title": "Nuevas medidas para reducir la contaminación en ciudades",
+            "description": "El gobierno implementa nuevas regulaciones para reducir la emisión de gases contaminantes en las principales ciudades del país.",
+            "keywords": "medio ambiente, contaminación, ecología, política",
+            "snippet": "Las nuevas regulaciones buscan reducir la contaminación en las principales ciudades del país.",
+            "url": "https://noticiasverdes.com/contaminacion-ciudades",
+            "image_url": "https://picsum.photos/800/400?random=14",
+            "language": "es",
+            "published_at": "2025-02-22T10:15:00.000000Z",
+            "source": "noticiasverdes.com",
+            "categories": ["environment", "politics"],
+            "relevance_score": 8.9
+        },
+        {
+            "uuid": "2d84e3c8-5f39-4b5b-a8b1-1d23456c7890",
+            "title": "Nuevas regulaciones para reducir emisiones en la UE",
+            "description": "La Unión Europea ha aprobado una nueva normativa para reducir las emisiones de carbono en un 40% para 2030.",
+            "keywords": "medio ambiente, cambio climático, regulaciones, UE",
+            "snippet": "La nueva legislación europea busca reducir drásticamente las emisiones contaminantes.",
+            "url": "https://environmentnews.eu/emisiones-ue",
+            "image_url": "https://picsum.photos/800/400?random=13",
+            "language": "es",
+            "published_at": "2025-02-21T10:15:00.000000Z",
+            "source": "environmentnews.eu",
+            "categories": ["environment", "politics"],
+            "relevance_score": 8.9
+        },
+        {
+            "uuid": "7c21a6d4-3e47-49c7-bcfe-8d12e4f98a76",
+            "title": "Los avances en la exploración espacial sorprenden al mundo",
+            "description": "Una nueva misión espacial ha descubierto indicios de agua líquida en una luna de Júpiter, abriendo la posibilidad de vida extraterrestre.",
+            "keywords": "espacio, NASA, Júpiter, astronomía",
+            "snippet": "La NASA encuentra signos de agua en una luna de Júpiter, un avance clave en la exploración espacial.",
+            "url": "https://spacenews.com/agua-jupiter",
+            "image_url": "https://picsum.photos/800/400?random=14",
+            "language": "es",
+            "published_at": "2025-02-22T08:45:00.000000Z",
+            "source": "spacenews.com",
+            "categories": ["science"],
+            "relevance_score": 9.6
+        },
+        {
+            "uuid": "3f92a8b5-6d48-4c9d-a5c4-123f567e9b21",
+            "title": "Un nuevo récord en los Juegos Olímpicos",
+            "description": "El atleta español Juan Pérez ha batido el récord mundial en los 100 metros lisos durante los Juegos Olímpicos de 2025.",
+            "keywords": "deportes, atletismo, Juegos Olímpicos",
+            "snippet": "Histórico: Juan Pérez establece un nuevo récord mundial en los 100 metros lisos.",
+            "url": "https://sportsnews.com/olimpicos-record",
+            "image_url": "https://picsum.photos/800/400?random=15",
+            "language": "es",
+            "published_at": "2025-02-23T12:00:00.000000Z",
+            "source": "sportsnews.com",
+            "categories": ["sports"],
+            "relevance_score": 9.7
+        },
+        {
+            "uuid": "4a65d1e2-7b36-4a2c-998b-6f12c34e5d87",
+            "title": "Un nuevo virus preocupa a la OMS",
+            "description": "Se ha detectado un nuevo virus en Asia con características similares al SARS-CoV-2. La OMS está en alerta y estudiando su posible impacto global.",
+            "keywords": "salud, OMS, virus, pandemia",
+            "snippet": "Un nuevo virus en Asia despierta preocupaciones sobre una posible pandemia global.",
+            "url": "https://healthnews.com/nuevo-virus",
+            "image_url": "https://picsum.photos/800/400?random=16",
+            "language": "es",
+            "published_at": "2025-02-24T14:30:00.000000Z",
+            "source": "healthnews.com",
+            "categories": ["health", "science"],
+            "relevance_score": 9.4
+        },
+        {
+            "uuid": "5d78b9c4-3f21-48b9-9845-8f12e3456d90",
+            "title": "El cine español triunfa en los Premios Óscar",
+            "description": "Una película española ha ganado el Óscar a Mejor Película Extranjera, consolidando la industria cinematográfica del país en la escena internacional.",
+            "keywords": "cine, premios, Óscar, España",
+            "snippet": "España brilla en los Premios Óscar con una película que conquista a la crítica y el público.",
+            "url": "https://entertainmentnews.com/oscar-espana",
+            "image_url": "https://picsum.photos/800/400?random=17",
+            "language": "es",
+            "published_at": "2025-02-25T02:00:00.000000Z",
+            "source": "entertainmentnews.com",
+            "categories": ["entertainment"],
+            "relevance_score": 9.3
         }
     ]
 }

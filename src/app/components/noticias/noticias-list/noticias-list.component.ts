@@ -29,7 +29,7 @@ export class NoticiasListComponent {
 
   // Método para cargar noticias iniciales
   private loadNews() {
-    this.#apiNoticia.getNews(3).subscribe(noticias => {
+    this.#apiNoticia.getNews().subscribe(noticias => {
       this.noticias = noticias;
     });
   }

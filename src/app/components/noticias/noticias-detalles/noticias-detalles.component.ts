@@ -1,5 +1,6 @@
+import { DatePipe } from '@angular/common';
 import { Component, inject } from '@angular/core';
-import { ActivatedRoute, RouterLink } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import { NoticiasApiService } from 'src/app/shared/services/noticias-api.service';
 import { Noticia } from 'src/app/shared/utils/data';
 
@@ -7,7 +8,7 @@ import { Noticia } from 'src/app/shared/utils/data';
     selector: 'app-noticias-detalles',
     templateUrl: './noticias-detalles.component.html',
     styleUrl: './noticias-detalles.component.scss',
-    imports: [],
+    imports: [DatePipe],
 })
 export class NoticiasDetallesComponent {
 
