@@ -252,7 +252,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/components/noticias/noticias-cards/noticias-cards.component.ts:14</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/components/noticias/noticias-cards/noticias-cards.component.ts:15</a></div>
                             </td>
                         </tr>
             </tbody>
@@ -286,14 +286,16 @@
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="19"
-                                    class="link-to-prism">src/app/components/noticias/noticias-cards/noticias-cards.component.ts:19</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="25"
+                                    class="link-to-prism">src/app/components/noticias/noticias-cards/noticias-cards.component.ts:25</a></div>
                         </td>
                     </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                        <div class="io-description"><p>Método para navegar a los detalles de una noticia</p>
+</div>
 
                             <div class="io-description">
                                 <b>Parameters :</b>
@@ -304,6 +306,7 @@
                                             <td>Name</td>
                                                 <td>Type</td>
                                             <td>Optional</td>
+                                                <td>Description</td>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -318,6 +321,12 @@
                                             </td>
 
 
+                                            <td>
+                                                    <ul>
+<li>Identificador único de la noticia</li>
+</ul>
+
+                                            </td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -359,7 +368,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/components/noticias/noticias-cards/noticias-cards.component.ts:16</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/components/noticias/noticias-cards/noticias-cards.component.ts:18</a></div>
                         </td>
                     </tr>
 
@@ -386,7 +395,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/app/components/noticias/noticias-cards/noticias-cards.component.ts:17</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/app/components/noticias/noticias-cards/noticias-cards.component.ts:19</a></div>
                         </td>
                     </tr>
 
@@ -412,11 +421,17 @@ import { Noticia } from &#x27;../../../shared/utils/data&#x27;;
 })
 export class NoticiasCardsComponent {
 
+  // Input que recibe una noticia individual para mostrar
   @Input() news!: Noticia;
 
+  // Servicios
   readonly #route &#x3D; inject(ActivatedRoute);
   readonly #router &#x3D; inject(Router);
 
+  /**
+   * Método para navegar a los detalles de una noticia
+   * @param uuid - Identificador único de la noticia
+   */
   goNews(uuid: string) {
     this.#router.navigate([&#x60;detalles/${uuid}&#x60;], {relativeTo: this.#route});
   }
@@ -430,7 +445,7 @@ export class NoticiasCardsComponent {
   &lt;div class&#x3D;&quot;card-body&quot;&gt;
       &lt;h5 class&#x3D;&quot;card-title&quot;&gt;{{ news.title }}&lt;/h5&gt;
       &lt;p class&#x3D;&quot;card-text&quot;&gt;{{ news.description }}&lt;/p&gt;
-      &lt;p&gt;{{news.categories}}&lt;/p&gt;
+      &lt;p class&#x3D;&quot;categories&quot;&gt;{{news.categories.join(&#x27;, &#x27;)}}&lt;/p&gt;
       &lt;a class&#x3D;&quot;btn btn-primary&quot; (click)&#x3D;&quot;goNews(news.uuid)&quot;&gt;Leer más&lt;/a&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
@@ -462,8 +477,8 @@ export class NoticiasCardsComponent {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class="card">  <img [src]="news.image_url" class="card-img-top" alt="{{ news.title }}">  <div class="card-body">      <h5 class="card-title">{{ news.title }}</h5>      <p class="card-text">{{ news.description }}</p>      <p>{{news.categories}}</p>      <a class="btn btn-primary" (click)="goNews(news.uuid)">Leer más</a>  </div></div></div>'
-    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'Error404Component', 'selector': 'app-error404'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'NoticiasCardsComponent', 'selector': 'app-noticias-cards'},{'name': 'NoticiasCarruselComponent', 'selector': 'app-noticias-carrusel'},{'name': 'NoticiasComponent', 'selector': 'app-noticias'},{'name': 'NoticiasDetallesComponent', 'selector': 'app-noticias-detalles'},{'name': 'NoticiasListComponent', 'selector': 'app-noticias-list'},{'name': 'RegisterComponent', 'selector': 'app-register'},{'name': 'SidebarComponent', 'selector': 'app-sidebar'}];
+        var COMPONENT_TEMPLATE = '<div><div class="card">  <img [src]="news.image_url" class="card-img-top" alt="{{ news.title }}">  <div class="card-body">      <h5 class="card-title">{{ news.title }}</h5>      <p class="card-text">{{ news.description }}</p>      <p class="categories">{{news.categories.join(\', \')}}</p>      <a class="btn btn-primary" (click)="goNews(news.uuid)">Leer más</a>  </div></div></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'Error404Component', 'selector': 'app-error404'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'NoticiasCardsComponent', 'selector': 'app-noticias-cards'},{'name': 'NoticiasCarruselComponent', 'selector': 'app-noticias-carrusel'},{'name': 'NoticiasCategoryComponent', 'selector': 'app-noticias-category'},{'name': 'NoticiasComponent', 'selector': 'app-noticias'},{'name': 'NoticiasDetallesComponent', 'selector': 'app-noticias-detalles'},{'name': 'NoticiasListComponent', 'selector': 'app-noticias-list'},{'name': 'RegisterComponent', 'selector': 'app-register'},{'name': 'SidebarComponent', 'selector': 'app-sidebar'},{'name': 'UserProfileComponent', 'selector': 'app-user-profile'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'NoticiasCardsComponent'};
 </script>

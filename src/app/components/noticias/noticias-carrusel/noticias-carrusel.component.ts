@@ -11,12 +11,15 @@ import { NoticiasApiService } from '../../../shared/services/noticias-api.servic
 })
 export class NoticiasCarruselComponent {
 
+  //Array vacio para noticia
   noticias: Noticia[] = [];
 
+  //Servicio
   readonly #apiNoticia = inject(NoticiasApiService);
 
   constructor() {
-    this.#apiNoticia.getNews(3).subscribe( (noticias) => {
+    //Se rellena el array con las notcias de la api
+    this.#apiNoticia.getNews().subscribe( (noticias) => {
       this.noticias = noticias;
     });
   }

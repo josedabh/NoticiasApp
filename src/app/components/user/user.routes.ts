@@ -18,9 +18,11 @@ export const USER_ROUTES = {
  */
 export const userRoutes: Routes = [
     { path: '', redirectTo: USER_ROUTES.LOGIN, pathMatch: 'full' },
-    { path: USER_ROUTES.LOGIN, canActivate: [authUserGuard],
+    { path: USER_ROUTES.LOGIN,
          component: LoginComponent },
-    { path: USER_ROUTES.REGISTER,  canActivate: [authUserGuard],
+    { path: USER_ROUTES.REGISTER,
          component: RegisterComponent },
-    { path: USER_ROUTES.INFOUSUARIO, component: UserProfileComponent}
+    { path: USER_ROUTES.INFOUSUARIO,
+        component: UserProfileComponent,
+        canActivate: [authUserGuard]}
 ]

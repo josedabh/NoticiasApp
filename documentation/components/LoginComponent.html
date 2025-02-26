@@ -149,6 +149,10 @@
                 <td class="col-md-9"><code>app-login</code></td>
             </tr>
 
+            <tr>
+                <td class="col-md-3">standalone</td>
+                <td class="col-md-9"><code>true</code></td>
+            </tr>
 
             <tr>
                 <td class="col-md-3">imports</td>
@@ -158,6 +162,7 @@
                             <code>MatInputModule</code>
                             <code>MatButtonModule</code>
                             <code>MatIconModule</code>
+                            <code>MatSnackBarModule</code>
                 </td>
             </tr>
 
@@ -198,13 +203,26 @@
                         <ul class="index-list">
                             <li>
                                     <span class="modifier">Readonly</span>
-                                <a href="#email" >email</a>
+                                    <span class="modifier">Private</span>
+                                <a href="##router" >#router</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Readonly</span>
+                                    <span class="modifier">Private</span>
+                                <a href="##snackBar" >#snackBar</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Readonly</span>
+                                <a href="#authService" >authService</a>
                             </li>
                             <li>
                                 <a href="#errorMessage" >errorMessage</a>
                             </li>
                             <li>
                                 <a href="#hide" >hide</a>
+                            </li>
+                            <li>
+                                <a href="#loginForm" >loginForm</a>
                             </li>
                         </ul>
                     </td>
@@ -219,7 +237,13 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                <a href="#clickEvent" >clickEvent</a>
+                                <a href="#goBack" >goBack</a>
+                            </li>
+                            <li>
+                                <a href="#onSubmit" >onSubmit</a>
+                            </li>
+                            <li>
+                                <a href="#togglePassword" >togglePassword</a>
                             </li>
                             <li>
                                 <a href="#updateErrorMessage" >updateErrorMessage</a>
@@ -247,7 +271,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">src/app/components/user/login/login.component.ts:22</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="43" class="link-to-prism">src/app/components/user/login/login.component.ts:43</a></div>
                             </td>
                         </tr>
 
@@ -268,30 +292,110 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="clickEvent"></a>
+                    <a name="goBack"></a>
                     <span class="name">
-                        <span ><b>clickEvent</b></span>
-                        <a href="#clickEvent"><span class="icon ion-ios-link"></span></a>
+                        <span ><b>goBack</b></span>
+                        <a href="#goBack"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>clickEvent(event: MouseEvent)</code>
+<code>goBack()</code>
                 </td>
             </tr>
 
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="40"
-                                    class="link-to-prism">src/app/components/user/login/login.component.ts:40</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="100"
+                                    class="link-to-prism">src/app/components/user/login/login.component.ts:100</a></div>
                         </td>
                     </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                        <div class="io-description"><p>Vuelve a la pagina principal</p>
+</div>
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onSubmit"></a>
+                    <span class="name">
+                        <span ><b>onSubmit</b></span>
+                        <a href="#onSubmit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onSubmit()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="56"
+                                    class="link-to-prism">src/app/components/user/login/login.component.ts:56</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Método que se ejecuta al enviar el formulario de login.</p>
+</div>
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="togglePassword"></a>
+                    <span class="name">
+                        <span ><b>togglePassword</b></span>
+                        <a href="#togglePassword"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>togglePassword(event: MouseEvent)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="92"
+                                    class="link-to-prism">src/app/components/user/login/login.component.ts:92</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Alterna la visibilidad del campo de contraseña.</p>
+</div>
 
                             <div class="io-description">
                                 <b>Parameters :</b>
@@ -302,6 +406,7 @@
                                             <td>Name</td>
                                                 <td>Type</td>
                                             <td>Optional</td>
+                                                <td>Description</td>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -316,6 +421,12 @@
                                             </td>
 
 
+                                            <td>
+                                                    <ul>
+<li>Evento MouseEvent para prevenir la acción por defecto.</li>
+</ul>
+
+                                            </td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -351,14 +462,16 @@
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="30"
-                                    class="link-to-prism">src/app/components/user/login/login.component.ts:30</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="76"
+                                    class="link-to-prism">src/app/components/user/login/login.component.ts:76</a></div>
                         </td>
                     </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                        <div class="io-description"><p>Actualiza el mensaje de error del campo &#39;email&#39; según el estado del control.</p>
+</div>
 
                         <div class="io-description">
                             <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
@@ -378,22 +491,76 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="email"></a>
+                    <a name="#router"></a>
                     <span class="name">
                             <span class="modifier">Readonly</span>
-                        <span ><b>email</b></span>
-                        <a href="#email"><span class="icon ion-ios-link"></span></a>
+                            <span class="modifier">Private</span>
+                        <span ><b>#router</b></span>
+                        <a href="##router"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
                 <tr>
                     <td class="col-md-4">
-                        <i>Default value : </i><code>new FormControl(&#x27;&#x27;, [Validators.required, Validators.email])</code>
+                        <i>Default value : </i><code>inject(Router)</code>
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/app/components/user/login/login.component.ts:20</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="32" class="link-to-prism">src/app/components/user/login/login.component.ts:32</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="#snackBar"></a>
+                    <span class="name">
+                            <span class="modifier">Readonly</span>
+                            <span class="modifier">Private</span>
+                        <span ><b>#snackBar</b></span>
+                        <a href="##snackBar"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>inject(MatSnackBar)</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="33" class="link-to-prism">src/app/components/user/login/login.component.ts:33</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="authService"></a>
+                    <span class="name">
+                            <span class="modifier">Readonly</span>
+                        <span ><b>authService</b></span>
+                        <a href="#authService"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>inject(AuthService)</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="31" class="link-to-prism">src/app/components/user/login/login.component.ts:31</a></div>
                         </td>
                     </tr>
 
@@ -418,7 +585,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">src/app/components/user/login/login.component.ts:22</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="42" class="link-to-prism">src/app/components/user/login/login.component.ts:42</a></div>
                         </td>
                     </tr>
 
@@ -443,7 +610,35 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="39" class="link-to-prism">src/app/components/user/login/login.component.ts:39</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="43" class="link-to-prism">src/app/components/user/login/login.component.ts:43</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="loginForm"></a>
+                    <span class="name">
+                        <span ><b>loginForm</b></span>
+                        <a href="#loginForm"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>new FormGroup({
+    email: new FormControl(&#x27;&#x27;, [Validators.required, Validators.email]),
+    password: new FormControl(&#x27;&#x27;, [Validators.required])
+  })</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="36" class="link-to-prism">src/app/components/user/login/login.component.ts:36</a></div>
                         </td>
                     </tr>
 
@@ -456,90 +651,143 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { ChangeDetectionStrategy, Component, signal } from &#x27;@angular/core&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { ChangeDetectionStrategy, Component, inject, signal } from &#x27;@angular/core&#x27;;
 import { takeUntilDestroyed } from &#x27;@angular/core/rxjs-interop&#x27;;
-import { FormControl, FormsModule, ReactiveFormsModule, Validators } from &#x27;@angular/forms&#x27;;
+import { FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from &#x27;@angular/forms&#x27;;
 import { MatButtonModule } from &#x27;@angular/material/button&#x27;;
 import { MatIconModule } from &#x27;@angular/material/icon&#x27;;
 import { MatInputModule } from &#x27;@angular/material/input&#x27;;
+import { Router } from &#x27;@angular/router&#x27;;
 import { merge } from &#x27;rxjs&#x27;;
+import { APP_ROUTES } from &#x27;src/app/app.routes&#x27;;
+import { USER_ROUTES } from &#x27;../user.routes&#x27;;
+import { AuthService } from &#x27;src/app/shared/services/auth.service&#x27;;
+import { MatSnackBar, MatSnackBarModule } from &#x27;@angular/material/snack-bar&#x27;;
 
 @Component({
     selector: &#x27;app-login&#x27;,
     templateUrl: &#x27;./login.component.html&#x27;,
     styleUrl: &#x27;./login.component.scss&#x27;,
     changeDetection: ChangeDetectionStrategy.OnPush,
-    imports: [FormsModule, ReactiveFormsModule,
-      MatInputModule, MatButtonModule, MatIconModule
+    standalone: true,
+    imports: [
+      FormsModule, 
+      ReactiveFormsModule,
+      MatInputModule, 
+      MatButtonModule, 
+      MatIconModule,
+      MatSnackBarModule
     ],
 })
 export class LoginComponent {
+  //Servicios
+  readonly authService &#x3D; inject(AuthService);
+  readonly #router &#x3D; inject(Router);
+  readonly #snackBar &#x3D; inject(MatSnackBar);
 
-  readonly email &#x3D; new FormControl(&#x27;&#x27;, [Validators.required, Validators.email]);
+  //Reactive Formulario 
+  loginForm &#x3D; new FormGroup({
+    email: new FormControl(&#x27;&#x27;, [Validators.required, Validators.email]),
+    password: new FormControl(&#x27;&#x27;, [Validators.required])
+  });
 
+  //Signals
   errorMessage &#x3D; signal(&#x27;&#x27;);
+  hide &#x3D; signal(true);
 
   constructor() {
-    merge(this.email.statusChanges, this.email.valueChanges)
+
+    merge(this.loginForm.get(&#x27;email&#x27;)!.statusChanges, 
+          this.loginForm.get(&#x27;email&#x27;)!.valueChanges)
       .pipe(takeUntilDestroyed())
       .subscribe(() &#x3D;&gt; this.updateErrorMessage());
   }
 
+   /**
+   * Método que se ejecuta al enviar el formulario de login.
+   */
+  onSubmit() {
+    if (this.loginForm.valid) {
+      const { email, password } &#x3D; this.loginForm.value;
+      if (this.authService.login(email!, password!)) {
+        this.#router.navigate([APP_ROUTES.USER, USER_ROUTES.INFOUSUARIO]);
+      } else {
+        this.errorMessage.set(&#x27;Email o contraseña incorrectos&#x27;);
+        this.#snackBar.open(&#x27;Email o contraseña incorrectos&#x27;, &#x27;Cerrar&#x27;, {
+          duration: 3000,
+          horizontalPosition: &#x27;center&#x27;,
+          verticalPosition: &#x27;top&#x27;,
+          panelClass: [&#x27;error-snackbar&#x27;]
+        });
+      }
+    }
+  }
+
+  /**
+   * Actualiza el mensaje de error del campo &#x27;email&#x27; según el estado del control.
+   */
   updateErrorMessage() {
-    if (this.email.hasError(&#x27;required&#x27;)) {
-      this.errorMessage.set(&#x27;You must enter a value&#x27;);
-    } else if (this.email.hasError(&#x27;email&#x27;)) {
-      this.errorMessage.set(&#x27;Not a valid email&#x27;);
+    const emailControl &#x3D; this.loginForm.get(&#x27;email&#x27;)!;
+    if (emailControl.hasError(&#x27;required&#x27;)) {
+      this.errorMessage.set(&#x27;El email es requerido&#x27;);
+    } else if (emailControl.hasError(&#x27;email&#x27;)) {
+      this.errorMessage.set(&#x27;El email no es válido&#x27;);
     } else {
       this.errorMessage.set(&#x27;&#x27;);
     }
   }
-  hide &#x3D; signal(true);
-  clickEvent(event: MouseEvent) {
-    this.hide.set(!this.hide());
-    event.stopPropagation();
+
+  /**
+   * Alterna la visibilidad del campo de contraseña.
+   *
+   * @param event - Evento MouseEvent para prevenir la acción por defecto.
+   */
+  togglePassword(event: MouseEvent) {
+    this.hide.update(value &#x3D;&gt; !value);
+    event.preventDefault();
   }
-}
-</code></pre>
+
+  /**
+   * Vuelve a la pagina principal
+   */
+  goBack(){
+    this.#router.navigate([APP_ROUTES.NOTICIAS]);
+  }
+}</code></pre>
     </div>
 
     <div class="tab-pane fade " id="templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;contenedor&quot;&gt;
-  &lt;h1&gt;Login&lt;/h1&gt;
-  &lt;br&gt;
-  &lt;!--Email--&gt;
-  &lt;mat-form-field&gt;
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;login-container&quot;&gt;
+  &lt;h1&gt;Iniciar Sesión&lt;/h1&gt;
+  &lt;form [formGroup]&#x3D;&quot;loginForm&quot; (ngSubmit)&#x3D;&quot;onSubmit()&quot;
+  (keydown.enter)&#x3D;&quot;onSubmit()&quot;&gt;
+    &lt;mat-form-field&gt;
       &lt;mat-label&gt;Email&lt;/mat-label&gt;
-      &lt;input
-        matInput
-        placeholder&#x3D;&quot;Email&quot;
-        [formControl]&#x3D;&quot;email&quot;
-        (blur)&#x3D;&quot;updateErrorMessage()&quot;
-        required
-      /&gt;
-      @if (email.invalid) {
+      &lt;input matInput formControlName&#x3D;&quot;email&quot; required&gt;
+      @if (errorMessage()) {
         &lt;mat-error&gt;{{errorMessage()}}&lt;/mat-error&gt;
       }
-  &lt;/mat-form-field&gt;
-  &lt;br&gt;
-  &lt;!--Contraseña--&gt;
-  &lt;mat-form-field&gt;
-    &lt;mat-label&gt;Contraseña&lt;/mat-label&gt;
-    &lt;input matInput [type]&#x3D;&quot;hide() ? &#x27;password&#x27; : &#x27;text&#x27;&quot; /&gt;
-    &lt;button
-      mat-icon-button
-      matSuffix
-      (click)&#x3D;&quot;clickEvent($event)&quot;
-      [attr.aria-label]&#x3D;&quot;&#x27;Hide password&#x27;&quot;
-      [attr.aria-pressed]&#x3D;&quot;hide()&quot;
-    &gt;
-      &lt;mat-icon&gt;{{hide() ? &#x27;visibility_off&#x27; : &#x27;visibility&#x27;}}&lt;/mat-icon&gt;
+    &lt;/mat-form-field&gt;
+
+    &lt;mat-form-field&gt;
+      &lt;mat-label&gt;Contraseña&lt;/mat-label&gt;
+      &lt;input matInput [type]&#x3D;&quot;hide() ? &#x27;password&#x27; : &#x27;text&#x27;&quot; 
+             formControlName&#x3D;&quot;password&quot; required&gt;
+      &lt;button mat-icon-button matSuffix (click)&#x3D;&quot;togglePassword($event)&quot; 
+              [attr.aria-label]&#x3D;&quot;&#x27;Hide password&#x27;&quot; [attr.aria-pressed]&#x3D;&quot;hide()&quot;&gt;
+        &lt;mat-icon&gt;{{hide() ? &#x27;visibility_off&#x27; : &#x27;visibility&#x27;}}&lt;/mat-icon&gt;
+      &lt;/button&gt;
+    &lt;/mat-form-field&gt;
+
+    &lt;button mat-raised-button color&#x3D;&quot;primary&quot; 
+            type&#x3D;&quot;submit&quot; [disabled]&#x3D;&quot;!loginForm.valid&quot;&gt;
+      Iniciar Sesión
     &lt;/button&gt;
-  &lt;/mat-form-field&gt;
-  &lt;br&gt;
-  &lt;!--Boton entrar--&gt;
-  &lt;button class&#x3D;&quot;btn btn-secondary&quot;
-  type&#x3D;&quot;submit&quot;&gt;Entrar&lt;/button&gt;
+  &lt;/form&gt;
+&lt;/div&gt;
+&lt;div class&#x3D;&quot;boton&quot;&gt;
+  &lt;button class&#x3D;&quot;btn btn-primary&quot; 
+  (click)&#x3D;&quot;goBack()&quot;&gt;Volver a la pagina principal&lt;/button&gt;
 &lt;/div&gt;</code></pre>
     </div>
 
@@ -569,8 +817,8 @@ export class LoginComponent {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class="contenedor">  <h1>Login</h1>  <br>  <!--Email-->  <mat-form-field>      <mat-label>Email</mat-label>      <input        matInput        placeholder="Email"        [formControl]="email"        (blur)="updateErrorMessage()"        required      />      @if (email.invalid) {        <mat-error>{{errorMessage()}}</mat-error>      }  </mat-form-field>  <br>  <!--Contraseña-->  <mat-form-field>    <mat-label>Contraseña</mat-label>    <input matInput [type]="hide() ? \'password\' : \'text\'" />    <button      mat-icon-button      matSuffix      (click)="clickEvent($event)"      [attr.aria-label]="\'Hide password\'"      [attr.aria-pressed]="hide()"    >      <mat-icon>{{hide() ? \'visibility_off\' : \'visibility\'}}</mat-icon>    </button>  </mat-form-field>  <br>  <!--Boton entrar-->  <button class="btn btn-secondary"  type="submit">Entrar</button></div></div>'
-    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'Error404Component', 'selector': 'app-error404'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'NoticiasCardsComponent', 'selector': 'app-noticias-cards'},{'name': 'NoticiasCarruselComponent', 'selector': 'app-noticias-carrusel'},{'name': 'NoticiasComponent', 'selector': 'app-noticias'},{'name': 'NoticiasDetallesComponent', 'selector': 'app-noticias-detalles'},{'name': 'NoticiasListComponent', 'selector': 'app-noticias-list'},{'name': 'RegisterComponent', 'selector': 'app-register'},{'name': 'SidebarComponent', 'selector': 'app-sidebar'}];
+        var COMPONENT_TEMPLATE = '<div><div class="login-container">  <h1>Iniciar Sesión</h1>  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()"  (keydown.enter)="onSubmit()">    <mat-form-field>      <mat-label>Email</mat-label>      <input matInput formControlName="email" required>      @if (errorMessage()) {        <mat-error>{{errorMessage()}}</mat-error>      }    </mat-form-field>    <mat-form-field>      <mat-label>Contraseña</mat-label>      <input matInput [type]="hide() ? \'password\' : \'text\'"              formControlName="password" required>      <button mat-icon-button matSuffix (click)="togglePassword($event)"               [attr.aria-label]="\'Hide password\'" [attr.aria-pressed]="hide()">        <mat-icon>{{hide() ? \'visibility_off\' : \'visibility\'}}</mat-icon>      </button>    </mat-form-field>    <button mat-raised-button color="primary"             type="submit" [disabled]="!loginForm.valid">      Iniciar Sesión    </button>  </form></div><div class="boton">  <button class="btn btn-primary"   (click)="goBack()">Volver a la pagina principal</button></div></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'Error404Component', 'selector': 'app-error404'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'NoticiasCardsComponent', 'selector': 'app-noticias-cards'},{'name': 'NoticiasCarruselComponent', 'selector': 'app-noticias-carrusel'},{'name': 'NoticiasCategoryComponent', 'selector': 'app-noticias-category'},{'name': 'NoticiasComponent', 'selector': 'app-noticias'},{'name': 'NoticiasDetallesComponent', 'selector': 'app-noticias-detalles'},{'name': 'NoticiasListComponent', 'selector': 'app-noticias-list'},{'name': 'RegisterComponent', 'selector': 'app-register'},{'name': 'SidebarComponent', 'selector': 'app-sidebar'},{'name': 'UserProfileComponent', 'selector': 'app-user-profile'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'LoginComponent'};
 </script>

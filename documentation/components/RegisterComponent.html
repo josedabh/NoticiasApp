@@ -145,6 +145,10 @@
                 <td class="col-md-9"><code>app-register</code></td>
             </tr>
 
+            <tr>
+                <td class="col-md-3">standalone</td>
+                <td class="col-md-9"><code>true</code></td>
+            </tr>
 
             <tr>
                 <td class="col-md-3">imports</td>
@@ -208,10 +212,23 @@
                                 <a href="##hidePassword" >#hidePassword</a>
                             </li>
                             <li>
+                                    <span class="modifier">Readonly</span>
+                                    <span class="modifier">Private</span>
+                                <a href="##router" >#router</a>
+                            </li>
+                            <li>
                                 <a href="#apellidos" >apellidos</a>
                             </li>
                             <li>
+                                    <span class="modifier">Readonly</span>
+                                <a href="#authService" >authService</a>
+                            </li>
+                            <li>
                                 <a href="#categorias" >categorias</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Readonly</span>
+                                <a href="#categories" >categories</a>
                             </li>
                             <li>
                                 <a href="#confirmPassword" >confirmPassword</a>
@@ -242,6 +259,9 @@
                         <ul class="index-list">
                             <li>
                                 <a href="#errorMessage" >errorMessage</a>
+                            </li>
+                            <li>
+                                <a href="#goBack" >goBack</a>
                             </li>
                             <li>
                                 <a href="#hideConfirmPassword" >hideConfirmPassword</a>
@@ -306,17 +326,62 @@
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="40"
-                                    class="link-to-prism">src/app/components/user/register/register.component.ts:40</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="116"
+                                    class="link-to-prism">src/app/components/user/register/register.component.ts:116</a></div>
                         </td>
                     </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                        <div class="io-description"><p>Obtiene el mensaje de error actual</p>
+</div>
 
                         <div class="io-description">
                             <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                <p>string - mensaje de error actual o cadena vacía</p>
+
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="goBack"></a>
+                    <span class="name">
+                        <span ><b>goBack</b></span>
+                        <a href="#goBack"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>goBack()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="155"
+                                    class="link-to-prism">src/app/components/user/register/register.component.ts:155</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Vuelve a la pagina principal</p>
+</div>
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
 
                         </div>
                 </td>
@@ -343,19 +408,25 @@
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="36"
-                                    class="link-to-prism">src/app/components/user/register/register.component.ts:36</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="108"
+                                    class="link-to-prism">src/app/components/user/register/register.component.ts:108</a></div>
                         </td>
                     </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                        <div class="io-description"><p>Obtiene el estado actual de visibilidad de la confirmación de contraseña</p>
+</div>
 
                         <div class="io-description">
                             <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
 
                         </div>
+                            <div class="io-description">
+                                <p>boolean - true si la confirmación de contraseña está oculta</p>
+
+                            </div>
                 </td>
             </tr>
         </tbody>
@@ -380,19 +451,25 @@
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="32"
-                                    class="link-to-prism">src/app/components/user/register/register.component.ts:32</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="100"
+                                    class="link-to-prism">src/app/components/user/register/register.component.ts:100</a></div>
                         </td>
                     </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                        <div class="io-description"><p>Obtiene el estado actual de visibilidad de la contraseña</p>
+</div>
 
                         <div class="io-description">
                             <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
 
                         </div>
+                            <div class="io-description">
+                                <p>boolean - true si la contraseña está oculta</p>
+
+                            </div>
                 </td>
             </tr>
         </tbody>
@@ -417,19 +494,25 @@
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="64"
-                                    class="link-to-prism">src/app/components/user/register/register.component.ts:64</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="85"
+                                    class="link-to-prism">src/app/components/user/register/register.component.ts:85</a></div>
                         </td>
                     </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                        <div class="io-description"><p>Valida si el formulario cumple con todos los requisitos</p>
+</div>
 
                         <div class="io-description">
                             <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
 
                         </div>
+                            <div class="io-description">
+                                <p>boolean - true si todos los campos son válidos y las contraseñas coinciden</p>
+
+                            </div>
                 </td>
             </tr>
         </tbody>
@@ -454,14 +537,18 @@
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="76"
-                                    class="link-to-prism">src/app/components/user/register/register.component.ts:76</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="56"
+                                    class="link-to-prism">src/app/components/user/register/register.component.ts:56</a></div>
                         </td>
                     </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                        <div class="io-description"><p>Maneja el envío del formulario de registro
+Valida el formulario, crea un nuevo usuario y lo registra
+Si el registro es exitoso, navega a la página de noticias</p>
+</div>
 
                         <div class="io-description">
                             <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
@@ -491,14 +578,16 @@
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="49"
-                                    class="link-to-prism">src/app/components/user/register/register.component.ts:49</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="133"
+                                    class="link-to-prism">src/app/components/user/register/register.component.ts:133</a></div>
                         </td>
                     </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                        <div class="io-description"><p>Alterna la visibilidad de la confirmación de contraseña</p>
+</div>
 
                             <div class="io-description">
                                 <b>Parameters :</b>
@@ -509,6 +598,7 @@
                                             <td>Name</td>
                                                 <td>Type</td>
                                             <td>Optional</td>
+                                                <td>Description</td>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -523,6 +613,12 @@
                                             </td>
 
 
+                                            <td>
+                                                    <ul>
+<li>Evento del botón de visibilidad</li>
+</ul>
+
+                                            </td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -558,14 +654,16 @@
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="44"
-                                    class="link-to-prism">src/app/components/user/register/register.component.ts:44</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="124"
+                                    class="link-to-prism">src/app/components/user/register/register.component.ts:124</a></div>
                         </td>
                     </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                        <div class="io-description"><p>Alterna la visibilidad de la contraseña</p>
+</div>
 
                             <div class="io-description">
                                 <b>Parameters :</b>
@@ -576,6 +674,7 @@
                                             <td>Name</td>
                                                 <td>Type</td>
                                             <td>Optional</td>
+                                                <td>Description</td>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -590,6 +689,12 @@
                                             </td>
 
 
+                                            <td>
+                                                    <ul>
+<li>Evento del botón de visibilidad</li>
+</ul>
+
+                                            </td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -625,14 +730,17 @@
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="54"
-                                    class="link-to-prism">src/app/components/user/register/register.component.ts:54</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="142"
+                                    class="link-to-prism">src/app/components/user/register/register.component.ts:142</a></div>
                         </td>
                     </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                        <div class="io-description"><p>Actualiza el mensaje de error basado en el estado del campo email
+Muestra diferentes mensajes según el tipo de error</p>
+</div>
 
                         <div class="io-description">
                             <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
@@ -667,7 +775,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">src/app/components/user/register/register.component.ts:30</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="49" class="link-to-prism">src/app/components/user/register/register.component.ts:49</a></div>
                         </td>
                     </tr>
 
@@ -693,7 +801,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">src/app/components/user/register/register.component.ts:29</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="48" class="link-to-prism">src/app/components/user/register/register.component.ts:48</a></div>
                         </td>
                     </tr>
 
@@ -719,7 +827,34 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">src/app/components/user/register/register.component.ts:28</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="47" class="link-to-prism">src/app/components/user/register/register.component.ts:47</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="#router"></a>
+                    <span class="name">
+                            <span class="modifier">Readonly</span>
+                            <span class="modifier">Private</span>
+                        <span ><b>#router</b></span>
+                        <a href="##router"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>inject(Router)</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="32" class="link-to-prism">src/app/components/user/register/register.component.ts:32</a></div>
                         </td>
                     </tr>
 
@@ -744,7 +879,33 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="21" class="link-to-prism">src/app/components/user/register/register.component.ts:21</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="39" class="link-to-prism">src/app/components/user/register/register.component.ts:39</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="authService"></a>
+                    <span class="name">
+                            <span class="modifier">Readonly</span>
+                        <span ><b>authService</b></span>
+                        <a href="#authService"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>inject(AuthService)</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="31" class="link-to-prism">src/app/components/user/register/register.component.ts:31</a></div>
                         </td>
                     </tr>
 
@@ -764,12 +925,38 @@
             </tr>
                 <tr>
                     <td class="col-md-4">
-                        <i>Default value : </i><code>new FormControl&lt;string[]&gt;([], [Validators.required])</code>
+                        <i>Default value : </i><code>new FormControl&lt;string[]&gt;([], [])</code>
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/app/components/user/register/register.component.ts:25</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="43" class="link-to-prism">src/app/components/user/register/register.component.ts:43</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="categories"></a>
+                    <span class="name">
+                            <span class="modifier">Readonly</span>
+                        <span ><b>categories</b></span>
+                        <a href="#categories"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>CATEGORIES</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="35" class="link-to-prism">src/app/components/user/register/register.component.ts:35</a></div>
                         </td>
                     </tr>
 
@@ -794,7 +981,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">src/app/components/user/register/register.component.ts:24</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="42" class="link-to-prism">src/app/components/user/register/register.component.ts:42</a></div>
                         </td>
                     </tr>
 
@@ -819,7 +1006,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">src/app/components/user/register/register.component.ts:22</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="40" class="link-to-prism">src/app/components/user/register/register.component.ts:40</a></div>
                         </td>
                     </tr>
 
@@ -844,7 +1031,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/app/components/user/register/register.component.ts:26</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="44" class="link-to-prism">src/app/components/user/register/register.component.ts:44</a></div>
                         </td>
                     </tr>
 
@@ -869,7 +1056,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/app/components/user/register/register.component.ts:20</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="38" class="link-to-prism">src/app/components/user/register/register.component.ts:38</a></div>
                         </td>
                     </tr>
 
@@ -894,7 +1081,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/app/components/user/register/register.component.ts:23</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="41" class="link-to-prism">src/app/components/user/register/register.component.ts:41</a></div>
                         </td>
                     </tr>
 
@@ -907,104 +1094,171 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, signal } from &#x27;@angular/core&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, inject, signal } from &#x27;@angular/core&#x27;;
 import { FormControl, FormsModule, ReactiveFormsModule, Validators } from &#x27;@angular/forms&#x27;;
 import { MatButtonModule } from &#x27;@angular/material/button&#x27;;
 import { MatCheckboxModule } from &#x27;@angular/material/checkbox&#x27;;
 import { MatIconModule } from &#x27;@angular/material/icon&#x27;;
 import { MatInputModule } from &#x27;@angular/material/input&#x27;;
 import { MatSelectModule } from &#x27;@angular/material/select&#x27;;
-import { RouterLink } from &#x27;@angular/router&#x27;;
+import { Router, RouterLink } from &#x27;@angular/router&#x27;;
+import { APP_ROUTES } from &#x27;src/app/app.routes&#x27;;
+import { AuthService } from &#x27;src/app/shared/services/auth.service&#x27;;
+import { CATEGORIES, User } from &#x27;src/app/shared/utils/data&#x27;;
 
 @Component({
-    selector: &#x27;app-register&#x27;,
-    templateUrl: &#x27;./register.component.html&#x27;,
-    styleUrl: &#x27;./register.component.scss&#x27;,
-    imports: [FormsModule, ReactiveFormsModule,
-        MatInputModule, MatButtonModule, MatIconModule,
-        MatCheckboxModule, MatSelectModule, RouterLink
-    ],
+  selector: &#x27;app-register&#x27;,
+  templateUrl: &#x27;./register.component.html&#x27;,
+  styleUrl: &#x27;./register.component.scss&#x27;,
+  standalone: true,
+  imports: [
+    FormsModule,
+    ReactiveFormsModule,
+    MatInputModule,
+    MatButtonModule,
+    MatIconModule,
+    MatCheckboxModule,
+    MatSelectModule,
+    RouterLink
+  ],
 })
 export class RegisterComponent {
-    nombre &#x3D; new FormControl(&#x27;&#x27;, [Validators.required]);
-    apellidos &#x3D; new FormControl(&#x27;&#x27;, [Validators.required]);
-    email &#x3D; new FormControl(&#x27;&#x27;, [Validators.required, Validators.email]);
-    password &#x3D; new FormControl(&#x27;&#x27;, [Validators.required, Validators.minLength(8)]);
-    confirmPassword &#x3D; new FormControl(&#x27;&#x27;, [Validators.required]);
-    categorias &#x3D; new FormControl&lt;string[]&gt;([], [Validators.required]);
-    newsletter &#x3D; new FormControl(false);
-  
-    #hidePassword &#x3D; signal(true);
-    #hideConfirmPassword &#x3D; signal(true);
-    #errorMessage &#x3D; signal(&#x27;&#x27;);
-  
-    hidePassword() {
-      return this.#hidePassword();
-    }
-  
-    hideConfirmPassword() {
-      return this.#hideConfirmPassword();
-    }
-  
-    errorMessage() {
-      return this.#errorMessage();
-    }
-  
-    togglePassword(event: Event) {
-      event.preventDefault();
-      this.#hidePassword.update(value &#x3D;&gt; !value);
-    }
-  
-    toggleConfirmPassword(event: Event) {
-      event.preventDefault();
-      this.#hideConfirmPassword.update(value &#x3D;&gt; !value);
-    }
-  
-    updateErrorMessage() {
-      if (this.email.hasError(&#x27;required&#x27;)) {
-        this.#errorMessage.set(&#x27;El email es requerido&#x27;);
-      } else if (this.email.hasError(&#x27;email&#x27;)) {
-        this.#errorMessage.set(&#x27;El email no es válido&#x27;);
-      } else {
-        this.#errorMessage.set(&#x27;&#x27;);
+  //Servicios
+  readonly authService &#x3D; inject(AuthService);
+  readonly #router &#x3D; inject(Router);
+
+  //Constante
+  readonly categories &#x3D; CATEGORIES;
+
+  // Controles del formulario
+  nombre &#x3D; new FormControl(&#x27;&#x27;, [Validators.required]);
+  apellidos &#x3D; new FormControl(&#x27;&#x27;, [Validators.required]);
+  email &#x3D; new FormControl(&#x27;&#x27;, [Validators.required, Validators.email]);
+  password &#x3D; new FormControl(&#x27;&#x27;, [Validators.required, Validators.minLength(8)]);
+  confirmPassword &#x3D; new FormControl(&#x27;&#x27;, [Validators.required]);
+  categorias &#x3D; new FormControl&lt;string[]&gt;([], []);
+  newsletter &#x3D; new FormControl(false);
+
+  // Signals
+  #hidePassword &#x3D; signal(true);
+  #hideConfirmPassword &#x3D; signal(true);
+  #errorMessage &#x3D; signal(&#x27;&#x27;);
+
+  /**
+   * Maneja el envío del formulario de registro
+   * Valida el formulario, crea un nuevo usuario y lo registra
+   * Si el registro es exitoso, navega a la página de noticias
+   */
+  onSubmit() {
+    if (this.isFormValid()) {
+      // Convertir las categorías seleccionadas a sus nombres
+      const categoriasSeleccionadas &#x3D; this.categorias.value?.map(categoriaValue &#x3D;&gt; {
+        const categoria &#x3D; CATEGORIES.find(cat &#x3D;&gt; cat.value &#x3D;&#x3D;&#x3D; categoriaValue);
+        return categoria ? categoria.name : categoriaValue;
+      }) || [];
+
+      const newUser: User &#x3D; {
+        id: Math.floor(Math.random() * 1000),
+        firstName: this.nombre.value!,
+        lastName: this.apellidos.value!,
+        email: this.email.value!,
+        password: this.password.value!,
+        avatar: &#x60;https://api.dicebear.com/7.x/avataaars/svg?seed&#x3D;${this.email.value}&#x60;,
+        categories: categoriasSeleccionadas, 
+        newsletter: this.newsletter.value!
+      };
+
+      if (this.authService.register(newUser)) {
+        this.#router.navigate([APP_ROUTES.NOTICIAS]);
       }
     }
-  
-    isFormValid(): boolean {
-      return (
-        this.nombre.valid &amp;&amp;
-        this.apellidos.valid &amp;&amp;
-        this.email.valid &amp;&amp;
-        this.password.valid &amp;&amp;
-        this.confirmPassword.valid &amp;&amp;
-        this.categorias.valid &amp;&amp;
-        this.password.value &#x3D;&#x3D;&#x3D; this.confirmPassword.value
-      );
+  }
+
+  /**
+   * Valida si el formulario cumple con todos los requisitos
+   * @returns boolean - true si todos los campos son válidos y las contraseñas coinciden
+   */
+  isFormValid(): boolean {
+    return (
+      this.nombre.valid &amp;&amp;
+      this.apellidos.valid &amp;&amp;
+      this.email.valid &amp;&amp;
+      this.password.valid &amp;&amp;
+      this.confirmPassword.valid &amp;&amp;
+      this.password.value &#x3D;&#x3D;&#x3D; this.confirmPassword.value
+    );
+  }
+
+  /**
+   * Obtiene el estado actual de visibilidad de la contraseña
+   * @returns boolean - true si la contraseña está oculta
+   */
+  hidePassword() {
+    return this.#hidePassword();
+  }
+
+  /**
+   * Obtiene el estado actual de visibilidad de la confirmación de contraseña
+   * @returns boolean - true si la confirmación de contraseña está oculta
+   */
+  hideConfirmPassword() {
+    return this.#hideConfirmPassword();
+  }
+
+  /**
+   * Obtiene el mensaje de error actual
+   * @returns string - mensaje de error actual o cadena vacía
+   */
+  errorMessage() {
+    return this.#errorMessage();
+  }
+
+  /**
+   * Alterna la visibilidad de la contraseña
+   * @param event - Evento del botón de visibilidad
+   */
+  togglePassword(event: Event) {
+    event.preventDefault();
+    this.#hidePassword.update(value &#x3D;&gt; !value);
+  }
+
+  /**
+   * Alterna la visibilidad de la confirmación de contraseña
+   * @param event - Evento del botón de visibilidad
+   */
+  toggleConfirmPassword(event: Event) {
+    event.preventDefault();
+    this.#hideConfirmPassword.update(value &#x3D;&gt; !value);
+  }
+
+  /**
+   * Actualiza el mensaje de error basado en el estado del campo email
+   * Muestra diferentes mensajes según el tipo de error
+   */
+  updateErrorMessage() {
+    if (this.email.hasError(&#x27;required&#x27;)) {
+      this.#errorMessage.set(&#x27;El email es requerido&#x27;);
+    } else if (this.email.hasError(&#x27;email&#x27;)) {
+      this.#errorMessage.set(&#x27;El email no es válido&#x27;);
+    } else {
+      this.#errorMessage.set(&#x27;&#x27;);
     }
-  
-    onSubmit() {
-      if (this.isFormValid()) {
-        const userData &#x3D; {
-          nombre: this.nombre.value,
-          apellidos: this.apellidos.value,
-          email: this.email.value,
-          password: this.password.value,
-          categorias: this.categorias.value,
-          newsletter: this.newsletter.value
-        };
-        console.log(&#x27;Datos del usuario:&#x27;, userData);
-        // Aquí iría la lógica para enviar los datos al servidor
-      }
-    }
-}
-</code></pre>
+  }
+
+  /**
+   * Vuelve a la pagina principal
+   */
+  goBack(){
+    this.#router.navigate([APP_ROUTES.NOTICIAS]);
+  }
+}</code></pre>
     </div>
 
     <div class="tab-pane fade " id="templateData">
         <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;contenedor&quot;&gt;
     &lt;h1&gt;Registro&lt;/h1&gt;
     &lt;br&gt;
-    &lt;form&gt;
+    &lt;form (ngSubmit)&#x3D;&quot;onSubmit()&quot; (keydown.enter)&#x3D;&quot;onSubmit()&quot;&gt;
         &lt;div class&#x3D;&quot;formulario&quot;&gt;
             &lt;!--Nombre--&gt;
             &lt;mat-form-field&gt;
@@ -1076,13 +1330,11 @@ export class RegisterComponent {
             &lt;mat-form-field&gt;
                 &lt;mat-label&gt;Categorías de interés&lt;/mat-label&gt;
                 &lt;mat-select [formControl]&#x3D;&quot;categorias&quot; multiple&gt;
-                    &lt;mat-option value&#x3D;&quot;deportes&quot;&gt;Deportes&lt;/mat-option&gt;
-                    &lt;mat-option value&#x3D;&quot;tecnologia&quot;&gt;Tecnología&lt;/mat-option&gt;
-                    &lt;mat-option value&#x3D;&quot;economia&quot;&gt;Economía&lt;/mat-option&gt;
-                    &lt;mat-option value&#x3D;&quot;politica&quot;&gt;Política&lt;/mat-option&gt;
-                    &lt;mat-option value&#x3D;&quot;entretenimiento&quot;&gt;Entretenimiento&lt;/mat-option&gt;
-                    &lt;mat-option value&#x3D;&quot;ciencia&quot;&gt;Ciencia&lt;/mat-option&gt;
-                    &lt;mat-option value&#x3D;&quot;salud&quot;&gt;Salud&lt;/mat-option&gt;
+                    @for (category of categories; track category.value) {
+                        &lt;mat-option [value]&#x3D;&quot;category.value&quot;&gt;
+                            {{category.name}}
+                        &lt;/mat-option&gt;
+                    }
                 &lt;/mat-select&gt;
             &lt;/mat-form-field&gt;
         &lt;/div&gt;
@@ -1093,11 +1345,16 @@ export class RegisterComponent {
         &lt;/mat-checkbox&gt;
     
         &lt;!--Botón registrar--&gt;
-        &lt;button class&#x3D;&quot;btn btn-primary&quot; type&#x3D;&quot;submit&quot; 
-        [disabled]&#x3D;&quot;!isFormValid()&quot; (click)&#x3D;&quot;onSubmit()&quot;&gt;
-            Registrarse
+        &lt;button class&#x3D;&quot;btn btn-primary&quot; 
+        type&#x3D;&quot;submit&quot; 
+        [disabled]&#x3D;&quot;!isFormValid()&quot;&gt;
+        Registrarse
         &lt;/button&gt;
 
+        &lt;button class&#x3D;&quot;btn btn-primary&quot; 
+        (click)&#x3D;&quot;goBack()&quot;&gt;
+        Volver a la pagina principal
+        &lt;/button&gt;
         &lt;!--Link a Login--&gt;
         &lt;p class&#x3D;&quot;mt-3&quot;&gt;
             ¿Ya tienes cuenta?
@@ -1135,8 +1392,8 @@ export class RegisterComponent {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class="contenedor">    <h1>Registro</h1>    <br>    <form>        <div class="formulario">            <!--Nombre-->            <mat-form-field>                <mat-label>Nombre</mat-label>                <input matInput placeholder="Nombre"                 [formControl]="nombre" required />                @if (nombre.invalid && nombre.touched) {                <mat-error>El nombre es requerido</mat-error>                }            </mat-form-field>            <!--Apellidos-->            <mat-form-field>                <mat-label>Apellidos</mat-label>                <input matInput placeholder="Apellidos"                 [formControl]="apellidos" required />                @if (apellidos.invalid && apellidos.touched) {                <mat-error>Los apellidos son requeridos</mat-error>                }            </mat-form-field>            <!--Email-->            <mat-form-field>                <mat-label>Email</mat-label>                <input matInput placeholder="Email" [formControl]="email"                 (blur)="updateErrorMessage()" required />                @if (email.invalid) {                <mat-error>{{errorMessage()}}</mat-error>                }            </mat-form-field>            <!--Contraseña-->            <mat-form-field>                <mat-label>Contraseña</mat-label>                <input matInput                 [type]="hidePassword() ? \'password\' : \'text\'"                 [formControl]="password" required />                <button mat-icon-button matSuffix                 (click)="togglePassword($event)" [attr.aria-label]="\'Hide password\'"                    [attr.aria-pressed]="hidePassword()">                    <mat-icon>                        {{hidePassword() ? \'visibility_off\' : \'visibility\'}}                    </mat-icon>                </button>                @if (password.invalid && password.touched) {                <mat-error>La contraseña debe tener al menos 8 caracteres</mat-error>                }            </mat-form-field>            <!--Confirmar Contraseña-->            <mat-form-field>                <mat-label>Confirmar Contraseña</mat-label>                <input matInput                 [type]="hideConfirmPassword() ? \'password\' : \'text\'"                 [formControl]="confirmPassword"                    required />                <button mat-icon-button matSuffix                 (click)="toggleConfirmPassword($event)"                    [attr.aria-label]="\'Hide confirm password\'"                     [attr.aria-pressed]="hideConfirmPassword()">                    <mat-icon>{{hideConfirmPassword() ? \'visibility_off\' : \'visibility\'}}</mat-icon>                </button>                @if (confirmPassword.invalid && confirmPassword.touched) {                <mat-error>Las contraseñas no coinciden</mat-error>                }            </mat-form-field>            <!--Categorías de Noticias-->            <mat-form-field>                <mat-label>Categorías de interés</mat-label>                <mat-select [formControl]="categorias" multiple>                    <mat-option value="deportes">Deportes</mat-option>                    <mat-option value="tecnologia">Tecnología</mat-option>                    <mat-option value="economia">Economía</mat-option>                    <mat-option value="politica">Política</mat-option>                    <mat-option value="entretenimiento">Entretenimiento</mat-option>                    <mat-option value="ciencia">Ciencia</mat-option>                    <mat-option value="salud">Salud</mat-option>                </mat-select>            </mat-form-field>        </div>                <!--Newsletter-->        <mat-checkbox [formControl]="newsletter">            Deseo recibir el boletín de noticias        </mat-checkbox>            <!--Botón registrar-->        <button class="btn btn-primary" type="submit"         [disabled]="!isFormValid()" (click)="onSubmit()">            Registrarse        </button>        <!--Link a Login-->        <p class="mt-3">            ¿Ya tienes cuenta?            <a [routerLink]="[\'/user/login\']">                Inicia sesión aquí            </a>        </p>    </form></div></div>'
-    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'Error404Component', 'selector': 'app-error404'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'NoticiasCardsComponent', 'selector': 'app-noticias-cards'},{'name': 'NoticiasCarruselComponent', 'selector': 'app-noticias-carrusel'},{'name': 'NoticiasComponent', 'selector': 'app-noticias'},{'name': 'NoticiasDetallesComponent', 'selector': 'app-noticias-detalles'},{'name': 'NoticiasListComponent', 'selector': 'app-noticias-list'},{'name': 'RegisterComponent', 'selector': 'app-register'},{'name': 'SidebarComponent', 'selector': 'app-sidebar'}];
+        var COMPONENT_TEMPLATE = '<div><div class="contenedor">    <h1>Registro</h1>    <br>    <form (ngSubmit)="onSubmit()" (keydown.enter)="onSubmit()">        <div class="formulario">            <!--Nombre-->            <mat-form-field>                <mat-label>Nombre</mat-label>                <input matInput placeholder="Nombre"                 [formControl]="nombre" required />                @if (nombre.invalid && nombre.touched) {                <mat-error>El nombre es requerido</mat-error>                }            </mat-form-field>            <!--Apellidos-->            <mat-form-field>                <mat-label>Apellidos</mat-label>                <input matInput placeholder="Apellidos"                 [formControl]="apellidos" required />                @if (apellidos.invalid && apellidos.touched) {                <mat-error>Los apellidos son requeridos</mat-error>                }            </mat-form-field>            <!--Email-->            <mat-form-field>                <mat-label>Email</mat-label>                <input matInput placeholder="Email" [formControl]="email"                 (blur)="updateErrorMessage()" required />                @if (email.invalid) {                <mat-error>{{errorMessage()}}</mat-error>                }            </mat-form-field>            <!--Contraseña-->            <mat-form-field>                <mat-label>Contraseña</mat-label>                <input matInput                 [type]="hidePassword() ? \'password\' : \'text\'"                 [formControl]="password" required />                <button mat-icon-button matSuffix                 (click)="togglePassword($event)" [attr.aria-label]="\'Hide password\'"                    [attr.aria-pressed]="hidePassword()">                    <mat-icon>                        {{hidePassword() ? \'visibility_off\' : \'visibility\'}}                    </mat-icon>                </button>                @if (password.invalid && password.touched) {                <mat-error>La contraseña debe tener al menos 8 caracteres</mat-error>                }            </mat-form-field>            <!--Confirmar Contraseña-->            <mat-form-field>                <mat-label>Confirmar Contraseña</mat-label>                <input matInput                 [type]="hideConfirmPassword() ? \'password\' : \'text\'"                 [formControl]="confirmPassword"                    required />                <button mat-icon-button matSuffix                 (click)="toggleConfirmPassword($event)"                    [attr.aria-label]="\'Hide confirm password\'"                     [attr.aria-pressed]="hideConfirmPassword()">                    <mat-icon>{{hideConfirmPassword() ? \'visibility_off\' : \'visibility\'}}</mat-icon>                </button>                @if (confirmPassword.invalid && confirmPassword.touched) {                <mat-error>Las contraseñas no coinciden</mat-error>                }            </mat-form-field>            <!--Categorías de Noticias-->            <mat-form-field>                <mat-label>Categorías de interés</mat-label>                <mat-select [formControl]="categorias" multiple>                    @for (category of categories; track category.value) {                        <mat-option [value]="category.value">                            {{category.name}}                        </mat-option>                    }                </mat-select>            </mat-form-field>        </div>                <!--Newsletter-->        <mat-checkbox [formControl]="newsletter">            Deseo recibir el boletín de noticias        </mat-checkbox>            <!--Botón registrar-->        <button class="btn btn-primary"         type="submit"         [disabled]="!isFormValid()">        Registrarse        </button>        <button class="btn btn-primary"         (click)="goBack()">        Volver a la pagina principal        </button>        <!--Link a Login-->        <p class="mt-3">            ¿Ya tienes cuenta?            <a [routerLink]="[\'/user/login\']">                Inicia sesión aquí            </a>        </p>    </form></div></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'Error404Component', 'selector': 'app-error404'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'NoticiasCardsComponent', 'selector': 'app-noticias-cards'},{'name': 'NoticiasCarruselComponent', 'selector': 'app-noticias-carrusel'},{'name': 'NoticiasCategoryComponent', 'selector': 'app-noticias-category'},{'name': 'NoticiasComponent', 'selector': 'app-noticias'},{'name': 'NoticiasDetallesComponent', 'selector': 'app-noticias-detalles'},{'name': 'NoticiasListComponent', 'selector': 'app-noticias-list'},{'name': 'RegisterComponent', 'selector': 'app-register'},{'name': 'SidebarComponent', 'selector': 'app-sidebar'},{'name': 'UserProfileComponent', 'selector': 'app-user-profile'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'RegisterComponent'};
 </script>

@@ -23,6 +23,9 @@ export class UserProfileComponent {
 
   user$ = this.#authService.currentUser$;
 
+  /**
+   * Vuelve a la pagina principal
+   */
   goBack(){
     this.#router.navigate([APP_ROUTES.NOTICIAS])
   }

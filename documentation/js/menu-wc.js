@@ -72,6 +72,9 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="components/NoticiasCarruselComponent.html" data-type="entity-link" >NoticiasCarruselComponent</a>
                             </li>
                             <li class="link">
+                                <a href="components/NoticiasCategoryComponent.html" data-type="entity-link" >NoticiasCategoryComponent</a>
+                            </li>
+                            <li class="link">
                                 <a href="components/NoticiasComponent.html" data-type="entity-link" >NoticiasComponent</a>
                             </li>
                             <li class="link">
@@ -85,6 +88,9 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                             </li>
                             <li class="link">
                                 <a href="components/SidebarComponent.html" data-type="entity-link" >SidebarComponent</a>
+                            </li>
+                            <li class="link">
+                                <a href="components/UserProfileComponent.html" data-type="entity-link" >UserProfileComponent</a>
                             </li>
                         </ul>
                     </li>
@@ -116,10 +122,16 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="interfaces/ApiNews.html" data-type="entity-link" >ApiNews</a>
                             </li>
                             <li class="link">
+                                <a href="interfaces/Category.html" data-type="entity-link" >Category</a>
+                            </li>
+                            <li class="link">
                                 <a href="interfaces/Meta.html" data-type="entity-link" >Meta</a>
                             </li>
                             <li class="link">
                                 <a href="interfaces/Noticia.html" data-type="entity-link" >Noticia</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/User.html" data-type="entity-link" >User</a>
                             </li>
                         </ul>
                     </li>

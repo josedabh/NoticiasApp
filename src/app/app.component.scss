@@ -1,9 +1,14 @@
+@use "variables/colors" as colors;
+@use "mixins/user" as *;
+
 .sidenav-container {
     height: 100vh;
 }
 
 mat-sidenav {
     width: 170px;
+    border-radius: 0;
+    background-color: colors.$secondary-color;
 }
 
 mat-sidenav-content {

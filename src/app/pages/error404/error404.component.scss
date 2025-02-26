@@ -1,9 +1,8 @@
 @use "variables/colors" as colors;
+@use "mixins/user" as *;
 
 .container{
-    background-color: colors.$primary-color;
-    display: grid;
-    place-items: center;
+    @include contenedor($color:colors.$primary-color, $maxWidth:auto);
 }
 
 img{

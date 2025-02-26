@@ -214,7 +214,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/components/noticias/noticias-carrusel/noticias-carrusel.component.ts:16</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/components/noticias/noticias-carrusel/noticias-carrusel.component.ts:18</a></div>
                             </td>
                         </tr>
 
@@ -252,7 +252,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/components/noticias/noticias-carrusel/noticias-carrusel.component.ts:16</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/components/noticias/noticias-carrusel/noticias-carrusel.component.ts:18</a></div>
                         </td>
                     </tr>
 
@@ -283,7 +283,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/components/noticias/noticias-carrusel/noticias-carrusel.component.ts:14</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/components/noticias/noticias-carrusel/noticias-carrusel.component.ts:15</a></div>
                         </td>
                     </tr>
 
@@ -309,12 +309,15 @@ import { NoticiasApiService } from &#x27;../../../shared/services/noticias-api.s
 })
 export class NoticiasCarruselComponent {
 
+  //Array vacio para noticia
   noticias: Noticia[] &#x3D; [];
 
+  //Servicio
   readonly #apiNoticia &#x3D; inject(NoticiasApiService);
 
   constructor() {
-    this.#apiNoticia.getNews(3).subscribe( (noticias) &#x3D;&gt; {
+    //Se rellena el array con las notcias de la api
+    this.#apiNoticia.getNews().subscribe( (noticias) &#x3D;&gt; {
       this.noticias &#x3D; noticias;
     });
   }
@@ -374,7 +377,7 @@ export class NoticiasCarruselComponent {
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
         var COMPONENT_TEMPLATE = '<div><div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">    <div class="carousel-inner">        @for (news of noticias; track $index) {        <div class="carousel-item" [class.active]="$index === 0">            <img [src]="news.image_url" class="d-block w-100" alt="{{ news.title }}">            <div class="carousel-caption d-none d-md-block">                <h5>{{ news.title }}</h5>                <p>{{ news.description }}</p>            </div>        </div>        }    </div>    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"        data-bs-slide="prev">        <span class="carousel-control-prev-icon" aria-hidden="true"></span>        <span class="visually-hidden">Previous</span>    </button>    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"        data-bs-slide="next">        <span class="carousel-control-next-icon" aria-hidden="true"></span>        <span class="visually-hidden">Next</span>    </button></div></div>'
-    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'Error404Component', 'selector': 'app-error404'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'NoticiasCardsComponent', 'selector': 'app-noticias-cards'},{'name': 'NoticiasCarruselComponent', 'selector': 'app-noticias-carrusel'},{'name': 'NoticiasComponent', 'selector': 'app-noticias'},{'name': 'NoticiasDetallesComponent', 'selector': 'app-noticias-detalles'},{'name': 'NoticiasListComponent', 'selector': 'app-noticias-list'},{'name': 'RegisterComponent', 'selector': 'app-register'},{'name': 'SidebarComponent', 'selector': 'app-sidebar'}];
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'Error404Component', 'selector': 'app-error404'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'NoticiasCardsComponent', 'selector': 'app-noticias-cards'},{'name': 'NoticiasCarruselComponent', 'selector': 'app-noticias-carrusel'},{'name': 'NoticiasCategoryComponent', 'selector': 'app-noticias-category'},{'name': 'NoticiasComponent', 'selector': 'app-noticias'},{'name': 'NoticiasDetallesComponent', 'selector': 'app-noticias-detalles'},{'name': 'NoticiasListComponent', 'selector': 'app-noticias-list'},{'name': 'RegisterComponent', 'selector': 'app-register'},{'name': 'SidebarComponent', 'selector': 'app-sidebar'},{'name': 'UserProfileComponent', 'selector': 'app-user-profile'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'NoticiasCarruselComponent'};
 </script>

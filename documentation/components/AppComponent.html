@@ -192,7 +192,12 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                <a href="#isDesktop" >isDesktop</a>
+                                    <span class="modifier">Readonly</span>
+                                    <span class="modifier">Private</span>
+                                <a href="##apiNoticia" >#apiNoticia</a>
+                            </li>
+                            <li>
+                                <a href="#isSidebarOpen" >isSidebarOpen</a>
                             </li>
                         </ul>
                     </td>
@@ -207,11 +212,7 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                <a href="#ngOnInit" >ngOnInit</a>
-                            </li>
-                            <li>
-                                    <span class="modifier"></span>
-                                <a href="#onResize" >onResize</a>
+                                <a href="#toggleSidebar" >toggleSidebar</a>
                             </li>
                         </ul>
                     </td>
@@ -220,20 +221,6 @@
 
 
 
-                <tr>
-                    <td class="col-md-4">
-                        <h6><b>HostListeners</b></h6>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <ul class="index-list">
-                            <li>
-                                <a href="#window:resize" >window:resize</a>
-                            </li>
-                        </ul>
-                    </td>
-                </tr>
 
         </tbody>
     </table>
@@ -243,36 +230,7 @@
 
 
 
-    <section data-compodoc="block-methods">
-    <h3>HostListeners</h3>    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="window:resize"></a>
-                    <span class="name">
-                        <span ><b>window:resize</b></span>
-                        <a href="#window:resize"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-md-4">
-<code>window:resize()</code>
-                </td>
-            </tr>
 
-
-                    <tr>
-                        <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="25"
-                                    class="link-to-prism">src/app/app.component.ts:25</a></div>
-                        </td>
-                    </tr>
-
-
-        </tbody>
-    </table>
-</section>
     <section data-compodoc="block-methods">
     
     <h3 id="methods">
@@ -282,76 +240,32 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="ngOnInit"></a>
+                    <a name="toggleSidebar"></a>
                     <span class="name">
-                        <span ><b>ngOnInit</b></span>
-                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                        <span ><b>toggleSidebar</b></span>
+                        <a href="#toggleSidebar"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>ngOnInit()</code>
+<code>toggleSidebar()</code>
                 </td>
             </tr>
 
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="19"
-                                    class="link-to-prism">src/app/app.component.ts:19</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="26"
+                                    class="link-to-prism">src/app/app.component.ts:26</a></div>
                         </td>
                     </tr>
 
 
             <tr>
                 <td class="col-md-4">
-
-                        <div class="io-description">
-                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
-
-                        </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="onResize"></a>
-                    <span class="name">
-                            <span class="modifier"></span>
-                        <span ><b>onResize</b></span>
-                        <a href="#onResize"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-md-4">
-                        <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>onResize()</code>
-                </td>
-            </tr>
-
-            <tr>
-                <td class="col-md-4">
-                    <b>Decorators : </b>
-                    <br />
-                    <code>@HostListener(&#x27;window:resize&#x27;, undefined)<br /></code>
-                </td>
-            </tr>
-
-                    <tr>
-                        <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="25"
-                                    class="link-to-prism">src/app/app.component.ts:25</a></div>
-                        </td>
-                    </tr>
-
-
-            <tr>
-                <td class="col-md-4">
+                        <div class="io-description"><p>Método para manejar el evento de redimensión de la ventana</p>
+</div>
 
                         <div class="io-description">
                             <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
@@ -371,21 +285,48 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="isDesktop"></a>
+                    <a name="#apiNoticia"></a>
                     <span class="name">
-                        <span ><b>isDesktop</b></span>
-                        <a href="#isDesktop"><span class="icon ion-ios-link"></span></a>
+                            <span class="modifier">Readonly</span>
+                            <span class="modifier">Private</span>
+                        <span ><b>#apiNoticia</b></span>
+                        <a href="##apiNoticia"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
                 <tr>
                     <td class="col-md-4">
-                        <i>Default value : </i><code>true</code>
+                        <i>Default value : </i><code>inject(NoticiasApiService)</code>
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/app/app.component.ts:17</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="21" class="link-to-prism">src/app/app.component.ts:21</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="isSidebarOpen"></a>
+                    <span class="name">
+                        <span ><b>isSidebarOpen</b></span>
+                        <a href="#isSidebarOpen"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/app.component.ts:18</a></div>
                         </td>
                     </tr>
 
@@ -398,12 +339,13 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, HostListener } from &#x27;@angular/core&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, inject } from &#x27;@angular/core&#x27;;
+import { MatSidenavModule } from &#x27;@angular/material/sidenav&#x27;;
 import { RouterOutlet } from &#x27;@angular/router&#x27;;
 
 import { NavbarComponent } from &#x27;./components/navbar/navbar.component&#x27;;
 import { SidebarComponent } from &#x27;./components/sidebar/sidebar.component&#x27;;
-import { MatSidenavModule } from &#x27;@angular/material/sidenav&#x27;;
+import { NoticiasApiService } from &#x27;./shared/services/noticias-api.service&#x27;;
 
 @Component({
     selector: &#x27;app-root&#x27;,
@@ -414,40 +356,39 @@ import { MatSidenavModule } from &#x27;@angular/material/sidenav&#x27;;
     ]
 })
 export class AppComponent {
-    isDesktop &#x3D; true;
+    isSidebarOpen &#x3D; false;
 
-    ngOnInit(): void {
-        this.onResize();
-    }
+    //Servicios
+    readonly #apiNoticia &#x3D; inject(NoticiasApiService);
 
-    // Detectar cambios de tamaño para mostrar el sidebar abierto o cerrado
-    @HostListener(&#x27;window:resize&#x27;, [])
-    onResize() {
-        this.isDesktop &#x3D; window.innerWidth &gt;&#x3D; 992; // breakpoint &quot;lg&quot; de Bootstrap
+    /**
+     * Método para manejar el evento de redimensión de la ventana
+     */
+    toggleSidebar() {
+        this.isSidebarOpen &#x3D; !this.isSidebarOpen;
     }
 }
 </code></pre>
     </div>
 
     <div class="tab-pane fade " id="templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;mat-sidenav-container class&#x3D;&quot;app-container&quot;&gt;
-
-    &lt;!-- SIDEBAR --&gt;
-    &lt;mat-sidenav #drawer mode&#x3D;&quot;side&quot; [opened]&#x3D;&quot;isDesktop&quot;&gt;
-      &lt;app-sidebar (closeSidebar)&#x3D;&quot;drawer.toggle()&quot;&gt;&lt;/app-sidebar&gt;
+        <pre class="line-numbers"><code class="language-html">&lt;mat-sidenav-container class&#x3D;&quot;sidenav-container&quot;&gt;
+    &lt;!-- Sidebar --&gt;
+    &lt;mat-sidenav mode&#x3D;&quot;side&quot; [opened]&#x3D;&quot;isSidebarOpen&quot;&gt;
+        &lt;app-sidebar [isOpen]&#x3D;&quot;isSidebarOpen&quot; 
+        (closeSidebar)&#x3D;&quot;toggleSidebar()&quot;&gt;&lt;/app-sidebar&gt;
     &lt;/mat-sidenav&gt;
-  
-    &lt;!-- CONTENIDO PRINCIPAL --&gt;
-    &lt;mat-sidenav-content&gt;
-      &lt;app-navbar (toggleSidebar)&#x3D;&quot;drawer.toggle()&quot;&gt;&lt;/app-navbar&gt;
-      
-      &lt;!-- Aquí va tu contenido o &lt;router-outlet&gt; --&gt;
-      &lt;div class&#x3D;&quot;container-fluid p-3&quot;&gt;
-        &lt;router-outlet&gt;&lt;/router-outlet&gt;
-      &lt;/div&gt;
+
+    &lt;!-- Contenido principal --&gt;
+    &lt;mat-sidenav-content [class.shrinked]&#x3D;&quot;isSidebarOpen&quot;&gt;
+        &lt;app-navbar (toggleSidebar)&#x3D;&quot;toggleSidebar()&quot;&gt;&lt;/app-navbar&gt;
+
+        &lt;!-- Contenido dinámico --&gt;
+        &lt;div class&#x3D;&quot;content&quot;&gt;
+            &lt;router-outlet&gt;&lt;/router-outlet&gt;
+        &lt;/div&gt;
     &lt;/mat-sidenav-content&gt;
-  
-  &lt;/mat-sidenav-container&gt;</code></pre>
+&lt;/mat-sidenav-container&gt;</code></pre>
     </div>
 
 
@@ -476,8 +417,8 @@ export class AppComponent {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><mat-sidenav-container class="app-container">    <!-- SIDEBAR -->    <mat-sidenav #drawer mode="side" [opened]="isDesktop">      <app-sidebar (closeSidebar)="drawer.toggle()"></app-sidebar>    </mat-sidenav>      <!-- CONTENIDO PRINCIPAL -->    <mat-sidenav-content>      <app-navbar (toggleSidebar)="drawer.toggle()"></app-navbar>            <!-- Aquí va tu contenido o <router-outlet> -->      <div class="container-fluid p-3">        <router-outlet></router-outlet>      </div>    </mat-sidenav-content>    </mat-sidenav-container></div>'
-    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'Error404Component', 'selector': 'app-error404'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'NoticiasCardsComponent', 'selector': 'app-noticias-cards'},{'name': 'NoticiasCarruselComponent', 'selector': 'app-noticias-carrusel'},{'name': 'NoticiasComponent', 'selector': 'app-noticias'},{'name': 'NoticiasDetallesComponent', 'selector': 'app-noticias-detalles'},{'name': 'NoticiasListComponent', 'selector': 'app-noticias-list'},{'name': 'RegisterComponent', 'selector': 'app-register'},{'name': 'SidebarComponent', 'selector': 'app-sidebar'}];
+        var COMPONENT_TEMPLATE = '<div><mat-sidenav-container class="sidenav-container">    <!-- Sidebar -->    <mat-sidenav mode="side" [opened]="isSidebarOpen">        <app-sidebar [isOpen]="isSidebarOpen"         (closeSidebar)="toggleSidebar()"></app-sidebar>    </mat-sidenav>    <!-- Contenido principal -->    <mat-sidenav-content [class.shrinked]="isSidebarOpen">        <app-navbar (toggleSidebar)="toggleSidebar()"></app-navbar>        <!-- Contenido dinámico -->        <div class="content">            <router-outlet></router-outlet>        </div>    </mat-sidenav-content></mat-sidenav-container></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'Error404Component', 'selector': 'app-error404'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'NoticiasCardsComponent', 'selector': 'app-noticias-cards'},{'name': 'NoticiasCarruselComponent', 'selector': 'app-noticias-carrusel'},{'name': 'NoticiasCategoryComponent', 'selector': 'app-noticias-category'},{'name': 'NoticiasComponent', 'selector': 'app-noticias'},{'name': 'NoticiasDetallesComponent', 'selector': 'app-noticias-detalles'},{'name': 'NoticiasListComponent', 'selector': 'app-noticias-list'},{'name': 'RegisterComponent', 'selector': 'app-register'},{'name': 'SidebarComponent', 'selector': 'app-sidebar'},{'name': 'UserProfileComponent', 'selector': 'app-user-profile'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'AppComponent'};
 </script>

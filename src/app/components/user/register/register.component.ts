@@ -149,6 +149,9 @@ export class RegisterComponent {
     }
   }
 
+  /**
+   * Vuelve a la pagina principal
+   */
   goBack(){
     this.#router.navigate([APP_ROUTES.NOTICIAS]);
   }

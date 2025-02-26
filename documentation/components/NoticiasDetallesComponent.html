@@ -208,6 +208,9 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
+                                <a href="#goBack" >goBack</a>
+                            </li>
+                            <li>
                                     <span class="modifier">Private</span>
                                 <a href="#setNoticiaNoEncontrada" >setNoticiaNoEncontrada</a>
                             </li>
@@ -234,7 +237,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/app/components/noticias/noticias-detalles/noticias-detalles.component.ts:17</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/app/components/noticias/noticias-detalles/noticias-detalles.component.ts:19</a></div>
                             </td>
                         </tr>
 
@@ -251,6 +254,43 @@
     <h3 id="methods">
         Methods
     </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="goBack"></a>
+                    <span class="name">
+                        <span ><b>goBack</b></span>
+                        <a href="#goBack"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>goBack()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="60"
+                                    class="link-to-prism">src/app/components/noticias/noticias-detalles/noticias-detalles.component.ts:60</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
     <table class="table table-sm table-bordered">
         <tbody>
             <tr>
@@ -273,14 +313,17 @@
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="34"
-                                    class="link-to-prism">src/app/components/noticias/noticias-detalles/noticias-detalles.component.ts:34</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="42"
+                                    class="link-to-prism">src/app/components/noticias/noticias-detalles/noticias-detalles.component.ts:42</a></div>
                         </td>
                     </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                        <div class="io-description"><p>Método privado para establecer una noticia por defecto
+cuando no se encuentra la noticia solicitada</p>
+</div>
 
                         <div class="io-description">
                             <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
@@ -316,7 +359,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/components/noticias/noticias-detalles/noticias-detalles.component.ts:15</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/components/noticias/noticias-detalles/noticias-detalles.component.ts:16</a></div>
                         </td>
                     </tr>
 
@@ -343,7 +386,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/components/noticias/noticias-detalles/noticias-detalles.component.ts:14</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/components/noticias/noticias-detalles/noticias-detalles.component.ts:15</a></div>
                         </td>
                     </tr>
 
@@ -369,7 +412,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/app/components/noticias/noticias-detalles/noticias-detalles.component.ts:17</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/app/components/noticias/noticias-detalles/noticias-detalles.component.ts:19</a></div>
                         </td>
                     </tr>
 
@@ -383,7 +426,7 @@
 
     <div class="tab-pane fade  tab-source-code" id="source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, inject } from &#x27;@angular/core&#x27;;
-import { ActivatedRoute } from &#x27;@angular/router&#x27;;
+import { ActivatedRoute, RouterLink } from &#x27;@angular/router&#x27;;
 import { NoticiasApiService } from &#x27;src/app/shared/services/noticias-api.service&#x27;;
 import { Noticia } from &#x27;src/app/shared/utils/data&#x27;;
 
@@ -395,13 +438,17 @@ import { Noticia } from &#x27;src/app/shared/utils/data&#x27;;
 })
 export class NoticiasDetallesComponent {
 
+    //Servicios
     readonly #route &#x3D; inject(ActivatedRoute);
     readonly #apiNoticias &#x3D; inject(NoticiasApiService);
 
+    //Constantes
     noticia!: Noticia;
 
     constructor() {
+        // Obtener el UUID de los parámetros de la URL
         const uuid &#x3D; this.#route.snapshot.paramMap.get(&#x27;uuid&#x27;);
+        //Si existe el UUID te muestra la noticia sino te pone no encontrada
         if (uuid) {
             this.#apiNoticias.getNewsByUuid(uuid).subscribe((noticia) &#x3D;&gt; {
                 if (noticia) {
@@ -415,6 +462,10 @@ export class NoticiasDetallesComponent {
         }
     }
 
+    /**
+     * Método privado para establecer una noticia por defecto
+     * cuando no se encuentra la noticia solicitada
+     */
     private setNoticiaNoEncontrada() {
         this.noticia &#x3D; {
             uuid: &#x27;&#x27;,
@@ -431,6 +482,11 @@ export class NoticiasDetallesComponent {
             language: &#x27;es&#x27;
         };
     }
+
+    //Va hacias atras
+    goBack() {
+        window.history.back();
+    }
 }</code></pre>
     </div>
 
@@ -443,7 +499,8 @@ export class NoticiasDetallesComponent {
         alt&#x3D;&quot;{{noticia.title}}&quot; class&#x3D;&quot;image&quot;&gt;
         &lt;p&gt;{{noticia.description}}&lt;/p&gt;
     &lt;/section&gt;
-&lt;/div&gt;</code></pre>
+&lt;/div&gt;
+&lt;button class&#x3D;&quot;btn btn-primary&quot; (click)&#x3D;&quot;goBack()&quot;&gt;Volver atras&lt;/button&gt;</code></pre>
     </div>
 
 
@@ -472,8 +529,8 @@ export class NoticiasDetallesComponent {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class="detalles">    <section>        <h1>{{noticia.title}}</h1>        <h3>{{noticia.snippet}}</h3>        <img [src]="noticia.image_url"         alt="{{noticia.title}}" class="image">        <p>{{noticia.description}}</p>    </section></div></div>'
-    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'Error404Component', 'selector': 'app-error404'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'NoticiasCardsComponent', 'selector': 'app-noticias-cards'},{'name': 'NoticiasCarruselComponent', 'selector': 'app-noticias-carrusel'},{'name': 'NoticiasComponent', 'selector': 'app-noticias'},{'name': 'NoticiasDetallesComponent', 'selector': 'app-noticias-detalles'},{'name': 'NoticiasListComponent', 'selector': 'app-noticias-list'},{'name': 'RegisterComponent', 'selector': 'app-register'},{'name': 'SidebarComponent', 'selector': 'app-sidebar'}];
+        var COMPONENT_TEMPLATE = '<div><div class="detalles">    <section>        <h1>{{noticia.title}}</h1>        <h3>{{noticia.snippet}}</h3>        <img [src]="noticia.image_url"         alt="{{noticia.title}}" class="image">        <p>{{noticia.description}}</p>    </section></div><button class="btn btn-primary" (click)="goBack()">Volver atras</button></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'Error404Component', 'selector': 'app-error404'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'NoticiasCardsComponent', 'selector': 'app-noticias-cards'},{'name': 'NoticiasCarruselComponent', 'selector': 'app-noticias-carrusel'},{'name': 'NoticiasCategoryComponent', 'selector': 'app-noticias-category'},{'name': 'NoticiasComponent', 'selector': 'app-noticias'},{'name': 'NoticiasDetallesComponent', 'selector': 'app-noticias-detalles'},{'name': 'NoticiasListComponent', 'selector': 'app-noticias-list'},{'name': 'RegisterComponent', 'selector': 'app-register'},{'name': 'SidebarComponent', 'selector': 'app-sidebar'},{'name': 'UserProfileComponent', 'selector': 'app-user-profile'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'NoticiasDetallesComponent'};
 </script>

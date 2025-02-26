@@ -153,6 +153,9 @@
                             <code>FormsModule</code>
                             <code>MatToolbarModule</code>
                             <code>MatMenuModule</code>
+                            <code>MatDividerModule</code>
+                            <code>AsyncPipe</code>
+                            <code>MatButtonModule</code>
                 </td>
             </tr>
 
@@ -192,6 +195,19 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
+                                    <span class="modifier">Readonly</span>
+                                    <span class="modifier">Private</span>
+                                <a href="##authService" >#authService</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Readonly</span>
+                                    <span class="modifier">Private</span>
+                                <a href="##router" >#router</a>
+                            </li>
+                            <li>
+                                <a href="#currentUser$" >currentUser$</a>
+                            </li>
+                            <li>
                                 <a href="#searchValue" >searchValue</a>
                             </li>
                         </ul>
@@ -207,7 +223,16 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
+                                <a href="#goPagPrincipal" >goPagPrincipal</a>
+                            </li>
+                            <li>
+                                <a href="#onInfoUser" >onInfoUser</a>
+                            </li>
+                            <li>
                                 <a href="#onLogin" >onLogin</a>
+                            </li>
+                            <li>
+                                <a href="#onLogout" >onLogout</a>
                             </li>
                             <li>
                                 <a href="#onRegister" >onRegister</a>
@@ -264,7 +289,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/components/navbar/navbar.component.ts:16</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/app/components/navbar/navbar.component.ts:26</a></div>
                             </td>
                         </tr>
             </tbody>
@@ -277,6 +302,84 @@
     <h3 id="methods">
         Methods
     </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="goPagPrincipal"></a>
+                    <span class="name">
+                        <span ><b>goPagPrincipal</b></span>
+                        <a href="#goPagPrincipal"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>goPagPrincipal()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="83"
+                                    class="link-to-prism">src/app/components/navbar/navbar.component.ts:83</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Método para navegar a la página principal</p>
+</div>
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onInfoUser"></a>
+                    <span class="name">
+                        <span ><b>onInfoUser</b></span>
+                        <a href="#onInfoUser"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onInfoUser()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="67"
+                                    class="link-to-prism">src/app/components/navbar/navbar.component.ts:67</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Método para navegar a la página de información del usuario</p>
+</div>
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
     <table class="table table-sm table-bordered">
         <tbody>
             <tr>
@@ -297,14 +400,55 @@
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="29"
-                                    class="link-to-prism">src/app/components/navbar/navbar.component.ts:29</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="53"
+                                    class="link-to-prism">src/app/components/navbar/navbar.component.ts:53</a></div>
                         </td>
                     </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                        <div class="io-description"><p>Método para navegar a la página de login</p>
+</div>
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onLogout"></a>
+                    <span class="name">
+                        <span ><b>onLogout</b></span>
+                        <a href="#onLogout"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onLogout()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="74"
+                                    class="link-to-prism">src/app/components/navbar/navbar.component.ts:74</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Método para cerrar sesión</p>
+</div>
 
                         <div class="io-description">
                             <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
@@ -334,14 +478,16 @@
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="34"
-                                    class="link-to-prism">src/app/components/navbar/navbar.component.ts:34</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="60"
+                                    class="link-to-prism">src/app/components/navbar/navbar.component.ts:60</a></div>
                         </td>
                     </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                        <div class="io-description"><p>Método para navegar a la página de registro</p>
+</div>
 
                         <div class="io-description">
                             <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
@@ -371,14 +517,16 @@
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="24"
-                                    class="link-to-prism">src/app/components/navbar/navbar.component.ts:24</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="46"
+                                    class="link-to-prism">src/app/components/navbar/navbar.component.ts:46</a></div>
                         </td>
                     </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                        <div class="io-description"><p>Método para buscar noticias</p>
+</div>
 
                         <div class="io-description">
                             <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
@@ -408,14 +556,16 @@
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="20"
-                                    class="link-to-prism">src/app/components/navbar/navbar.component.ts:20</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="39"
+                                    class="link-to-prism">src/app/components/navbar/navbar.component.ts:39</a></div>
                         </td>
                     </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                        <div class="io-description"><p>Método para emitir el evento de toggle del sidebar</p>
+</div>
 
                         <div class="io-description">
                             <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
@@ -431,6 +581,85 @@
     <h3 id="inputs">
         Properties
     </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="#authService"></a>
+                    <span class="name">
+                            <span class="modifier">Readonly</span>
+                            <span class="modifier">Private</span>
+                        <span ><b>#authService</b></span>
+                        <a href="##authService"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>inject(AuthService)</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">src/app/components/navbar/navbar.component.ts:30</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="#router"></a>
+                    <span class="name">
+                            <span class="modifier">Readonly</span>
+                            <span class="modifier">Private</span>
+                        <span ><b>#router</b></span>
+                        <a href="##router"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>inject(Router)</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">src/app/components/navbar/navbar.component.ts:29</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="currentUser$"></a>
+                    <span class="name">
+                        <span ><b>currentUser$</b></span>
+                        <a href="#currentUser$"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>this.#authService.currentUser$</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="34" class="link-to-prism">src/app/components/navbar/navbar.component.ts:34</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
     <table class="table table-sm table-bordered">
         <tbody>
             <tr>
@@ -455,7 +684,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/components/navbar/navbar.component.ts:18</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="33" class="link-to-prism">src/app/components/navbar/navbar.component.ts:33</a></div>
                         </td>
                     </tr>
 
@@ -468,74 +697,141 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, EventEmitter, Output } from &#x27;@angular/core&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, EventEmitter, inject, Output } from &#x27;@angular/core&#x27;;
 import { FormsModule } from &#x27;@angular/forms&#x27;;
 import { MatIconModule } from &#x27;@angular/material/icon&#x27;;
 import { MatMenuModule } from &#x27;@angular/material/menu&#x27;;
 import { MatToolbarModule } from &#x27;@angular/material/toolbar&#x27;;
+import { Router } from &#x27;@angular/router&#x27;;
+import { APP_ROUTES } from &#x27;src/app/app.routes&#x27;;
+
+import { USER_ROUTES } from &#x27;../user/user.routes&#x27;;
+import { AuthService } from &#x27;src/app/shared/services/auth.service&#x27;;
+import { MatDividerModule } from &#x27;@angular/material/divider&#x27;;
+import { AsyncPipe } from &#x27;@angular/common&#x27;;
+import { MatButtonModule } from &#x27;@angular/material/button&#x27;;
+
 
 @Component({
     selector: &#x27;app-navbar&#x27;,
     templateUrl: &#x27;./navbar.component.html&#x27;,
     styleUrl: &#x27;./navbar.component.scss&#x27;,
     imports: [MatIconModule, FormsModule, MatToolbarModule,
-      MatMenuModule
+      MatMenuModule, MatDividerModule, AsyncPipe, MatButtonModule
     ],
 })
 export class NavbarComponent {
+  //Output para el sidebar
   @Output() toggleSidebar &#x3D; new EventEmitter&lt;void&gt;();
 
-  searchValue: string &#x3D; &#x27;&#x27;;
+  //Servicio
+  readonly #router &#x3D; inject(Router);
+  readonly #authService &#x3D; inject(AuthService);
 
+  //Buscador
+  searchValue: string &#x3D; &#x27;&#x27;;
+  currentUser$ &#x3D; this.#authService.currentUser$;
+
+  /**
+   * Método para emitir el evento de toggle del sidebar
+   */
   onToggleSidebar() {
     this.toggleSidebar.emit();
   }
 
+  /**
+   * Método para buscar noticias
+   */
   onSearch() {
     console.log(&#x27;Buscando:&#x27;, this.searchValue);
-    // Lógica de búsqueda
   }
 
+  /**
+   * Método para navegar a la página de login
+   */
   onLogin() {
-    console.log(&#x27;Iniciar Sesión&#x27;);
-    // Lógica de login
+    this.#router.navigate([APP_ROUTES.USER,USER_ROUTES.LOGIN]);
   }
 
+  /**
+   * Método para navegar a la página de registro
+    */
   onRegister() {
-    console.log(&#x27;Registrarse&#x27;);
-    // Lógica de registro
+    this.#router.navigate([APP_ROUTES.USER, USER_ROUTES.REGISTER]);
+  }
+
+  /**
+   * Método para navegar a la página de información del usuario
+   */
+  onInfoUser(){
+    this.#router.navigate([APP_ROUTES.USER, USER_ROUTES.INFOUSUARIO]);
+  }
+
+  /**
+   * Método para cerrar sesión
+   */
+  onLogout() {
+    this.#authService.logout();
+    this.#router.navigate([APP_ROUTES.NOTICIAS]
+    );
+  }
+
+  /**
+   * Método para navegar a la página principal
+   */
+  goPagPrincipal() {
+    this.#router.navigate([APP_ROUTES.NOTICIAS]);
   }
 }
 </code></pre>
     </div>
 
     <div class="tab-pane fade " id="templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;mat-toolbar color&#x3D;&quot;primary&quot; class&#x3D;&quot;navbar d-flex align-items-center&quot;&gt;
-    &lt;!-- Botón de menú para pantallas pequeñas --&gt;
-    &lt;button mat-icon-button class&#x3D;&quot;d-md-none me-3&quot; (click)&#x3D;&quot;onToggleSidebar()&quot;&gt;
+        <pre class="line-numbers"><code class="language-html">&lt;mat-toolbar color&#x3D;&quot;primary&quot; class&#x3D;&quot;navbar&quot;&gt;
+    &lt;!-- Botón hamburguesa --&gt;
+    &lt;button mat-icon-button (click)&#x3D;&quot;onToggleSidebar()&quot;&gt;
         &lt;mat-icon&gt;menu&lt;/mat-icon&gt;
     &lt;/button&gt;
 
     &lt;!-- Título o Logo --&gt;
-    &lt;span class&#x3D;&quot;fw-bold me-auto&quot;&gt;ARQUICKINFO&lt;/span&gt;
-
-    &lt;!-- Buscador --&gt;
-    &lt;div class&#x3D;&quot;d-flex align-items-center bg-white rounded px-2&quot;&gt;
-        &lt;input matInput placeholder&#x3D;&quot;Buscar noticias...&quot; 
-        [(ngModel)]&#x3D;&quot;searchValue&quot; class&#x3D;&quot;form-control border-0&quot; /&gt;
-        &lt;button mat-button color&#x3D;&quot;accent&quot; (click)&#x3D;&quot;onSearch()&quot;&gt;
-            &lt;mat-icon&gt;search&lt;/mat-icon&gt;
-        &lt;/button&gt;
+    &lt;a class&#x3D;&quot;brand&quot; (click)&#x3D;&quot;goPagPrincipal()&quot;&gt;ARQUICKINFO&lt;/a&gt;
+    
+    &lt;!-- Contenedor de autenticación --&gt;
+    &lt;div class&#x3D;&quot;auth-container&quot;&gt;
+        @if (currentUser$ | async; as user) {
+            &lt;button mat-icon-button [matMenuTriggerFor]&#x3D;&quot;userMenu&quot;&gt;
+                &lt;mat-icon&gt;account_circle&lt;/mat-icon&gt;
+            &lt;/button&gt;
+            &lt;mat-menu #userMenu&#x3D;&quot;matMenu&quot;&gt;
+                &lt;div class&#x3D;&quot;user-menu-header&quot;&gt;
+                    &lt;img [src]&#x3D;&quot;user.avatar&quot; 
+                         [alt]&#x3D;&quot;user.firstName&quot; 
+                         class&#x3D;&quot;user-avatar&quot;&gt;
+                    &lt;p class&#x3D;&quot;mb-0&quot;&gt;{{user.firstName}}&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;mat-divider&gt;&lt;/mat-divider&gt;
+                &lt;button mat-menu-item (click)&#x3D;&quot;onInfoUser()&quot;&gt;
+                    &lt;mat-icon&gt;person&lt;/mat-icon&gt;
+                    &lt;span&gt;Mi Perfil&lt;/span&gt;
+                &lt;/button&gt;
+                &lt;button mat-menu-item (click)&#x3D;&quot;onLogout()&quot;&gt;
+                    &lt;mat-icon&gt;exit_to_app&lt;/mat-icon&gt;
+                    &lt;span&gt;Cerrar Sesión&lt;/span&gt;
+                &lt;/button&gt;
+            &lt;/mat-menu&gt;
+        } @else {
+            &lt;div class&#x3D;&quot;auth-buttons&quot;&gt;
+                &lt;button mat-raised-button (click)&#x3D;&quot;onLogin()&quot;&gt;
+                    &lt;mat-icon&gt;login&lt;/mat-icon&gt;
+                    Iniciar Sesión
+                &lt;/button&gt;
+                &lt;button mat-stroked-button color&#x3D;&quot;accent&quot; (click)&#x3D;&quot;onRegister()&quot;&gt;
+                    &lt;mat-icon&gt;person_add&lt;/mat-icon&gt;
+                    Registrarse
+                &lt;/button&gt;
+            &lt;/div&gt;
+        }
     &lt;/div&gt;
-
-    &lt;!-- Botón de usuario con menú desplegable --&gt;
-    &lt;button mat-icon-button [matMenuTriggerFor]&#x3D;&quot;userMenu&quot; class&#x3D;&quot;ms-3&quot;&gt;
-        &lt;mat-icon&gt;account_circle&lt;/mat-icon&gt;
-    &lt;/button&gt;
-    &lt;mat-menu #userMenu&#x3D;&quot;matMenu&quot;&gt;
-        &lt;button mat-menu-item (click)&#x3D;&quot;onLogin()&quot;&gt;Iniciar Sesión&lt;/button&gt;
-        &lt;button mat-menu-item (click)&#x3D;&quot;onRegister()&quot;&gt;Registrarse&lt;/button&gt;
-    &lt;/mat-menu&gt;
 &lt;/mat-toolbar&gt;</code></pre>
     </div>
 
@@ -565,8 +861,8 @@ export class NavbarComponent {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><mat-toolbar color="primary" class="navbar d-flex align-items-center">    <!-- Botón de menú para pantallas pequeñas -->    <button mat-icon-button class="d-md-none me-3" (click)="onToggleSidebar()">        <mat-icon>menu</mat-icon>    </button>    <!-- Título o Logo -->    <span class="fw-bold me-auto">ARQUICKINFO</span>    <!-- Buscador -->    <div class="d-flex align-items-center bg-white rounded px-2">        <input matInput placeholder="Buscar noticias..."         [(ngModel)]="searchValue" class="form-control border-0" />        <button mat-button color="accent" (click)="onSearch()">            <mat-icon>search</mat-icon>        </button>    </div>    <!-- Botón de usuario con menú desplegable -->    <button mat-icon-button [matMenuTriggerFor]="userMenu" class="ms-3">        <mat-icon>account_circle</mat-icon>    </button>    <mat-menu #userMenu="matMenu">        <button mat-menu-item (click)="onLogin()">Iniciar Sesión</button>        <button mat-menu-item (click)="onRegister()">Registrarse</button>    </mat-menu></mat-toolbar></div>'
-    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'Error404Component', 'selector': 'app-error404'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'NoticiasCardsComponent', 'selector': 'app-noticias-cards'},{'name': 'NoticiasCarruselComponent', 'selector': 'app-noticias-carrusel'},{'name': 'NoticiasComponent', 'selector': 'app-noticias'},{'name': 'NoticiasDetallesComponent', 'selector': 'app-noticias-detalles'},{'name': 'NoticiasListComponent', 'selector': 'app-noticias-list'},{'name': 'RegisterComponent', 'selector': 'app-register'},{'name': 'SidebarComponent', 'selector': 'app-sidebar'}];
+        var COMPONENT_TEMPLATE = '<div><mat-toolbar color="primary" class="navbar">    <!-- Botón hamburguesa -->    <button mat-icon-button (click)="onToggleSidebar()">        <mat-icon>menu</mat-icon>    </button>    <!-- Título o Logo -->    <a class="brand" (click)="goPagPrincipal()">ARQUICKINFO</a>        <!-- Contenedor de autenticación -->    <div class="auth-container">        @if (currentUser$ | async; as user) {            <button mat-icon-button [matMenuTriggerFor]="userMenu">                <mat-icon>account_circle</mat-icon>            </button>            <mat-menu #userMenu="matMenu">                <div class="user-menu-header">                    <img [src]="user.avatar"                          [alt]="user.firstName"                          class="user-avatar">                    <p class="mb-0">{{user.firstName}}</p>                </div>                <mat-divider></mat-divider>                <button mat-menu-item (click)="onInfoUser()">                    <mat-icon>person</mat-icon>                    <span>Mi Perfil</span>                </button>                <button mat-menu-item (click)="onLogout()">                    <mat-icon>exit_to_app</mat-icon>                    <span>Cerrar Sesión</span>                </button>            </mat-menu>        } @else {            <div class="auth-buttons">                <button mat-raised-button (click)="onLogin()">                    <mat-icon>login</mat-icon>                    Iniciar Sesión                </button>                <button mat-stroked-button color="accent" (click)="onRegister()">                    <mat-icon>person_add</mat-icon>                    Registrarse                </button>            </div>        }    </div></mat-toolbar></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'Error404Component', 'selector': 'app-error404'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'NoticiasCardsComponent', 'selector': 'app-noticias-cards'},{'name': 'NoticiasCarruselComponent', 'selector': 'app-noticias-carrusel'},{'name': 'NoticiasCategoryComponent', 'selector': 'app-noticias-category'},{'name': 'NoticiasComponent', 'selector': 'app-noticias'},{'name': 'NoticiasDetallesComponent', 'selector': 'app-noticias-detalles'},{'name': 'NoticiasListComponent', 'selector': 'app-noticias-list'},{'name': 'RegisterComponent', 'selector': 'app-register'},{'name': 'SidebarComponent', 'selector': 'app-sidebar'},{'name': 'UserProfileComponent', 'selector': 'app-user-profile'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'NavbarComponent'};
 </script>

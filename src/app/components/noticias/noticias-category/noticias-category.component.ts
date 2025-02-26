@@ -16,14 +16,17 @@ import { NoticiasCardsComponent } from '../noticias-cards/noticias-cards.compone
 
 export class NoticiasCategoryComponent {
 
+  //Servicios
   readonly #router = inject(Router);
   readonly #route = inject(ActivatedRoute);
   readonly #apiNoticia = inject(NoticiasApiService);
 
+  //Constantes
   listNews!: Noticia[];
   categoriaActual:string | null = null;
 
   ngOnInit() {
+    //Recoge el parametro de a url y recarga la vista con noticias de esa categoria
     this.#route.paramMap.subscribe(params => {
       const category = params.get('category');
       if (category) {
@@ -33,6 +36,10 @@ export class NoticiasCategoryComponent {
     });
   }
 
+  /**
+   * Da el nombre de la categoria
+   * @param category la categoria value
+   */
   private onNameCategory(category:string){
     let categoria = null;
     if(category !=null){
@@ -42,6 +49,11 @@ export class NoticiasCategoryComponent {
     }
     this.categoriaActual = categoria!.name;
   }
+
+  /**
+   * Rellena la vista con noticias de la misma categoria
+   * @param category categoria value
+   */
   private loadNewsByCategory(category: string) {
     this.#apiNoticia.getNewsByCategory(category).subscribe({
       next: (noticias) => {

@@ -89,7 +89,7 @@
   <li class="breadcrumb-item">Components</li>
   <li class="breadcrumb-item"
   >
-  Error404Component</li>
+  UserProfileComponent</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -116,7 +116,7 @@
     <h3>File</h3>
 </p>
 <p class="comment">
-    <code>src/app/pages/error404/error404.component.ts</code>
+    <code>src/app/components/user/user-profile/user-profile.component.ts</code>
 </p>
 
 
@@ -142,14 +142,21 @@
 
             <tr>
                 <td class="col-md-3">selector</td>
-                <td class="col-md-9"><code>app-error404</code></td>
+                <td class="col-md-9"><code>app-user-profile</code></td>
             </tr>
 
+            <tr>
+                <td class="col-md-3">standalone</td>
+                <td class="col-md-9"><code>true</code></td>
+            </tr>
 
             <tr>
                 <td class="col-md-3">imports</td>
                 <td class="col-md-9">
-                            <code>MatButtonModule</code>
+                            <code>MatCardModule</code>
+                            <code>MatIconModule</code>
+                            <code>MatChipsModule</code>
+                            <code>AsyncPipe</code>
                 </td>
             </tr>
 
@@ -158,14 +165,14 @@
 
             <tr>
                 <td class="col-md-3">templateUrl</td>
-                <td class="col-md-9"><code>./error404.component.html</code></td>
+                <td class="col-md-9"><code>./user-profile.component.html</code></td>
             </tr>
 
 
 
             <tr>
                 <td class="col-md-3">styleUrl</td>
-                <td class="col-md-9"><code>./error404.component.scss</code></td>
+                <td class="col-md-9"><code>./user-profile.component.scss</code></td>
             </tr>
 
 
@@ -191,7 +198,15 @@
                             <li>
                                     <span class="modifier">Readonly</span>
                                     <span class="modifier">Private</span>
+                                <a href="##authService" >#authService</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Readonly</span>
+                                    <span class="modifier">Private</span>
                                 <a href="##router" >#router</a>
+                            </li>
+                            <li>
+                                <a href="#user$" >user$</a>
                             </li>
                         </ul>
                     </td>
@@ -250,15 +265,15 @@
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="20"
-                                    class="link-to-prism">src/app/pages/error404/error404.component.ts:20</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="29"
+                                    class="link-to-prism">src/app/components/user/user-profile/user-profile.component.ts:29</a></div>
                         </td>
                     </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                        <div class="io-description"><p>LLeva a la pagina principal</p>
+                        <div class="io-description"><p>Vuelve a la pagina principal</p>
 </div>
 
                         <div class="io-description">
@@ -279,6 +294,33 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
+                    <a name="#authService"></a>
+                    <span class="name">
+                            <span class="modifier">Readonly</span>
+                            <span class="modifier">Private</span>
+                        <span ><b>#authService</b></span>
+                        <a href="##authService"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>inject(AuthService)</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="21" class="link-to-prism">src/app/components/user/user-profile/user-profile.component.ts:21</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
                     <a name="#router"></a>
                     <span class="name">
                             <span class="modifier">Readonly</span>
@@ -295,7 +337,32 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/pages/error404/error404.component.ts:15</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">src/app/components/user/user-profile/user-profile.component.ts:22</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="user$"></a>
+                    <span class="name">
+                        <span ><b>user$</b></span>
+                        <a href="#user$"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>this.#authService.currentUser$</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">src/app/components/user/user-profile/user-profile.component.ts:24</a></div>
                         </td>
                     </tr>
 
@@ -308,39 +375,68 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, inject } from &#x27;@angular/core&#x27;;
-import { MatButtonModule } from &#x27;@angular/material/button&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { AsyncPipe, CommonModule } from &#x27;@angular/common&#x27;;
+import { Component, inject } from &#x27;@angular/core&#x27;;
+
+import { AuthService } from &#x27;../../../shared/services/auth.service&#x27;;
+import { MatCardModule } from &#x27;@angular/material/card&#x27;;
+import { MatIconModule } from &#x27;@angular/material/icon&#x27;;
+import { MatChipsModule } from &#x27;@angular/material/chips&#x27;;
 import { Router } from &#x27;@angular/router&#x27;;
-import { APP_ROUTES } from &#x27;../../app.routes&#x27;;
+import { APP_ROUTES } from &#x27;src/app/app.routes&#x27;;
 
 @Component({
-    selector: &#x27;app-error404&#x27;,
-    templateUrl: &#x27;./error404.component.html&#x27;,
-    styleUrl: &#x27;./error404.component.scss&#x27;,
-    imports: [MatButtonModule]
+  selector: &#x27;app-user-profile&#x27;,
+  standalone: true,
+  imports: [MatCardModule,MatIconModule, 
+    MatChipsModule, AsyncPipe],
+  templateUrl: &#x27;./user-profile.component.html&#x27;,
+  styleUrl: &#x27;./user-profile.component.scss&#x27;
 })
-export class Error404Component {
+export class UserProfileComponent {
+  //Servicios
+  readonly #authService &#x3D; inject(AuthService);
+  readonly #router &#x3D; inject(Router);
 
-    //Servicio
-    readonly #router &#x3D; inject(Router);
-    
-    /**
-     * LLeva a la pagina principal
-     */
-    goBack(){
-        this.#router.navigate([APP_ROUTES.NOTICIAS]);
-    }
-}
-</code></pre>
+  user$ &#x3D; this.#authService.currentUser$;
+
+  /**
+   * Vuelve a la pagina principal
+   */
+  goBack(){
+    this.#router.navigate([APP_ROUTES.NOTICIAS])
+  }
+}</code></pre>
     </div>
 
     <div class="tab-pane fade " id="templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;container&quot;&gt;
-    &lt;img src&#x3D;&quot;assets\img\oso404.png&quot; alt&#x3D;&quot;Error 404&quot;&gt;
-    &lt;h1 class&#x3D;&quot;title&quot;&gt;La página no ha sido encontrada&lt;/h1&gt;
-    &lt;p&gt;Está pagina ha desaparecido de nuestra base de datos.&lt;/p&gt;
-    &lt;button mat-raised-button (click)&#x3D;&quot;goBack()&quot;&gt;Volver atrás&lt;/button&gt;
-&lt;/div&gt;</code></pre>
+        <pre class="line-numbers"><code class="language-html">@if (user$ | async; as user) {
+  &lt;mat-card class&#x3D;&quot;profile-card&quot;&gt;
+    &lt;mat-card-header&gt;
+      &lt;img [src]&#x3D;&quot;user.avatar&quot; [alt]&#x3D;&quot;user.firstName&quot; class&#x3D;&quot;profile-avatar&quot;&gt;
+      &lt;mat-card-title&gt;{{ user.firstName }} {{ user.lastName }}&lt;/mat-card-title&gt;
+    &lt;/mat-card-header&gt;
+    &lt;mat-card-content&gt;
+      &lt;div class&#x3D;&quot;profile-info&quot;&gt;
+        &lt;p&gt;&lt;mat-icon&gt;email&lt;/mat-icon&gt; {{ user.email }}&lt;/p&gt;
+        &lt;div class&#x3D;&quot;categories-section&quot;&gt;
+          &lt;h3&gt;Categorías de interés&lt;/h3&gt;
+          &lt;mat-chip-set&gt;
+            @for (category of user.categories; track category) {
+              &lt;mat-chip&gt;{{ category }}&lt;/mat-chip&gt;
+            }
+          &lt;/mat-chip-set&gt;
+        &lt;/div&gt;
+        &lt;p class&#x3D;&quot;newsletter&quot;&gt;
+          &lt;mat-icon&gt;{{ user.newsletter ? &#x27;mark_email_read&#x27; : &#x27;mark_email_unread&#x27; }}&lt;/mat-icon&gt;
+          Newsletter: {{ user.newsletter ? &#x27;Suscrito&#x27; : &#x27;No suscrito&#x27; }}
+        &lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/mat-card-content&gt;
+  &lt;/mat-card&gt;
+
+  &lt;button class&#x3D;&quot;btn btn-primary&quot; (click)&#x3D;&quot;goBack()&quot;&gt;Volver atrás&lt;/button&gt;
+}</code></pre>
     </div>
 
 
@@ -369,10 +465,10 @@ export class Error404Component {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class="container">    <img src="assets\img\oso404.png" alt="Error 404">    <h1 class="title">La página no ha sido encontrada</h1>    <p>Está pagina ha desaparecido de nuestra base de datos.</p>    <button mat-raised-button (click)="goBack()">Volver atrás</button></div></div>'
+        var COMPONENT_TEMPLATE = '<div>@if (user$ | async; as user) {  <mat-card class="profile-card">    <mat-card-header>      <img [src]="user.avatar" [alt]="user.firstName" class="profile-avatar">      <mat-card-title>{{ user.firstName }} {{ user.lastName }}</mat-card-title>    </mat-card-header>    <mat-card-content>      <div class="profile-info">        <p><mat-icon>email</mat-icon> {{ user.email }}</p>        <div class="categories-section">          <h3>Categorías de interés</h3>          <mat-chip-set>            @for (category of user.categories; track category) {              <mat-chip>{{ category }}</mat-chip>            }          </mat-chip-set>        </div>        <p class="newsletter">          <mat-icon>{{ user.newsletter ? \'mark_email_read\' : \'mark_email_unread\' }}</mat-icon>          Newsletter: {{ user.newsletter ? \'Suscrito\' : \'No suscrito\' }}        </p>      </div>    </mat-card-content>  </mat-card>  <button class="btn btn-primary" (click)="goBack()">Volver atrás</button>}</div>'
     var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'Error404Component', 'selector': 'app-error404'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'NoticiasCardsComponent', 'selector': 'app-noticias-cards'},{'name': 'NoticiasCarruselComponent', 'selector': 'app-noticias-carrusel'},{'name': 'NoticiasCategoryComponent', 'selector': 'app-noticias-category'},{'name': 'NoticiasComponent', 'selector': 'app-noticias'},{'name': 'NoticiasDetallesComponent', 'selector': 'app-noticias-detalles'},{'name': 'NoticiasListComponent', 'selector': 'app-noticias-list'},{'name': 'RegisterComponent', 'selector': 'app-register'},{'name': 'SidebarComponent', 'selector': 'app-sidebar'},{'name': 'UserProfileComponent', 'selector': 'app-user-profile'}];
     var DIRECTIVES = [];
-    var ACTUAL_COMPONENT = {'name': 'Error404Component'};
+    var ACTUAL_COMPONENT = {'name': 'UserProfileComponent'};
 </script>
 <script src="../js/tree.js"></script>
 
@@ -418,7 +514,7 @@ export class Error404Component {
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
-            var COMPODOC_CURRENT_PAGE_URL = 'Error404Component.html';
+            var COMPODOC_CURRENT_PAGE_URL = 'UserProfileComponent.html';
             var MAX_SEARCH_RESULTS = 15;
        </script>
 

@@ -11,6 +11,7 @@ import { APP_ROUTES } from '../../app.routes';
 })
 export class Error404Component {
 
+    //Servicio
     readonly #router = inject(Router);
     
     /**

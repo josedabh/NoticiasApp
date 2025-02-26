@@ -22,6 +22,7 @@ import { MatButtonModule } from '@angular/material/button';
     ],
 })
 export class NavbarComponent {
+  //Output para el sidebar
   @Output() toggleSidebar = new EventEmitter<void>();
 
   //Servicio

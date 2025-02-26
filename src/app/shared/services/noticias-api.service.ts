@@ -1,42 +1,52 @@
 import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
-
-import { ApiNews, Noticia } from '../utils/data';
-import { TOKEN } from '../utils/token-api';
 import { map } from 'rxjs';
+
+import { ApiNews } from '../utils/data';
 
 @Injectable({
   providedIn: 'root'
 })
 export class NoticiasApiService {
 
+  //Servicio
   readonly #http = inject(HttpClient);
-  readonly #tokenApi = inject(TOKEN);
 
-  getNews(limit: number = 3) {
-    const url = "assets/api/noticia.json";
-    return this.#http.get<ApiNews>(url).pipe(
+  //Constante
+  url = "assets/api/noticia.json";
+  
+  /**
+   * Obtiene un número limitado de noticias.
+   *
+   * @returns Un Observable que emite un array de noticias (Noticia[]).
+   */
+  getNews() {
+    return this.#http.get<ApiNews>(this.url).pipe(
       map((response) => response.data)
     );
   }
 
   /**
-   * Llamada a la API para obtener una noticia por su uuid
-   * @param uuid 
-   * @returns 
+   * Llama a la API para obtener una noticia específica mediante su UUID.
+   *
+   * @param uuid El identificador único de la noticia.
+   * @returns Observable que emite un array de noticias
    */
   getNewsByUuid(uuid: string) {
-    const url = "assets/api/noticia.json";
-    return this.#http.get<ApiNews>(url).pipe(
+    return this.#http.get<ApiNews>(this.url).pipe(
       map(response => response.data),
       map((noticias) => noticias.find((noticia) => noticia.uuid === uuid))
     );
   }
 
-  // noticias-api.service.ts
+  /**
+   * Llama a la API para obtener noticias filtradas por categoría.
+   *
+   * @param category La categoría por la que filtrar las noticias.
+   * @returns Observable que emite un array de noticias
+   */
   getNewsByCategory(category: string) {
-    const url = "assets/api/noticia.json";
-    return this.#http.get<ApiNews>(url).pipe(
+    return this.#http.get<ApiNews>(this.url).pipe(
         map(response => response.data),
         map(noticias => noticias.filter(noticia => 
             noticia.categories.map(cat => cat.toLowerCase()).includes(category.toLowerCase())

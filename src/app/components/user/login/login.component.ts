@@ -32,21 +32,27 @@ export class LoginComponent {
   readonly #router = inject(Router);
   readonly #snackBar = inject(MatSnackBar);
 
+  //Reactive Formulario 
   loginForm = new FormGroup({
     email: new FormControl('', [Validators.required, Validators.email]),
     password: new FormControl('', [Validators.required])
   });
 
+  //Signals
   errorMessage = signal('');
   hide = signal(true);
 
   constructor() {
+
     merge(this.loginForm.get('email')!.statusChanges, 
           this.loginForm.get('email')!.valueChanges)
       .pipe(takeUntilDestroyed())
       .subscribe(() => this.updateErrorMessage());
   }
 
+   /**
+   * Método que se ejecuta al enviar el formulario de login.
+   */
   onSubmit() {
     if (this.loginForm.valid) {
       const { email, password } = this.loginForm.value;
@@ -64,6 +70,9 @@ export class LoginComponent {
     }
   }
 
+  /**
+   * Actualiza el mensaje de error del campo 'email' según el estado del control.
+   */
   updateErrorMessage() {
     const emailControl = this.loginForm.get('email')!;
     if (emailControl.hasError('required')) {
@@ -75,11 +84,19 @@ export class LoginComponent {
     }
   }
 
+  /**
+   * Alterna la visibilidad del campo de contraseña.
+   *
+   * @param event - Evento MouseEvent para prevenir la acción por defecto.
+   */
   togglePassword(event: MouseEvent) {
     this.hide.update(value => !value);
     event.preventDefault();
   }
 
+  /**
+   * Vuelve a la pagina principal
+   */
   goBack(){
     this.#router.navigate([APP_ROUTES.NOTICIAS]);
   }
