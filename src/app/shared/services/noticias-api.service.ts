@@ -13,22 +13,13 @@ export class NoticiasApiService {
   readonly #http = inject(HttpClient);
   readonly #tokenApi = inject(TOKEN);
 
-  readonly #apiUrl = 'https://api.thenewsapi.com/v1/news/';
-
   getNews(limit: number = 3) {
-    // const url = `${this.#apiUrl}/all?api_token=${this.#tokenApi}&language=es&limit=${limit}`;
     const url = "assets/api/noticia.json";
     return this.#http.get<ApiNews>(url).pipe(
       map((response) => response.data)
     );
   }
 
-  // getNewsByUuid(uuid: string) {
-  //   const url = `${this.#apiUrl}/uuid/${uuid}?api_token=${this.#tokenApi}`;
-  //   return this.#http.get<{ data: Noticia }>(url).pipe(
-  //     map(response => response.data)
-  //   );
-  // }
   /**
    * Llamada a la API para obtener una noticia por su uuid
    * @param uuid 
@@ -42,10 +33,14 @@ export class NoticiasApiService {
     );
   }
 
+  // noticias-api.service.ts
   getNewsByCategory(category: string) {
-    const url = `${this.#apiUrl}/headlines?api_token=${this.#tokenApi}&language=es&categories=${category}`;
+    const url = "assets/api/noticia.json";
     return this.#http.get<ApiNews>(url).pipe(
-      map((response) => response.data)
+        map(response => response.data),
+        map(noticias => noticias.filter(noticia => 
+            noticia.categories.map(cat => cat.toLowerCase()).includes(category.toLowerCase())
+        ))
     );
   }
 }

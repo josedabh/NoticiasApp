@@ -1,8 +1,11 @@
 import { Component, inject } from '@angular/core';
-import { Noticia } from '../../../shared/utils/data';
+import { Router } from '@angular/router';
+
 import { NoticiasApiService } from '../../../shared/services/noticias-api.service';
-import { NoticiasCarruselComponent } from '../noticias-carrusel/noticias-carrusel.component';
+import { Noticia } from '../../../shared/utils/data';
 import { NoticiasCardsComponent } from '../noticias-cards/noticias-cards.component';
+import { NoticiasCarruselComponent } from '../noticias-carrusel/noticias-carrusel.component';
+import { APP_ROUTES } from 'src/app/app.routes';
 
 @Component({
     selector: 'app-noticias-list',
@@ -13,9 +16,11 @@ import { NoticiasCardsComponent } from '../noticias-cards/noticias-cards.compone
 export class NoticiasListComponent {
   // Array para almacenar las noticias
   noticias: Noticia[] = [];
+  selectedCategory: string | null = null;
 
   // Servicios
   readonly #apiNoticia = inject(NoticiasApiService);
+  readonly #router = inject(Router);
 
   ngOnInit() {
     // Cargar noticias iniciales
@@ -30,9 +35,11 @@ export class NoticiasListComponent {
   }
 
   // Método para cargar noticias por categoría
-  loadNewsByCategory(category: string) {
+  onCategorySelected(category: string) {
+    this.selectedCategory = category;
+    this.#router.navigate([APP_ROUTES.NOTICIAS]);
     this.#apiNoticia.getNewsByCategory(category).subscribe(noticias => {
-      this.noticias = noticias;
+        this.noticias = noticias;
     });
   }
 }

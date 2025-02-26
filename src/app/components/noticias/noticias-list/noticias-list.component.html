@@ -1,12 +1,22 @@
-<!-- Carrusel de Noticias Destacadas -->
-<app-noticias-carrusel></app-noticias-carrusel>
+<!-- Carrusel solo se muestra cuando no hay categoría seleccionada -->
+@if (!selectedCategory) {
+    <app-noticias-carrusel></app-noticias-carrusel>
+}
 
-<!-- Lista de Noticias -->
+<!-- Grid de Noticias -->
 <div class="container mt-4">
+    @if (selectedCategory) {
+        <h2 class="mb-4">Noticias de: {{selectedCategory}}</h2>
+    }
+    
     <div class="row row-cols-1 row-cols-md-3 g-4">
         @for (news of noticias; track $index) {
             <div class="col">
                 <app-noticias-cards [news]="news"></app-noticias-cards>
+            </div>
+        } @empty {
+            <div class="col-12 text-center">
+                <h3>No hay noticias en esta categoría</h3>
             </div>
         }
     </div>

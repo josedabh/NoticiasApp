@@ -1,12 +1,23 @@
-.container {
-    padding: 0 15px;
-    margin-bottom: 2rem;
-}
+.noticias-container {
+    display: flex;
+    height: 100%;
 
-.row {
-    margin: 0 -15px;
-}
+    .noticias-content {
+        flex: 1;
+        padding: 20px;
+        overflow-y: auto;
+    }
 
-.col {
-    padding: 15px;
+    .container {
+        padding: 0 15px;
+        margin-bottom: 2rem;
+    }
+
+    .row {
+        margin: 0 -15px;
+    }
+
+    .col {
+        padding: 15px;
+    }
 }

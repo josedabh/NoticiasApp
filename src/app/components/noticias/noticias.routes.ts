@@ -10,6 +10,11 @@ export const noticiasRoutes: Routes = [
       { path: '', 
         component: NoticiasListComponent 
       },
+      { 
+        path: 'categoria/:category', 
+        pathMatch: 'full',
+        component: NoticiasListComponent 
+      },
       {
         path: 'detalles/:uuid',
         pathMatch:'full',

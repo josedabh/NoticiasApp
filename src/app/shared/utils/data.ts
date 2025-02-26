@@ -42,11 +42,12 @@ export interface Category {
 }
 
 export const CATEGORIES: Category[] = [
-    { value: 'sports', name: 'Deportes' },
+    { value: 'general', name: 'General' },
     { value: 'tech', name: 'Tecnología' },
-    { value: 'business', name: 'Economía' },
+    { value: 'sports', name: 'Deportes' },
     { value: 'politics', name: 'Política' },
+    { value: 'business', name: 'Económicas' },
+    { value: 'science', name: 'Científicas' },
     { value: 'entertainment', name: 'Entretenimiento' },
-    { value: 'science', name: 'Ciencia' },
     { value: 'health', name: 'Salud' }
 ];
